@@ -1,37 +1,37 @@
 pt-BR:
   menu:
     configuration:
-      title: "Configuration"
-      tsp: "Timestamping Services"
-      approved_ca: "Certification Services"
-      org: "Members"
-      group: "Global Groups"
-      member: "Members"
-      securityserver: "Security Servers"
-      central_service: "Central Services"
+      title: "Configurações"
+      tsp: "Carimbo te Tempo"
+      approved_ca: "Autoridades Certificadoras"
+      org: "Entidades"
+      group: "Grupos Globais"
+      member: "Entidades"
+      securityserver: "Servidores Seguros"
+      central_service: "Serviços Centrais"
     management:
-      title: "Management"
-      request: "Management Requests"
-      configuration_management: "Global Configuration"
-      system_settings: "System Settings"
-      distributed_file: "Distributed Files"
+      title: "Gerenciamento"
+      request: "Gerenciar Solicitações"
+      configuration_management: "Configurações Globais"
+      system_settings: "Configurações do Sistema"
+      distributed_file: "Arquivos de Distribuição"
     help:
-      title: "Help"
-      version: "Version"
+      title: "Ajuda"
+      version: "Versão"
       feedback: "Feedback"
 
   common:
-    db_error: "Cannot connect to database server"
+    db_error: "Não foi possivel conectar-se ao banco de dados"
     submit: "Salvar"
 
   about:
     action:
-      index: "display application version"
+      index: "mostrar versão da aplicação"
 
   application:
     action:
-      member_classes: "get member classes"
-      set_locale: "set application locale"
+      member_classes: "obter classe da entidade"
+      set_locale: "definir linguagem da aplicação"
 
   init:
     not_authorized: "Not authorized - contact system administrator"
