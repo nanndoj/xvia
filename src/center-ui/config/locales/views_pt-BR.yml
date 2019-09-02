@@ -30,16 +30,16 @@ pt-BR:
   init:
     index:
       heading: "Configuração inicial"
-      central_server_identification: "Identificador do Servidor Central"
-      instance_identifier: "Identificador da Instãncia"
-      instance_identifier_help: "Código identificador, identifica exclusivamente uma instância do X-Road."
-      central_server_address: "Endereço do Servidor Central"
+      central_server_identification: "Dados deste Servidor Central"
+      instance_identifier: "ID da Rede X-Via"
+      instance_identifier_help: "Código identificador único, identifica exclusivamente uma instância de rede do X-Via."
+      central_server_address: "DNS público"
       central_server_address_help: "DNS público do servidor central ou endereço de IP externo. Usado para conexões a partir da rede externa para o servidor central."
-      software_token: "Token de Software (A1)"
+      software_token: "Gerador de chaves"
       pin: "PIN"
-      pin_help: "PIN para acesso ao token de software (A1)."
+      pin_help: "Será configurado um sistema gerador de chaves para esta instância. Um PIN para acesso ao gerador deve ser definido."
       repeat_pin: "Repetir PIN"
-      initialized: "Servidor Central Inicializado"
+      initialized: "Servidor central inicializado com sucesso"
 
   orgs:
     index:
@@ -322,8 +322,8 @@ pt-BR:
       token: "Token"
       label: "Label"
       login: "Login"
-      logout: "Logout"
-      activate: "Activate"
+      logout: "Sair"
+      activate: "Ativa"
       new_key: "New Key"
       device_key: "Device ID: Key ID"
       configuration_parts: "Configuration Parts"

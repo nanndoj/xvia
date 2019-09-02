@@ -1,4 +1,4 @@
-en:
+pt-BR:
   menu:
     configuration:
       title: "Configuration"
@@ -22,6 +22,7 @@ en:
 
   common:
     db_error: "Cannot connect to database server"
+    submit: "Salvar"
 
   about:
     action:
