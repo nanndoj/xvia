@@ -55,22 +55,22 @@ pt-BR:
       address: "Endereços do servidor seguro"
 
   members:
-    name: "Nome da Entidade"
-    class: "Classe da Entidade"
-    code: "Código da Entidade"
+    name: "Nome do Membro"
+    class: "Classe do Membro"
+    code: "Código do Membro"
     admin_contact: "Contato Administrativo"
     search: "Procurar Entidade"
     add:
       title: "Adicionar Entidade"
       load_from_file: "Ler Dados do Arquivo"
     edit:
-      title: "Detalhes da Entidade"
+      title: "Detalhes do Membro"
       server: "Servidor"
       details:
-        legend: "Detalhes da Entidade"
+        legend: "Detalhes do Membro"
       contact:
-        title: "Editar contato da Entidade"
-        legend: "Editar contato da Entidade"
+        title: "Editar contato do Membro"
+        legend: "Editar contato do Membro"
       owned_servers:
         legend: "Servidores associados"
       global_group_membership:
@@ -79,7 +79,7 @@ pt-BR:
         description: "Descrição do Grupo"
         subsystem:
           table: "Subsistema"
-          add: "Adicionar entidade como subsistema"
+          add: "Adicionar membro como subsistema"
         added_to_group: "Adicionado ao grupo"
         add_member_to_group: "Adicionar '{{member}}' ao grupo"
         remove_confirm: "Você tem certeza que deseja remover '{{member}}' do grupo global '{{group}}'?"
@@ -87,7 +87,7 @@ pt-BR:
         legend: "Subsistemas"
         subsystem_code: "Código do subsistema"
         used_servers: "Servidores associados"
-        remove_confirm: "Você tem certeza que deseja remover o subsistema '{{subsystem}}' da entidade '{{memberClass}}/{{memberCode}}'?"
+        remove_confirm: "Você tem certeza que deseja remover o subsistema '{{subsystem}}' do membro '{{memberClass}}/{{memberCode}}'?"
       used_servers:
         legend: "Servidores associados"
         server_code: "Código do servidor"
@@ -103,12 +103,12 @@ pt-BR:
           client:
             legend: "Informação do cliente"
       name:
-        title: "Editar Nome da Entidade"
+        title: "Editar Nome do Membro"
       all_servers:
         search:
           title: "Servidores Seguros"
-    remove_confirm: "Você tem certeza que deseja remover a entidade '{{memberClass}}/{{memberCode}}'? {{ownedServersMessage}}"
-    removable_owned_servers: "Os servidores seguros pertencentes à esta entidade também serão removidos: '{{serversToRemove}}'"
+    remove_confirm: "Você tem certeza que deseja remover o membro '{{memberClass}}/{{memberCode}}'? {{ownedServersMessage}}"
+    removable_owned_servers: "Os servidores seguros pertencentes à esto membro também serão removidos: '{{serversToRemove}}'"
 
   management_requests:
     legend: "Gerenciamento de Requisições"
@@ -155,7 +155,7 @@ pt-BR:
       approve_confirm: "Você tem certeza que deseja aprovar esta requisição?"
       revoke_confirm: "Você te certeza que deseja revogar esta requisição?"
       decline_confirm: "Você tem certeza que deseja rejeitar esta requisição?"
-      member_not_found: "<entidade não encontrada>"
+      member_not_found: "<membro não encontrada>"
     request:
       legend: "Solicitar Informação"
     securityserver:
@@ -164,8 +164,8 @@ pt-BR:
   securityservers:
     server_code: "Código do Servidor"
     owner_name: "Entidade Proprietária"
-    owner_class: "Classe da Entidade Proprietária"
-    owner_code: "Código da Entidade Proprietária"
+    owner_class: "Classe do Membro Proprietária"
+    owner_code: "Código do Membro Proprietária"
     address: "DNS/IP Público"
     registered: "Registrado"
     info:
@@ -207,7 +207,7 @@ pt-BR:
   groups:
     code: "Código"
     updated: "Atualizado"
-    member_count: "Número de Entidades"
+    member_count: "Número de Membros"
     add:
       button: "Adicionar"
       title: "Novo Grupo"
@@ -215,13 +215,13 @@ pt-BR:
       all: "Adicionar Todos"
     remove:
       confirm: "Você tem certez que deseja remover o grupo '{{group}}'?"
-      selected_members_confirm: "Você tem cereteza que deseja remover as entidades selecionadas do gupo '{{group}}'?"
-      all_members_confirm: "Você tem cereteza que deseja remover todas as entidades do grupo '{{group}}'?"
+      selected_members_confirm: "Você tem cereteza que deseja remover os membros selecionadas do gupo '{{group}}'?"
+      all_members_confirm: "Você tem cereteza que deseja remover todas os membros do grupo '{{group}}'?"
     details:
       title: "Grupo '{{group}}'"
-      members: "Entidades"
-      members_add_title: "Adicionar entidades ao grupo '{{group}}'"
-      members_add_search_show_members: "Mostrar entidades em buscas"
+      members: "Membros"
+      members_add_title: "Adicionar membros ao grupo '{{group}}'"
+      members_add_search_show_members: "Mostrar membros em buscas"
       name: "Nome "
       code: "Código"
       class: "Classe"
@@ -230,18 +230,18 @@ pt-BR:
       type: "Tipo"
       added: "Adicionado"
       delete_group: "Remover grupo"
-      remove_selected_members: "Remover entidades selecionadas"
-      remove_all_members: "Remove todas as entidades"
-      add_members: "Adicionar entidades"
+      remove_selected_members: "Remover membros selecionadas"
+      remove_all_members: "Remove todas os membros"
+      add_members: "Adicionar membros"
       description:
         edit:
           title: "Editar Descrição"
     index:
       group_name: "Nome do Grupo"
-      org_name: "Nome da entidade no X-Via"
+      org_name: "Nome do membro da rede X-Via"
       group_to_org: "Mostrar por grupos"
-      org_to_group: "Mostrar por entidades"
-      org_not_in_group: "Entidades do X-Via que não pertencem ao grupo selecionado"
+      org_to_group: "Mostrar por membros"
+      org_not_in_group: "Membros do X-Via que não pertencem ao grupo selecionado"
 
   central_services:
     central_service: "Serviço Central"
@@ -360,12 +360,12 @@ pt-BR:
       service_provider_security_servers: "Servidor Seguro de Gerenciamento"
       wsdl_address: "URL do WSDL"
       services_address: "URL do Serviço"
-      security_server_owners_group: "Grupo da Entidade Proprietária"
-      member_classes: "Classe da Entidade"
-      member_class_code: "Código da Entidade"
+      security_server_owners_group: "Grupo do Membro Proprietária"
+      member_classes: "Classe do Membro"
+      member_class_code: "Código do Membro"
       member_class_description: "Descrição"
-      member_class_add: "Adicionar Classe de Entidades"
-      member_class_edit: "Editar Classe de Entidades"
+      member_class_add: "Adicionar Classe de Membros"
+      member_class_edit: "Editar Classe de Membros"
 
   shared:
     cert_details_dialog:

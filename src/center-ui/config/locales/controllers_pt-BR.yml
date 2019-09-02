@@ -34,20 +34,20 @@ pt-BR:
       set_locale: "definir linguagem da aplicação"
 
   init:
-    not_authorized: "Not authorized - contact system administrator"
-    already_initialized: "Central Server already initialized"
-    mismatching_pins: "Software token pins do not match"
+    not_authorized: "Não Autorizado - Contate o adminstrador"
+    already_initialized: "Servidor central já inicializado"
+    mismatching_pins: "Os PINs do gerador de chaves não são iguais"
     init_params:
       central_server_address:
-        host: "Central server address must be DNS name or IP address"
+        host: "Deve ser informado um nome de domínio ou um endereço de IP"
 
   approved_cas:
     action:
-      index: "display approved CAs page"
-      get_cert_details_by_id: "get approved CA temp certificate details by id"
-      get_records_count: "get approved CA records count"
-      can_see_details: "verify visibility of approved CA details"
-      refresh: "refresh approved CAs table"
+      index: "Mostrar página de ACs aprovadas"
+      get_cert_details_by_id: "Obter detalhes do certificado temporário da AC por id"
+      get_records_count: "Obter número de ACs aprovadas"
+      can_see_details: "verificar visibilidade das ACs aprovadas"
+      refresh: "Atualizar lista de ACs aprovadas"
       get_intermediate_ca_temp_cert_details: "get approved CA intermediate CA temp certificate details"
       get_existing_intermediate_ca_cert_details: "get existing intermediate CA certificate details"
       get_existing_intermediate_ca_cert_dump_and_hash: "get existing intermediate CA certificate dump and hash"

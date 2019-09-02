@@ -59,6 +59,7 @@
   with_items:
     - "fi_FI.UTF-8 UTF-8"
     - "en_US.UTF-8 UTF-8"
+    - "pt_BR.UTF-8 UTF-8"
 
 - name: generate locales
   command: "/usr/sbin/locale-gen"
