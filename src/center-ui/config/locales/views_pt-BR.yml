@@ -270,7 +270,7 @@ pt-BR:
 
   layouts:
     application:
-      title: "Administração do Servidor Central"
+      title: "Servidor Central UI"
       server_type: "Servidor Central"
 
   approved_cas:

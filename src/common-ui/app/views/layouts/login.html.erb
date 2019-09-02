@@ -1,41 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1,initial-scale=1,user-scalable=1" />
+    <link rel="stylesheet" type="text/css" href="/xvia/style.css" />
     <link href="/xvia-favicon.ico" rel="shortcut icon">
-    <%= stylesheet_link_tag (skin_installed? ? "/application/skin" : "style.css") %>
     <title><%= t 'layouts.application.title' %></title>
   </head>
   <body id="login">
-    <div class="container" id="login-form">
-      <div class="container" id="login-form-titles">
-        <h1 class="section-title up center"><%= t 'layouts.application.title' %> Fernando</h1>
-      </div>
-
-      <h2 class="section-title center"><%= @server_id.toShortString if @server_id %></h2>
-
-      <form method="POST" action="j_security_check">
-        <p>
-          <label class="section-title up">
-            <span class="text">Username</span>
+      <section class="container">
+        <section class="login-form">
+          <form method="POST" action="j_security_check">
+            <div>
+              <img src="/xvia-logo.png" alt="" />
+              <h4>Login to your private dashboard</h4>
+            </div>
             <span><%= text_field_tag :j_username %></span>
-          </label>
-        </p>
-        <p>
-          <label class="section-title up">
-            <span class="text">Password</span>
             <span><%= password_field_tag :j_password %></span>
-          </label>
-        </p>
-        <% if flash[:error] %>
-          <p class="error message">
-            <%= raw(flash_message(:error)) %>
-          </p>
-        <% end %>
-        <p class="button-container">
-          <button type="submit" class="btn">Login</button>
-        </p>
-      </form>
-    </div>
+            <button type="submit" name="go" class="btn btn-lg btn-block btn-info">Entrar</button>
+          </form>
+        </section>
+      </section>
   </body>
 </html>
