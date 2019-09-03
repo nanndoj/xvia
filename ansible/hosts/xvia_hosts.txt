@@ -1,0 +1,28 @@
+#central servers (ubuntu)
+[cs-servers]
+cs.xvia.com.br
+
+#security servers (ubuntu or rhel)
+[ss-servers]
+#ss.xvia.com.br
+35.247.246.180
+35.199.115.67
+
+#configuration proxies (ubuntu)
+[cp-servers]
+
+#certification authority, time stamping authority and ocsp service server (ubuntu)
+[ca-servers]
+ca.xvia.com.br
+
+#a custom super group for overriding variable defaults
+[xvia:children]
+cs-servers
+ss-servers
+cp-servers
+ca-servers
+
+### vars ###
+
+[ss-servers:vars]
+variant=vanilla
