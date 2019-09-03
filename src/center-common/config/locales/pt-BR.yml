@@ -2,113 +2,113 @@ pt-BR:
   activerecord:
     attributes:
       approved_ca:
-        cert_profile_info: "Certificate profile info"
+        cert_profile_info: "Perfil do certificado"
       approved_tsa:
-        url: "Timestamping server URL"
-        cert: "Timestamping server certificate"
+        url: "URL do servidor de Carimbo de Tempo"
+        cert: "Certificado do servidor de Carimbo de Tempo"
       central_service:
-        service_code: "central service code"
+        service_code: "código de serviço central"
       distributed_files:
-        original_filename_last_successful: "original filename of uploaded file"
-        original_filename_last_failed: "original filename of uploaded file"
+        original_filename_last_successful: "nome do arquivo enviado"
+        original_filename_last_failed: "nome do arquivo enviado"
       distributed_signed_files:
-        data_boundary: "data boundary"
-        sig_algo_id: "signature algorithm ID"
+        data_boundary: "limite de dados"
+        sig_algo_id: "ID do algoritmo de assinatura"
       federated_xroad:
-        code: "code"
-        address: "address"
+        code: "código"
+        address: "endereço"
       global_group:
-        group_code: "group code"
-        description: "group description"
+        group_code: "código do grupo"
+        description: "descrição do grupo"
       identifier:
-        object_type: "object type"
-        xroad_instance: "X-Road instance"
-        member_class: "member class"
-        member_code: "member code"
-        subsystem_code: "subsystem code"
-        service_code: "service code"
-        server_code: "server code"
-        type: "type"
-        service_version: "service version"
+        object_type: "tipo de objeto"
+        xroad_instance: "instância de rede X-Via"
+        member_class: "classe de membro"
+        member_code: "código do membro"
+        subsystem_code: "código do subsistema"
+        service_code: "código de serviço"
+        server_code: "código do servidor"
+        type: "tipo"
+        service_version: "versão do serviço"
       member_class_mapping:
-        federated_member_class: "federated member class"
+        federated_member_class: "classe de membro federado"
       member_class:
-        code: "code"
-        description: "description"
+        código: "código"
+        description: "descrição"
       ocsp_info:
         url: "URL"
       pki:
-        name: "name"
+        name: "nome"
         identifier_decoder_member_class: "name extractor member class"
         identifier_decoder_method_name: "name extractor method name"
       request_processing:
-        type: "type"
+        type: "tipo"
         status: "status"
       request:
-        type: "type"
-        address: "address"
-        origin: "origin"
-        server_owner_name: "server owner name"
-        server_user_name: "server user name"
+        type: "tipo"
+        address: "endereço"
+        origin: "origem"
+        server_owner_name: "proprietário do servidor"
+        server_user_name: "usuário do servidor"
       xroad_member:
-        member_code: "member code"
-        name: "member name"
+        member_code: "código do membro"
+        name: "nome do membro"
       security_category:
-        code: "code"
-        description: "description"
+        code: "código"
+        description: "descrição"
       security_category_mapping:
-        federated_category: "federated category"
+        federated_category: "categoria federada"
       security_server_client_name:
-        name: "name"
+        name: "nome"
       security_server_client:
-        subsystem_code: "subsystem code"
-        type: "type"
-        administrative_contact: "Administrative contact"
+        subsystem_code: "código do subsistema"
+        type: "tipo"
+        administrative_contact: "Contato administrativo"
       security_server:
-        server_code: "server code"
-        address: "address"
+        server_code: "código do servidor"
+        address: "endereço"
       system_parameter:
-        key: "key"
-        value: "value"
+        key: "chave"
+        value: "valor"
       ui_user:
-        username: "username"
-        locale: "locale"
+        username: "nome de usuário"
+        locale: "linguagem"
     errors:
-      invalid_url: "'%{url}' is an invalid URL, examples of valid URL-s: 'http://www.example.com', 'https://www.example.com'"
-      input_too_long: "can contain up to %{max_length} symbols"
+      invalid_url: "'%{url}' é um URL inválida, exemplos de URLs válidas: 'http://www.example.com', 'https://www.example.com'"
+      input_too_long: "pode ​​conter até %{max_length} símbolos"
       messages:
-        taken: "'%{value}' has already been taken"
-        blank: "%{attribute} cannot be blank"
+        taken: "%{value}' já foi utilizado"
+        blank: "%{attribute} não pode ficar em branco"
         record_invalid: "%{errors}"
 
   # Management requests error messages.
   requests:
-    server_not_found: "Server not found: %{server}"
-    multiple_open_requests: "More than one request is open for server %{server_id}, id of another request: '%{request_id}'"
-    invalid_processing_state: "Request processing is in invalid state: %{status}"
-    duplicate_requests: "A request for registering '%{user}', as a client to security server '%{security_server}' has already been submitted (%{received}, request ID: '%{id}')"
-    client_already_registered: "'%{user}' has already been registered as a client to security server '%{security_server}'"
-    more_than_one_requests: "Internal error: duplicate requests found in database"
-    client_not_found: "Client not found: %{client}"
+    server_not_found: "Servidor näo encontrado: %{server}"
+    multiple_open_requests: "Mais de uma solicitação está aberta para o servidor %{server_id}, ID da outra solicitação: '%{request_id}'"
+    invalid_processing_state: "O processamento da solicitação está em um estado inválido: %{status}"
+    duplicate_requests: "Uma solicitação para registrar '%{user}', como cliente do Servidor Seguro '%{security_server}' já foi enviada (%{received}, ID da solicitação: '%{id}')"
+    client_already_registered: "'%{user}' já foi registrado como um cliente no Servidor Seguro '%{security_server}'"
+    more_than_one_requests: "Erro interno: solicitações duplicadas encontradas no banco de dados"
+    client_not_found: "Cliente não encontrado: %{client}"
     request_with_same_cert_already_exists: "Certificate is already submitted for registration with request '%{id}'"
-    security_server_exists: "Certificate is already registered, request id '%{id}"
-    duplicate_owner_change_requests: "A request for registering '%{user}', as the owner of the security server '%{security_server}' has already been submitted (%{received}, request ID: '%{id}')"
-    must_be_member: "'%{user}' is a subsystem. New owner must be a member"
-    already_owner: "'%{user}' is already the owner of the security server '%{security_server}'"
-    server_code_exists: "Member '%{member_class} : %{member_code}' already owns a security server with server code '%{server_code}'"
-    not_registered_client: "'%{user}' is not registered as a client on the security server '%{security_server}'"
+    security_server_exists: "O certificado já está registrado, ID da solicitçäo: '%{id}"
+    duplicate_owner_change_requests: "Uma solicitação para registrar '%{user}', como o proprietário do servidor de segurança '%{security_server}' já foi enviada (%{received}, ID da solicitação: '%{id}')"
+    must_be_member: "'%{user}' é um subsistema. O novo proprietário deve ser um membro"
+    already_owner: "'%{user}' já é o proprietário do servidor de segurança '%{security_server}'"
+    server_code_exists: "O membro '%{member_class} : %{member_code}' já é proprietário do Servidor Seguro com o código '%{server_code}'"
+    not_registered_client: "'%{user}' não está registrado como um cliente no Servidor Seguro '%{security_server}'"
 
   errors:
     format: "%{message}"
     member_class:
-      member_class_has_members: "Cannot delete member class %{code}: found X-Road members belonging to the class. Only classes with no registered members can be deleted."
+      member_class_has_members: "Não é possível excluir a classe %{code}: membros da rede X-Via encontrados pertencentes à classe. Somente as classes sem membros registrados podem ser excluídas."
     pki:
-      top_ca_cert_too_long_subject_name: "Length of service CA certificate subject name You are trying to load exceeds %{max_length} symbols. Subject name: '%{subject_name}'"
+      top_ca_cert_too_long_subject_name: "O número de caracteres no campo 'Subject Name' do certificado da AC que você está tentando carregar é maior que o máximo de  %{max_length} caracteres. Subject name: '%{subject_name}'"
     tsp:
-      cert_and_url_exists: "An approved timestamping service with the inserted URL and certificate already exists"
-      cert_too_long_subject_name: "Length of TSA certificate subject name You are trying to load exceeds %{max_length} symbols. Subject name: '%{subject_name}'"
+      cert_and_url_exists: "Uma Autoridade de Carimbo de Tempo com a URL e o certificado inseridos já existe"
+      cert_too_long_subject_name: "O número de caracteres no campo 'Subject Name' do certificado da ACT que você está tentando carregar é maior que o máximo de  %{max_length} caracteres. Subject name: '%{subject_name}'"
     request:
-      auth_cert_not_unique: "Security server '%{server_id}' already has authentication certificate You are trying to add"
-      cert_not_auth: "This certificate cannot be used for authentication."
+      auth_cert_not_unique: "O Servidor Seguro '%{server_id}' já possui o mesmo certificado de autenticação que você está tentando adicionar"
+      cert_not_auth: "Este certificado não pode ser utilizado para autenticação."
     import:
-      invalid_content: "Content of uploaded file '%{file}' is not in gzip format"
+      invalid_content: "O conteúdo do arquivo enviado '%{file}' não está no formato gzip"
