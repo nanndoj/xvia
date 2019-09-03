@@ -36,7 +36,7 @@ pt-BR:
   init:
     not_authorized: "Não Autorizado - Contate o adminstrador"
     already_initialized: "Servidor central já inicializado"
-    mismatching_pins: "Os PINs do gerador de chaves não são iguais"
+    mismatching_pins: "Os PINs do token gerador de chaves não são iguais"
     init_params:
       central_server_address:
         host: "Deve ser informado um nome de domínio ou um endereço de IP"
@@ -184,7 +184,7 @@ pt-BR:
     action:
       index: "mostrar página de diaginóstico"
       check_status: "verificar diagnóstico do sistema"
-      enter_signing_token_pin: "entre o PIN do gerador de chaves"
+      enter_signing_token_pin: "entre o PIN do token gerador de chaves"
 
   requests:
     action:
@@ -215,13 +215,13 @@ pt-BR:
       signer_error: "Erro ao invocar o serviço de assinaturas digitais: %{message}"
       internal:
         missing: "Erro ao assinar o arquivo de configuração interna - não existe uma chave ativa"
-        token_not_found: "Erro ao assinar o arquivo de configuração interna - gerador de chaves não encontrado"
-        token_not_active: "Erro ao assinar o arquivo de configuração interna - PIN do gerador de chaves não registrado"
+        token_not_found: "Erro ao assinar o arquivo de configuração interna - token gerador de chaves não encontrado"
+        token_not_active: "Erro ao assinar o arquivo de configuração interna - PIN do token gerador de chaves não registrado"
         key_not_available: "Erro ao assinar o arquivo de configuração interna - chave nao disponível"
       external:
         missing: "Erro ao assinar o arquivo de configuração externa - não existe uma chave ativa"
-        token_not_found: "Erro ao assinar o arquivo de configuração externa - gerador de chaves não encontrado"
-        token_not_active: "Erro ao assinar o arquivo de configuração externa - PIN do gerador de chaves não registrado"
+        token_not_found: "Erro ao assinar o arquivo de configuração externa - token gerador de chaves não encontrado"
+        token_not_active: "Erro ao assinar o arquivo de configuração externa - PIN do token gerador de chaves não registrado"
         key_not_available: "Erro ao assinar o arquivo de configuração externa - chave nao disponível"
 
   configuration_management:
@@ -229,7 +229,7 @@ pt-BR:
       index: "mostrar página de configurações"
       source: "mostrar fonte de configuração"
       download_source_anchor: "baixar âncora de confição da fonte"
-      available_tokens: "listar geradores de chaves disponíveis"
+      available_tokens: "listar tokens de chaves disponíveis"
       download_conf_part: "baixar parte de configuração"
       trusted_anchors: "mostrar âncoras confiáveis"
       download_trusted_anchor: "baixar âncoras confiáveis"

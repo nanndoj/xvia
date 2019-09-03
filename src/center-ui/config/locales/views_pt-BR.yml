@@ -35,9 +35,9 @@ pt-BR:
       instance_identifier_help: "Código identificador único, identifica exclusivamente uma instância de rede do X-Via."
       central_server_address: "DNS público"
       central_server_address_help: "DNS público do servidor central ou endereço de IP externo. Usado para conexões a partir da rede externa para o servidor central."
-      software_token: "Gerador de chaves"
+      software_token: "Token gerador de chaves"
       pin: "PIN"
-      pin_help: "Será configurado um sistema gerador de chaves para esta instância. Um PIN para acesso ao gerador deve ser definido."
+      pin_help: "Será configurado um token gerador de chaves privadas para esta instância. Um PIN para acesso ao gerador deve ser definido."
       repeat_pin: "Repetir PIN"
       initialized: "Servidor central inicializado com sucesso"
 
@@ -302,8 +302,8 @@ pt-BR:
 
   system_status:
     enter_softtoken_pin: "Clique aqui para digitar PIN"
-    softtoken_pin_not_entered: "PIN para gerador de chaves de assinaturas não registrado"
-    signing_token_not_initialized: "Gerador de Chaves de assinatura não inicializado. Você pode fazer isso utilizando o signer-console."
+    softtoken_pin_not_entered: "PIN para o token gerador de chaves de assinaturas não registrado"
+    signing_token_not_initialized: "Token Gerador de Chaves de assinatura não inicializado. Você pode fazer isso utilizando o signer-console."
 
   tsps:
     edit_new: "Adicionar Autoridade de Carimbo de Tempo"
@@ -319,7 +319,7 @@ pt-BR:
       anchor_file_not_found: "Âncora de Configuração não encontrada"
       download_url: "URL de Download"
       signing_keys: "Chaves de Assinatura"
-      token: "Gerador"
+      token: "Token"
       label: "Nome"
       login: "Login"
       logout: "Sair"
