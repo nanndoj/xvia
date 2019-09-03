@@ -1,0 +1,291 @@
+en:
+  about:
+    index:
+      name: "Servidor Seguro"
+      version: "versão"
+
+  feedback:
+    index:
+      instruction_text_html: "Sugestões de melhoria no X-Road ou erros podem ser submetidos para o %{service_desk_link}. %{sign_up_link} para criar uma conta e ter acesso ao %{service_desk_link_0} e %{backlog_link}."
+      service_desk: "Suporte ao X-Road"
+      sign_up: "Registrar"
+      backlog: "X-Road Backlog (em inglês)"
+
+  clients:
+    index:
+      add_client: "Adicionar Cliente"
+      member_name: "Nome do membro"
+      member_class: "Classe"
+      member_code: "Código"
+      subsystem_code: "Subsistema"
+      state: "Estado"
+
+    client_add_dialog:
+      select: "Selecionar cliente na lista global"
+      new_client: "Novo cliente"
+      send_regreq: "Deseja enviar uma solicitaçã de registro do novo cliente cliente para o servidor central?<br/>{{new_subsystem_warning}}"
+      new_subsystem: "O novo subsistema '%{subsystem_code}' será enviado para registro no servidor central para o membro '%{member_name} %{member_class}: %{member_code}'."
+      new_member: "Uma nova solicitação de registro do membro '%{member_name} %{member_class}: %{member_code}' será enviada ao servidor central."
+
+    client_select_dialog:
+      select_client: "Selecionar clientes"
+      filter: "Mostrar apenas clientes locais"
+      label_title: "Mostrar apenas os membros e subsistemas registrados neste Servidor Seguro."
+
+    client_details_dialog:
+      title: "Client ID: "
+      details: "Detalhes"
+      local_groups: "Grupos Locais"
+      internal_servers: "Servidores internos"
+      services: "Servoços"
+      acl_subjects: "Clientes"
+
+    client_details_tab:
+      certificates: "Certificados"
+      ca: "AC"
+      serial_number: "Número de série"
+      state: "Estado"
+      expires: "Expira em"
+      register: "Registrar"
+      unregister: "Cancelar registro"
+      set_as_owner: "Transferir propriedade"
+      delete: "Apagar"
+      send_regreq_confirm: "Você tem certeza que deseja enviar uma solicitação de registro de cliente ao servidor central?<br/>{{new_subsystem_warning}}"
+      send_delreq_confirm: "Você tem certeza que deseja enviar uma solicitação de remoção de cliente ao servidor central?<br/>"
+      send_owner_change_confirm: "Você tem certeza que deseja enviar uma solicitação de mudança de propriedade para este membro ao servidor central?<br/>"
+      delete_client: "Requisição de remoção enviada. Deseja excluir este membro?"
+      delete_client_confirm: "Você tem certeza que deseja excluir este cliente?"
+      delete_certs_title: "Excluzão de certificado"
+      delete_certs: "O certificado de assinatura associado ao cliente '{{client_id}}' não possui usuários. Remover certificado?"
+
+    client_groups_tab:
+      local_groups: "Grupos locais"
+      member_title: "{{client}} : Grupos Locais"
+      subsystem_title: "{{member}} subsystem {{subsystem}} : Grupos Locais"
+      details: "Detalhes"
+      add_group: "Adicionar grupo"
+      code: "Código"
+      member_count: "Número de membros"
+      updated: "Atualizado"
+      new_group: "Novo grupo"
+
+    group_details_dialog:
+      title: "Grupo local {{group}}"
+      edit_title: "Editar descrição"
+      group_members: "Membros"
+      select_all: "selecionar todos"
+      name: "Nome"
+      code: "Código"
+      class: "Classe"
+      subsystem: "Subsistema"
+      instance: "Instância de rede"
+      added: "Adicionado"
+      delete_group: "Excluir grupo"
+      delete_group_confirm: "Você tem certeza que deseja excluir o grupo '{{group}}'?"
+      add_members: "Adicionar membros"
+      remove_selected_members: "Remover Membros Selecionados"
+      remove_all_members: "Remover Todos os Membros"
+
+    group_members_add_dialog:
+      title: "Adicionar Membros ao Grupo Local {{group}}"
+      show_existing: "Mostrar membros do grupo no resultado da pesquisa"
+      add_selected: "Adicionar grupo selecionado"
+      add_all: "Adicionar todos ao grupo"
+      name: "Nome"
+
+    client_internal_certs_tab:
+      internal_servers: "Servidores internos"
+      connection_type: "Tipo de conexção com os consumidores de serviço"
+      connection_type_hint: "O tipo de conexão com o sistema de informação provedor deve ser especificado na aba de 'Serviços'(<i class='fa fa-wrench'></i>) by service URL (http/https)."
+      internal_ssl_certs: "Fixação de certificados para o Sistema de Informacao"
+      security_server_cert: "Certificado TLS deste Servidor Seguro"
+      import_certificate: "Importar certificado"
+      certificate_hash: "Hash do certificado (%{alg})"
+      delete_internal_cert_confirm: "Você deseja apagar o certificado TLS {{hash}} deste servidor ?"
+
+    client_services_tab:
+      member_title: "Serviços do membro{{member}}"
+      subsystem_title: "Servicos do subsistema {{subsystem}} do membro {{member}}"
+      client_services: "Serviços"
+      add_wsdl: "Adicionar WSDL"
+      add_openapi3: "Adicionar REST"
+      access_rights: "Permissões"
+      service_code: "Código do serviço"
+      title: "Título"
+      url: "URL"
+      wsdl_uri: "URI do WSDL"
+      timeout: "Timeout (s)"
+      security_category: "Categoria"
+      last_refreshed: "Última atualização"
+      disable_wsdl: "Desabilitar serviço"
+      disable_notice: "Mensagens para clientes que requisitarem serviços desabilitados:"
+      edit_wsdl_parameters: "Editar parâmetros do WSDL"
+      edit_openapi3_parameters: "Editar parâmetros do REST"
+      delete_wsdls_confirm: "Você tem certeza que deseja excluir os serviços selecionados?"
+      wsdl_validator_output: "Validar Resposta"
+
+    service_params_dialog:
+      edit_service_parameters: "Editar parâmetros do serviço"
+      apply_to_all: "Aplicar à todos"
+      service_url: "URL do Serviço"
+      required_sec_cat: "Categoria Obrigatória"
+      sslauth: "Verificar certificado TLS"
+      no_timeout: "Um valor de timeout 0 será considerado um timeout infinito."
+
+    service_acl_dialog:
+      title: "Permissões para o serviço: {{code}}"
+      title_with_service_title: "Permissões para o serviço: {{code}} ({{title}})"
+      access_rights: "Permissões"
+      service: "Serviço"
+      member_name_group_desc: "Nome/Grupo do Membro"
+      member_class: "Classe"
+      member_group_code: "Código do Membro/Grupo"
+      subsystem_code: "Código do subsistema"
+      instance: "Instância"
+      type: "Tipo"
+      access_rights_given: "Permissões concedidas"
+      add_subjects: "Adicionar cliente"
+      remove_selected: "Remvover selecionados"
+      remove_selected_confirm: "Remover permissões dos clientes: {{subjects}}"
+      remove_all: "Remover todas"
+      remove_all_confirm: "Remover todos os clientes?"
+
+    acl_subjects_search_dialog:
+      add_subjects: "Acidionar clientes"
+      add_selected: "Adiicionar selecionados ao ACL"
+      add_all: "Adicionar tudo ao ACL"
+      add_all_confirm: "Adicionar permissões para todos os clientes?"
+
+    client_acl_subjects_tab:
+      acl_subjects: "Clientes"
+      open_services: "Permições"
+      subject_name: "Nome/Grupo do membro"
+      client_not_found: "Cliente não encontrado nas configuração global"
+      group_not_found: "Grupo não encontrado nas configurações globais"
+
+    acl_subject_open_services_dialog:
+      title: "Permissões do serviço {{name}} {{id}}"
+      add_services: "Adicionar Serviço"
+      service_code: "Código único"
+      service_title: "Título"
+      rights_given: "Permissões concedidas"
+      add_selected: "Adicionar selecionados ao ACL"
+      add_all: "Adicionar todos ao ACL"
+      delete_selected_confirm: "Você tem certeza que deseja remover os serviços selecionados: {{services}}"
+      delete_all_confirm: "Você tem certeza que deseja remover todos os serviços?"
+
+  diagnostics:
+    index:
+      global_configuration: "Configuração global"
+      timestamping: "Carimbo de Tempo"
+      title_ocsp: "OCSP Responders"
+      label_ocsp_cert_service: "Serviços de certificação: "
+      service_url: "URL do Serviço"
+      status: "Status"
+      message: "Mensagem"
+      previous_update: "Última atualização"
+      next_update: "Proxima atualização"
+      next_update_at_latest: "Proxima atualização em"
+
+  init:
+    index:
+      heading: "Configuração Inicial"
+      security_server_owner: "Proprietário"
+      member_name: "Membro"
+      member_class: "Classe"
+      member_code: "Cåodigo"
+      security_server: "Servidor Seguro"
+      security_server_code: "Código único"
+      software_token: "Token gerador de chaves A1"
+      pin: "PIN"
+      repeat_pin: "Repedir PIN"
+      initialized: "Servidor Seguro inicializado com sucesso!"
+
+  keys:
+    index:
+      certificate: "Certificado"
+      client: "Cliente"
+      member: "Membro"
+      ocsp_response: "OCSP response"
+      expires: "Data de expiração"
+      status: "Status"
+      details: "Detalhes"
+      generate_key: "Gerar Chave"
+      generate_csr: "Gerar CSR"
+      generate_csr_title: "Gerar Requisição de Assinatura de Certificado (CSR)"
+      activate: "Ativar"
+      register: "Registrar"
+      unregister: "Cancelar registro"
+      label: "Label"
+      import_certificate: "Importar certificado"
+      usage: "Uso"
+      usage_sign: "Entrar"
+      usage_auth: "Authenticar"
+      approved_ca: "Autoridade Certificadora"
+      csr_format: "Formato do CSR"
+      subject_dn: "Subject Distinguished Name"
+      token_details: "Detalhes do Token"
+      key_details: "Detalhes da Chave"
+      certificate_location: "Localização do certificado"
+      registration_request: "Solicitação de registro"
+      server_dns_or_ip: "DNS ou IP Público deste servidor seguro"
+      no_keys: "Nenhum objeto encontrado"
+      unregister_cert_confirm: "Tem certeza que deseja cancelar o registro do certificado '{{hash}}'?"
+      delete_cert_from_conf_confirm: "Are you sure you want to delete certificate '{{hash}}' from server configuration?"
+      delete_cert_from_token_confirm: "Are you sure you want to delete certificate '{{hash}}' from token '{{token}}'?"
+      delete_csr_confirm: "Are you sure you want to delete the request notice?"
+      locked: "BLOCKED"
+      logout: "Logout"
+      delete_key_confirm: "Delete key '{{key}}' and all associated certificates from server configuration?"
+      delete_key_from_token_confirm: "Delete key '{{key}}' from token '{{token}}'?"
+      delete_key_and_unregister_certs_confirm: "Key '{{key}}' has certificates that need to be unregistered before deletion. Continue with unregistration and deletion of associated certifcates and the key from server configuration?"
+      token: "Token: "
+      key: "Key: "
+    token_details:
+      friendly_name: "Friendly name"
+      token_info: "Token Info"
+      token_id: "Token ID"
+    key_details:
+      friendly_name: "Friendly name"
+      friendly_name_hint: "The key can be renamed after importing a certificate or creating a CSR."
+      key_info: "Key Info"
+      key_id: "Key ID"
+      readonly: "Read-Only"
+
+  shared:
+    cert_details_dialog:
+      cert_details: "Certificate Details"
+
+  sysparams:
+    index:
+      tsps: "Timestamping Services"
+      tsp_name: "Timestamping service"
+      tsp_url: "Service URL"
+      internal_ssl_cert: "Internal TLS Certificate"
+      internal_ssl_cert_hash: "Certificate hash (%{alg})"
+      internal_ssl_generate_key: "Generate New TLS Key"
+      internal_ssl_generate_csr: "Generate Certificate Request"
+      generate_internal_ssl_confirm: "Generate new internal TLS key and certificate?"
+      distinguished_name: "Distinguished name"
+      import_certificate: "Import certificate"
+      certificate_authorities: "Approved Certificate Authorities"
+      ca_name: "Distinguished Name"
+      ocsp_response: "OCSP response"
+      expires: "Expires"
+      expired: "expired"
+      issuer: "Issuer: "
+      top_ca: "top-level CA"
+    tsp_add_dialog:
+      add_tsp: "Add Timestamping Service"
+      approved_tsp: "Trusted Timestamping Services"
+
+  layouts:
+    application:
+      title: "Security Server Administration"
+      server_type: "Security Server"
+
+  anchor:
+    title: "Configuration Anchor"
+    import_title: "Import Configuration Anchor"
+    upload_title: "Upload Configuration Anchor"
+    upload_confirm: "Configuration anchor details: <table style=\"margin: 1em 0px;\" class=\"details\"><tbody><tr><td class=\"semibold\">Hash ({{hash_algorithm}})</td><td>{{hash}}</td></tr><tr><td class=\"semibold\">Generated</td><td>{{generated_at}}</td></tr></tbody></table> Continue with import?"
