@@ -1,3 +1,4 @@
+
 ---
 - name: setup sync service (trusty)
   block:

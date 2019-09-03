@@ -22,8 +22,8 @@
     vtype: "string" # parametrize if you add a different type of question to item list
     value: "{{ item.value }}"
   with_items:
-    - { question: "xroad-common/service-altsubject", value: "IP:{{ ansible_eth0['ipv4']['address'] }},DNS:{{ inventory_hostname }}" }
-    - { question: "xroad-common/admin-altsubject",   value: "IP:{{ ansible_eth0['ipv4']['address'] }},DNS:{{ inventory_hostname }}" }
+    - { question: "xroad-common/service-altsubject", value: "IP:{{ ansible_default_ipv4['address'] }},DNS:{{ inventory_hostname }}" }
+    - { question: "xroad-common/admin-altsubject",   value: "IP:{{ ansible_default_ipv4['address'] }},DNS:{{ inventory_hostname }}" }
     - { question: "xroad-common/service-subject",    value: "/CN={{ inventory_hostname }}" }
     - { question: "xroad-common/admin-subject",      value: "/CN={{ inventory_hostname }}" }
     - { question: "xroad-common/username",           value: "{{ xroad_ui_user }}" }

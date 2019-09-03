@@ -4,9 +4,7 @@ cs.xvia.com.br
 
 #security servers (ubuntu or rhel)
 [ss-servers]
-#ss.xvia.com.br
-35.247.246.180
-35.199.115.67
+ss.xvia.com.br
 
 #configuration proxies (ubuntu)
 [cp-servers]

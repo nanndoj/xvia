@@ -1,0 +1,11 @@
+# see roles/xroad-ca/defaults/main.yml for other CA-related parameters
+xroad_ca_dn_country: "BR"
+xroad_ca_o: "X-Via Inc."
+xroad_ca_ou: "X-Via Certificate Authority"
+xroad_ca_cn: "ca.xvia.com.br"
+xroad_ca_ocsp_o: "X-Via Inc."
+xroad_ca_ocsp_ou: "X-Via Certificate Authority"
+xroad_ca_ocsp_cn: "ocsp.xvia.com.br"
+xroad_ca_tsa_o: "X-Via Inc."
+xroad_ca_tsa_ou: "X-Via Certificate Authority"
+xroad_ca_tsa_cn: "tsa.xvia.com.br"

@@ -2,3 +2,4 @@
 #controls lxd versions, if changed, check epel version and repo urls
 centos_releasever: 7
 ubuntu_releasever: bionic
+ansible_ssh_user: xvia
