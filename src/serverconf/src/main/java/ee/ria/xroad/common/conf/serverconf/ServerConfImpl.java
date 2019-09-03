@@ -35,6 +35,7 @@ import ee.ria.xroad.common.conf.serverconf.dao.ServiceDescriptionDAOImpl;
 import ee.ria.xroad.common.conf.serverconf.model.AccessRightType;
 import ee.ria.xroad.common.conf.serverconf.model.ClientType;
 import ee.ria.xroad.common.conf.serverconf.model.DescriptionType;
+import ee.ria.xroad.common.conf.serverconf.model.EndpointType;
 import ee.ria.xroad.common.conf.serverconf.model.LocalGroupType;
 import ee.ria.xroad.common.conf.serverconf.model.ServerConfType;
 import ee.ria.xroad.common.conf.serverconf.model.ServiceDescriptionType;
@@ -274,6 +275,17 @@ public class ServerConfImpl implements ServerConfProvider {
         });
     }
 
+    @Override
+    public String getServiceDescriptionURL(ServiceId service) {
+        return tx(session -> {
+            ServiceType serviceType = getService(session, service);
+            if (serviceType != null && serviceType.getServiceDescription() != null) {
+                return serviceType.getServiceDescription().getUrl();
+            }
+            return null;
+        });
+    }
+
     // ------------------------------------------------------------------------
 
     protected ServerConfType getConf() {
@@ -318,28 +330,28 @@ public class ServerConfImpl implements ServerConfProvider {
         }
 
         for (AccessRightType accessRight : clientType.getAcl()) {
-            if (!StringUtils.equals(service.getServiceCode(),
-                    accessRight.getServiceCode())) {
+            final EndpointType endpoint = accessRight.getEndpoint();
+            if (!StringUtils.equals(service.getServiceCode(), endpoint.getServiceCode())) {
                 continue;
             }
 
             XRoadId subjectId = accessRight.getSubjectId();
 
-            if (subjectId instanceof GlobalGroupId
-                    && !GlobalConf.isSubjectInGlobalGroup(client, (GlobalGroupId)subjectId)) {
-                continue;
-            } else if (subjectId instanceof LocalGroupId
-                    && !isMemberInLocalGroup(session, client, (LocalGroupId)subjectId, service)) {
-                continue;
+            if (subjectId instanceof GlobalGroupId) {
+                if (!GlobalConf.isSubjectInGlobalGroup(client, (GlobalGroupId)subjectId)) continue;
+            } else if (subjectId instanceof LocalGroupId) {
+                if (!isMemberInLocalGroup(session, client, (LocalGroupId)subjectId, service)) continue;
             } else if (!client.equals(subjectId)) {
                 continue;
             }
 
-            if (accessRight.getMethod() != null && !accessRight.getMethod().equalsIgnoreCase(method)) {
+            if (!EndpointType.ANY_METHOD.equals(endpoint.getMethod())
+                    && !endpoint.getMethod().equalsIgnoreCase(method)) {
                 continue;
             }
 
-            if (accessRight.getPath() == null || PathGlob.matches(accessRight.getPath(), normalizedPath)) {
+            if (EndpointType.ANY_PATH.equals(endpoint.getPath())
+                    || PathGlob.matches(endpoint.getPath(), normalizedPath)) {
                 return true;
             }
         }
