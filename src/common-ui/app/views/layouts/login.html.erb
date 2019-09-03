@@ -8,9 +8,8 @@
   </head>
   <body id="login">
     <div class="container" id="login-form">
-      <img src="/xvia-logo-large.png" style="max-width: 200px; margin-bottom: 16px"/>
-
-      <div class="container" id="login-form-titles">
+      <div class="container" id="login-form-titles" style="text-align: center">
+        <img src="/xvia-logo-large.png" style="max-width: 100px; margin-bottom: 16px"/>
         <h1 class="section-title up center"><%= t 'layouts.application.title' %></h1>
       </div>
 
@@ -19,13 +18,13 @@
       <form method="POST" action="j_security_check">
         <p>
           <label class="section-title up">
-            <span class="text">Username</span>
+            <span class="text">Usuário</span>
             <span><%= text_field_tag :j_username %></span>
           </label>
         </p>
         <p>
           <label class="section-title up">
-            <span class="text">Password</span>
+            <span class="text">Senha</span>
             <span><%= password_field_tag :j_password %></span>
           </label>
         </p>
@@ -35,7 +34,7 @@
           </p>
         <% end %>
         <p class="button-container">
-          <button type="submit" class="btn">Login</button>
+          <button type="submit" class="btn">Entrar</button>
         </p>
       </form>
     </div>

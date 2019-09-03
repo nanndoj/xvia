@@ -66,7 +66,7 @@ public class AuthFilter implements Filter {
                 && !httpRequest.getRequestURI().startsWith(ctx + "/stylesheets/")
                 && !httpRequest.getRequestURI().equals(ctx + "/application/skin")
                 && !httpRequest.getRequestURI().equals(ctx + "/xvia-favicon.ico")
-                && !httpRequest.getRequestURI().equals(ctx + "/xvia-logo-large.png")
+                && !httpRequest.getRequestURI().endsWith(".png")
                 // Finally check authentication.
                 && httpRequest.getUserPrincipal() == null
                 && !httpRequest.authenticate(httpResponse)) {
