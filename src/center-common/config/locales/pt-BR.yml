@@ -27,13 +27,14 @@ pt-BR:
         member_code: "código do membro"
         subsystem_code: "código do subsistema"
         service_code: "código de serviço"
-        server_code: "código do servidor"
+        server_code: "código do servidor"
         type: "tipo"
         service_version: "versão do serviço"
       member_class_mapping:
         federated_member_class: "classe de membro federado"
+
       member_class:
-        código: "código"
+        code: "código"
         description: "descrição"
       ocsp_info:
         url: "URL"

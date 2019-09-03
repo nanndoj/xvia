@@ -32,6 +32,7 @@ en:
         service_version: "service version"
       member_class_mapping:
         federated_member_class: "federated member class"
+
       member_class:
         code: "code"
         description: "description"
