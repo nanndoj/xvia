@@ -55,19 +55,19 @@ pt-BR:
       address: "Endereços do servidor seguro"
 
   members:
-    name: "Nome do Membro"
-    class: "Classe do Membro"
-    code: "Código do Membro"
+    name: "Nome"
+    class: "Classe"
+    code: "Código único"
     admin_contact: "Contato Administrativo"
-    search: "Procurar Entidade"
+    search: "Procurar Membro da Rede"
     add:
-      title: "Adicionar Entidade"
+      title: "Adicionar Membro da Rede"
       load_from_file: "Ler Dados do Arquivo"
     edit:
-      title: "Detalhes do Membro"
+      title: "Detalhes"
       server: "Servidor"
       details:
-        legend: "Detalhes do Membro"
+        legend: "Detalhes"
       contact:
         title: "Editar contato do Membro"
         legend: "Editar contato do Membro"
@@ -336,7 +336,7 @@ pt-BR:
       delete_signing_key_confirm: "Remover chave '{{key_id}}'?"
       part_validator_stderr_title: "Erro padrão do módulo de configuração"
     trusted_anchors:
-      title: "Âncora de Configuração Confiável"
+      title: "Âncoras Confiáveis"
       none: "Nenhuma âncora de configuração encontrada."
       download: "Baixar"
       delete: "Apagar"
@@ -361,8 +361,8 @@ pt-BR:
       wsdl_address: "URL do WSDL"
       services_address: "URL do Serviço"
       security_server_owners_group: "Grupo do Membro Proprietária"
-      member_classes: "Classe do Membro"
-      member_class_code: "Código do Membro"
+      member_classes: "Classe"
+      member_class_code: "Código Único"
       member_class_description: "Descrição"
       member_class_add: "Adicionar Classe de Membros"
       member_class_edit: "Editar Classe de Membros"

@@ -1,0 +1,10 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Olá mundo"
+
+  request:
+    incorrect_instance: "Endereço de serviço de gerenciamento inválido. Entre em contato com o administrador do servidor central."
+    server_id_not_match_owner: "O identificador do proprietário do servidor de segurança na solicitação (%{sec_serv_owner}) e o identificador de cliente do serviço (%{security_server}) no cabeçalho SOAP não coincidem"
+

@@ -2,9 +2,9 @@ pt-BR:
   menu:
     configuration:
       title: "Configurações"
-      tsp: "Carimbo te Tempo"
+      tsp: "Carimbo de Tempo"
       approved_ca: "Autoridades Certificadoras"
-      org: "Entidades"
+      org: "Membros da Rede"
       group: "Grupos Globais"
       member: "Entidades"
       securityserver: "Servidores Seguros"
