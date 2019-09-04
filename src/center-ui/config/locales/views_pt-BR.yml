@@ -274,9 +274,9 @@ pt-BR:
       server_type: "Servidor Central"
 
   approved_cas:
-    upload_ca_cert: "Inserir Certificado de AC Raiz"
+    upload_ca_cert: "Inserir Certificado da AC Raiz"
     upload_intermediate_ca_cert: "Inserir Certificado de AC Intrermediária"
-    trusted_certification_service: "Autoridade Certificadoras Aprovadas"
+    trusted_certification_service: "Autoridades Certificadoras Aprovadas"
     approved_ca_details: "Detalhes da Autoridade Certificadora"
     ca_certificate: "Certificado da AC"
     ocsp_responders: "OCSP Responders"
