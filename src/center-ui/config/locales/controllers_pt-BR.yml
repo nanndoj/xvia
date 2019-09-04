@@ -6,7 +6,7 @@ pt-BR:
       approved_ca: "Autoridades Certificadoras"
       org: "Membros da Rede"
       group: "Grupos Globais"
-      member: "Entidades"
+      member: "Membros da Rede"
       securityserver: "Servidores Seguros"
       central_service: "Serviços Centrais"
     management:
@@ -30,7 +30,7 @@ pt-BR:
 
   application:
     action:
-      member_classes: "obter classe da entidade"
+      member_classes: "obter classe da do membro"
       set_locale: "definir linguagem da aplicação"
 
   init:
