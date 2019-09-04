@@ -72,11 +72,11 @@ pt-BR:
         title: "Editar contato do Membro"
         legend: "Editar contato do Membro"
       owned_servers:
-        legend: "Servidores associados"
+        legend: "Servidores"
       global_group_membership:
-        legend: "Associação do Grupo Global"
+        legend: "Grupos"
         group: "Grupo"
-        description: "Descrição do Grupo"
+        description: "Descrição"
         subsystem:
           table: "Subsistema"
           add: "Adicionar membro como subsistema"
@@ -86,10 +86,10 @@ pt-BR:
       subsystems:
         legend: "Subsistemas"
         subsystem_code: "Código do subsistema"
-        used_servers: "Servidores associados"
+        used_servers: "Servidores em uso"
         remove_confirm: "Você tem certeza que deseja remover o subsistema '{{subsystem}}' do membro '{{memberClass}}/{{memberCode}}'?"
       used_servers:
-        legend: "Servidores associados"
+        legend: "Servidores em uso"
         server_code: "Código do servidor"
         client_subsystem_code: "Código do subsistem cliente"
         server_owner: "Proprietário do servidor"
@@ -111,7 +111,7 @@ pt-BR:
     removable_owned_servers: "Os servidores seguros pertencentes à esto membro também serão removidos: '{{serversToRemove}}'"
 
   management_requests:
-    legend: "Gerenciamento de Requisições"
+    legend: "Requisições"
     process_id: "ID da Requisição"
     received: "Recebida"
     process_type: "Tipo da Requisição"
@@ -163,9 +163,9 @@ pt-BR:
 
   securityservers:
     server_code: "Código do Servidor"
-    owner_name: "Entidade Proprietária"
-    owner_class: "Classe do Membro Proprietária"
-    owner_code: "Código do Membro Proprietária"
+    owner_name: "Proprietário"
+    owner_class: "Proprietária"
+    owner_code: "Código"
     address: "DNS/IP Público"
     registered: "Registrado"
     info:
@@ -199,7 +199,7 @@ pt-BR:
       owner:
         legend: "Servidor Seguro"
       cert:
-        legend: "Informaões do Certificao de Autenticação"
+        legend: "Certificado de Autenticação"
       delete:
         title: "Remover Certificado de Autenticação"
     remove_confirm: "Você tem certeza que deseja remover o Servidor Seguro '{{server}}' pertencente à '{{ownerClass}}/{{ownerCode}}'?"
@@ -207,7 +207,7 @@ pt-BR:
   groups:
     code: "Código"
     updated: "Atualizado"
-    member_count: "Número de Membros"
+    member_count: "Membros"
     add:
       button: "Adicionar"
       title: "Novo Grupo"
@@ -355,12 +355,12 @@ pt-BR:
       instance_identifier: "Identificador da Instância"
       central_server_address: "DNS/IP Público do Servidor Central"
       management_services: "Provedor de Gerenciamento"
-      service_provider_id: "ID do Provedor de Gerenciamento"
-      service_provider_name: "Nome do Provedor de Gerenciamento"
-      service_provider_security_servers: "Servidor Seguro de Gerenciamento"
+      service_provider_id: "ID do Provedor"
+      service_provider_name: "Nome do Provedor"
+      service_provider_security_servers: "Servidor Seguro"
       wsdl_address: "URL do WSDL"
       services_address: "URL do Serviço"
-      security_server_owners_group: "Grupo do Membro Proprietária"
+      security_server_owners_group: "Grupo do Proprietário"
       member_classes: "Classe"
       member_class_code: "Código Único"
       member_class_description: "Descrição"
