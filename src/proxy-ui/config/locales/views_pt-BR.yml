@@ -33,11 +33,11 @@ pt-BR:
       label_title: "Mostrar apenas os membros e subsistemas registrados neste Servidor Seguro."
 
     client_details_dialog:
-      title: "Client ID: "
+      title: "Cliente: "
       details: "Detalhes"
       local_groups: "Grupos Locais"
       internal_servers: "Servidores internos"
-      services: "Servoços"
+      services: "Serviços"
       acl_subjects: "Clientes"
 
     client_details_tab:
@@ -55,7 +55,7 @@ pt-BR:
       send_owner_change_confirm: "Você tem certeza que deseja enviar uma solicitação de mudança de propriedade para este membro ao servidor central?<br/>"
       delete_client: "Requisição de remoção enviada. Deseja excluir este membro?"
       delete_client_confirm: "Você tem certeza que deseja excluir este cliente?"
-      delete_certs_title: "Excluzão de certificado"
+      delete_certs_title: "Exclusão de certificado"
       delete_certs: "O certificado de assinatura associado ao cliente '{{client_id}}' não possui usuários. Remover certificado?"
 
     client_groups_tab:
@@ -65,6 +65,7 @@ pt-BR:
       details: "Detalhes"
       add_group: "Adicionar grupo"
       code: "Código"
+      description: "Descrição"
       member_count: "Membros"
       updated: "Atualizado"
       new_group: "Novo grupo"
@@ -95,9 +96,9 @@ pt-BR:
 
     client_internal_certs_tab:
       internal_servers: "Servidores internos"
-      connection_type: "Tipo de conexção com os consumidores de serviço"
-      connection_type_hint: "O tipo de conexão com o sistema de informação provedor deve ser especificado na aba de 'Serviços'(<i class='fa fa-wrench'></i>) by service URL (http/https)."
-      internal_ssl_certs: "Fixação de certificados para o Sistema de Informacao"
+      connection_type: "Conexão com Servidores Seguros"
+      connection_type_hint: "Método de conexão com outros servidores seguros. (O tipo de conexão com o sistema de informação provedor deve ser especificado na aba de Serviços(<i class='fa fa-wrench'></i>) para cada URL)."
+      internal_ssl_certs: "Certificados do sistema de informacao"
       security_server_cert: "Certificado TLS deste Servidor Seguro"
       import_certificate: "Importar certificado"
       certificate_hash: "Hash do certificado (%{alg})"
@@ -179,7 +180,7 @@ pt-BR:
       global_configuration: "Configuração global"
       timestamping: "Carimbo de Tempo"
       title_ocsp: "OCSP Responders"
-      label_ocsp_cert_service: "Serviços de certificação: "
+      label_ocsp_cert_service: "OCSP: "
       service_url: "URL do Serviço"
       status: "Status"
       message: "Mensagem"
@@ -254,7 +255,7 @@ pt-BR:
 
   shared:
     cert_details_dialog:
-      cert_details: "Detalhes do certificado"
+      cert_details: "Detalhes"
 
   sysparams:
     index:
@@ -263,7 +264,7 @@ pt-BR:
       tsp_url: "URL do Serviço"
       internal_ssl_cert: "Certificado TLS interno"
       internal_ssl_cert_hash: "Hash do certificado (%{alg})"
-      internal_ssl_generate_key: "Gerar nova chave TLS"
+      internal_ssl_generate_key: "Gerar chave TLS"
       internal_ssl_generate_csr: "Gerar CSR"
       generate_internal_ssl_confirm: "Deseja gerar uma nova chave e certificado TLS para este servidor?"
       distinguished_name: "Distinguished name"

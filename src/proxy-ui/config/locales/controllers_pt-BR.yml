@@ -4,8 +4,8 @@ pt-BR:
       MalformedGlobalConf: "Erro sintaxe do arquivo de configurações: %{reason}"
 
   application:
-    globalconf_invalid: "Aonfiguraçao global está expirada"
-    softtoken_pin_not_entered: "Please enter softtoken PIN"
+    globalconf_invalid: "A configuraçao global está expirada"
+    softtoken_pin_not_entered: "Favor digitar o PIN do Token de Segurança"
     restart_service_failed: "Falha ao reiniciar o serviço '%{name}': %{output}"
     database_connection_error: "Não foi possível conectar-se ao banco de dados"
     invalid_anchor_file: "Erro ao importar o arquivo de configurações: Arquivo inválido"
