@@ -1,4 +1,4 @@
-en:
+pt-BR:
   coded_exception:
     fault_code:
       MalformedGlobalConf: "Erro sintaxe do arquivo de configurações: %{reason}"

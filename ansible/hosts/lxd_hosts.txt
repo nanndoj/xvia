@@ -1,6 +1,6 @@
 #central servers (ubuntu lxd containers)
 [cs-servers]
-xroad-lxd-cs ansible_connection=lxd
+#xroad-lxd-cs ansible_connection=lxd
 
 #configuration proxies (ubuntu lxd containers, optional)
 [cp-servers]
@@ -13,7 +13,7 @@ xroad-lxd-cs ansible_connection=lxd
 #security servers (ubuntu lxd containers)
 [ss-servers]
 #xroad-lxd-ss1 ansible_connection=lxd
-#xroad-lxd-ss2 ansible_connection=lxd
+xroad-lxd-ss2 ansible_connection=lxd
 
 [ss-servers:children]
 centos-ss
