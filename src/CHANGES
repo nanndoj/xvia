@@ -1,0 +1,2060 @@
+Version 0.1.0
+ - Fixed translations
+ - Merge branch 'xvia' of https://bitbucket.org/mexinovaes/x-via into xvia
+ - Fixed translation file
+ - Merge branch 'develop' into xvia
+ - Merge branch 'develop' of github.com:nordic-institute/X-Road into develop
+ - Merge branch 'xvia' of https://bitbucket.org/mexinovaes/x-via into xvia
+ - Fixed locales
+ - Update Central Server Intallation Guide
+ - Fixed pt-BR translations
+ - Portuguese Translations for the Security Server
+ - Proxy ui translations
+ - Partial translation for the Security Server
+ - Added Security Server translatios to pt-BR
+ - Login mage margin
+ - Fixed login page layout
+ - skip authentication for the logo
+ - Added xvia logo to login page
+ - tabs in yml file
+ - Translations for common-ui module in PT-BR
+ - Translations for the center-common module
+ - Fixed deployement ipv4 error
+ - added xvia host files
+ - Merge branch 'develop' into xvia
+ - Merge branch 'develop' of github.com:nordic-institute/X-Road into develop
+ - Added Portuguese BR translations
+ - Fix login page
+ - Test login page
+ - Changed logo and favicon
+ - Added more translations
+ - Added more translations for Brazilian Portuguese
+ - Translations for the initial config
+ - Added Brazilian Portuguese as a new locale
+ - Partial: Brazilian Portuguese translation
+ - Merge branch 'xvia' of https://bitbucket.org/mexinovaes/x-via into xvia
+ - Added X-Via logo
+ - Partial: Translating to Brazilian Portuguese
+ - Merge pull request #183 from nordic-institute/XRDDEV-236
+ - Merge pull request #177 from nordic-institute/XRDDEV-136
+ - XRDDEV-236: Fix review findings
+ - XRDDEV-136 Improvements based on review
+ - Merge pull request #176 from nordic-institute/XRDDEV-592
+ - Update src/packages/src/xroad/redhat/SPECS/xroad-base.spec
+ - Update src/packages/src/xroad/ubuntu/generic/xroad-base.postinst
+ - Merge pull request #181 from nordic-institute/XRDDEV-615
+ - XRDDEV-236: Update documentation
+ - XRDDEV-236: Support trusty
+ - XRDDEV-236: Add web interface for the Test CA
+ - XRDDEV-615. Add service endpoints.
+ - Merge pull request #174 from nordic-institute/XRDDEV-465
+ - XRDDEV-465 Use httpclient to download the description
+ - Merge pull request #175 from nordic-institute/XRDDEV-468
+ - XRDDEV-468: Merge develop and fix conflicts
+ - Merge pull request #178 from nordic-institute/XRDDEV-612
+ - XRDDEV-465 Remove extra head request
+ - XRDDEV-465 Adjust logging
+ - XRDDEV-465 Refactoring based on review comments
+ - Update Readme
+ - Merge branch 'develop' into XRDDEV-465
+ - Merge pull request #172 from nordic-institute/XRDDEV-463
+ - XRDDEV-463: Fix metaservices openapi definition
+ - XRDDEV-463 Update documentation based on review comments
+ - XRDDEV-463 Refactor getting services
+ - XRDDEV-612: Refactor REST authorization
+ - XRDDEV-463 Fix build
+ - XRDDEV-463 Refactor based on review comments
+ - XRDDEV-136 Add automatic backups for Central and Security Server
+ - Fix build.gradle
+ - Fix owasp dependency check analysis for sonarcube
+ - XRDDEV-592: Remove write rights from groups from messagelog archives and all created files
+ - XRDDEV-468: Refactor
+ - XRDDEV-592: Remove admin logs files write rights from groups
+ - XRDDEV-468: Add support for editing openapi service
+ - XRDDEV-465 Refactor enum handling
+ - XRDDEV-468: Parse OpenAPI description when adding REST service
+ - XRDDEV-468: Add OpenAPI parser
+ - XRDDEV-463 Add content type
+ - XRDDEV-465 Require client header
+ - XRDDEV-465 Set timeouts
+ - XRDDEV-465 Add tests for rest metadata handler
+ - XRDDEV-465 Add getOpenAPI REST metaservice
+ - Merge branch 'develop' into XRDDEV-463
+ - Merge pull request #160 from nordic-institute/XRDDEV-507
+ - XRDDEV-507: Update operational monitoring documentation
+ - Merge branch 'develop' into XRDDEV-463
+ - Merge pull request #168 from nordic-institute/XRDDEV-586
+ - Merge pull request #170 from nordic-institute/XRDDEV-517
+ - XRDDEV-517 Fixing proxymonitor metaservice test issues by downgrading JAXB Runtime libraries version number.
+ - XRDDEV-517 Fixing proxymonitor metaservice test issues by downgrading Hibernate libraries version number.
+ - XRDDEV-463 Add REST metaservices listMethods and allowedMethods
+ - XRDDEV-517 Fixing proxy integration test issues by downgrading Bouncycastle and HttpComponents libraries version numbers.
+ - XRDDEV-517 Fixing proxy integration test issues by downgrading Jetty version.
+ - Merge pull request #171 from nordic-institute/XRDDEV-600-fix-dependency-check-core
+ - XRDDEV-600 update dependency-check-gradle
+ - XRDDEV-517 Trying reverting Powermock dependencies version change.
+ - XRDDEV-517 Trying reverting StringTemplate dependency version change.
+ - XRDDEV-517 Fixing common-test test issues by downgrading StringTemplate 4 version.
+ - XRDDEV-517 Fixed typo.
+ - XRDDEV-517 Updated OWASP dependency check plugin.
+ - XRDDEV-517 Updated Java Servlet API and OWASP dependencies (compileOnly, compile) for common-util component.
+ - XRDDEV-517 Updated Project Lombok library version (provided) for X-Road project.
+ - XRDDEV-517 Updated Google guava dependency (compile) for proxymonitor metaservice addon, common-util and monitor-common components.
+ - XRDDEV-517 Updated commons-cli dependency (testCompile, compile) for op-monitoring addon, configuration-client, configuration-proxy, op-monitor-daemon and signer-console components.
+ - XRDDEV-517 Updated HSQLDB dependency (testCompile, schema) for messagelog addon, common-db, op-monitor-daemon, proxy and serverconf components.
+ - XRDDEV-517 Updated powermock dependencies (testCompile) for common-messagelog, common-util, proxy and signer components. Updated junit dependency for X-Road project.
+ - XRDDEV-517 Updated JAXB Runtime, Jetty server and Hibernate versions.
+ - XRDDEV-517 Updated jacoco and checkstyle java plugins.
+ - XRDDEV-517 Updated java dependencies (compile) for common-util component.
+ - XRDDEV-517 Updated java dependencies (compile) for common-ui and common-test components.
+ - Merge pull request #153 from nordic-institute/XRDDEV-456
+ - Merge pull request #169 from nordic-institute/XRDSD-94
+ - XRDSD-94 trim property before splitting
+ - XRDSD-94 make configuration reading more tolerant
+ - Merge pull request #157 from nordic-institute/XRDDEV-140
+ - XRDDEV-140 change logging level
+ - XRDDEV-140 more robust parsing
+ - XRDDEV-140 Fix slot id usage
+ - XRDDEV-140 use slot identifiers instead of indexes
+ - XRDDEV-140 move slot configuration to devices.ini
+ - Merge branch 'develop' into XRDDEV-140
+ - XRDDEV-586: Implement REST access control rules
+ - Merge pull request #165 from nordic-institute/XRDDEV-560
+ - XRDDEV-560 Update validations
+ - Merge pull request #164 from nordic-institute/XRDDEV-562
+ - XRDDEV-560 Fix owner change dialog issue in Member Details view
+ - XRDDEV-562 Minor fixes to Security Server UI
+ - Merge pull request #167 from nordic-institute/XRDDEV-580
+ - XRDDEV-580 Updated security server installation instructions to indicate that xroad-securityserver-fi meta-package installs xroad-addon-opmonitoring module.
+ - XRDDEV-580 Added xroad-addon-opmonitoring package as required for installation of meta-package xroad-securityserver-fi for Red Hat Enterprise Linux.
+ - Merge branch 'XRDDEV-580' of github.com:nordic-institute/X-Road into XRDDEV-580
+ - XRDDEV-580 Added xroad-addon-opmonitoring package as required for installation of meta-package of X-Road security server with Finnish settings, xroad-securityserver-fi.
+ - Added xroad-addon-opmonitoring package as required for installation of meta-package of X-Road security server with Finnish settings, xroad-securityserver-fi.
+ - XRDDEV-562: Add a unit test for CachingKeyConfImpl
+ - XRDDEV-562: Fix test failure
+ - XRDDEV-562: Refactor KeyConf and ServerConf caching
+ - Merge pull request #166 from nordic-institute/XRDDEV-573
+ - XRDDEV-562 Refactor GlobalConfChecker, remove return value from updateOwner
+ - XRDDEV-562 Refactor GlobalConfChecker based on review comments
+ - XRDDEV-562 Refactor KeyConf based on review comments
+ - Merge pull request #161 from nordic-institute/XRDDEV-476
+ - XRDDEV-562 Update ServerConfImpl based on review comments
+ - XRDDEV-476 update Figure 1
+ - XRDDEV-476 Update chapter 14
+ - XRDDEV-476 Update diagram 1
+ - XRDDEV-476 Update diagram 1
+ - XRDDEV-476 Update diagram 1
+ - XRDDEV-476 Update diagram 1
+ - Remove reloading of ServerConf from GlobalConfChecker
+ - XRDDEV-573: Update serverconf database schema
+ - XRDDEV-562 Change ServerConfImpl constructor visibility to public
+ - XRDDEV-562 Update Security Server user guide
+ - XRDDEV-562 Sync changes from develop
+ - XRDDEV-562 Refactor ServerConfImpl constructor
+ - Fix test ca initialization
+ - XRDDEV-562 Update comments
+ - XRDDEV-562 Update server conf update logic
+ - XRDDEV-560 Refactor owner change request validation
+ - XRDDEV-560 Additional validations on owner change
+ - XRDDEV-562 Update server conf database and cache
+ - XRDDEV-560 Merge changes from develop
+ - XRDDEV-476 Update Security Architecture based on review comments
+ - XRDDEV-560 Add automatic approval and update documentation
+ - Merge pull request #162 from nordic-institute/XRDDEV-593
+ - XRDDEV-560 Implement ownerChange service logic
+ - XRDDEV-560 Add ownerChange management service stub implementation
+ - XRDDEV-562 Update Security Server User Guide
+ - XRDDEV-562 Update ownerChange management request protocol
+ - XRDDEV-562 Add owner change button to the Security Server UI
+ - XRDDEV-428 Update new service client's default connection type
+ - XRDDEV-593 Enable adding another member on Security Server
+ - XRDDEV-562 Implement ownerChange management request client on Security Server
+ - XRDDEV-562 Update management seervice protocol description version history
+ - XRDDEV-562 Update ownerChange management service protocol description
+ - XRDDEV-476 Update chapter 15 and 18
+ - XRDDEV-476 Update chapter 5, 6 and 15
+ - XRDDEV-476 Update chapter 7
+ - XRDDEV-476 Update chapter 5
+ - XRDDEV-476 Update date
+ - XRDDEV-476 Fix broken links in ToC
+ - XRDDEV-476 Update chapter 14, 15, 16 and 17 - Remove a list of Central Server components and add reference to Central Server architecture where all the components are listed. - Remove a list of Security Server components and add reference to Security Server architecture where all the components are listed. - Remove a list of Security Server roles and add reference to Security Server user guide where all the roles are listed. - Split monitoring in three parts: environmental monitoring, operational monitoring and controlling access.
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-507
+ - XRDDEV-476 Update chapter 16 Certificates and Keys Management
+ - XRDDEV-507: Refactoring
+ - XRDDEV-476 Editorial change to Security Server Architecture
+ - XRDDEV-476 Editorial changes to X-Road Security Architecture
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-456
+ - XRDDEV-476 Add new X-Road Security Architecture document
+ - Merge pull request #158 from nordic-institute/XRDDEV-538
+ - Merge pull request #159 from nordic-institute/XRDDEV-574
+ - Merge pull request #156 from nordic-institute/XRDDEV-462
+ - XRDDEV-462: Support JSON response for listClients metaservice
+ - Fix undefined method error when WSDL is refreshed
+ - Update consultation services providers.
+ - XRDDEV-538 Increase proxy component default metaspace memory to 128MB
+ - XRDDEV-140 Add HSM device specific slot configuration
+ - Merge pull request #155 from nordic-institute/XRDDEV-516
+ - XRDDEV-516 Fix review issues
+ - XRDDEV-516 Describe ownerChange management service
+ - Merge pull request #150 from nordic-institute/XRDDEV-508
+ - XRDDEV-508: Update server installation guide version number
+ - XRDDEV-508 Update version history
+ - XRDDEV-508 Moving added bullet point before installation of locale-gen package.
+ - XRDDEV-508 Addressed review comment. Moved installation instructions of locales and software-properties-common to section 2.4.
+ - XRDDEV-508 Addressed review comment. Moving net-tools and iproute2 package dependencies to xroad-base.
+ - XRDDEV-456: Add support for injecting autologin pin
+ - Merge branch 'develop' into XRDDEV-456
+ - XRDDEV-507: Add missing fields to documentation
+ - Merge remote-tracking branch 'origin/master' into develop
+ - Merge pull request #152 from nordic-institute/bugfix-6.21.1
+ - XRDDEV-507: Add statuscode to operationaldata collected from the provider
+ - Merge branch 'develop' into XRDDEV-507
+ - XRDDEV-507: Set succeeded flag and add status code for rest messages in op-monitor
+ - Release 6.21.1
+ - Merge branch 'XRDDEV-506' into bugfix-6.21.1
+ - XRDDEV-506: Set attachment count for REST messages.
+ - Merge pull request #151 from nordic-institute/XRDDEV-506
+ - Merge branch 'XRDDEV-526' into bugfix-6.21.1
+ - XRDDEV-506: Fix reinstalling xroad-opmonitor on Ubuntu can fail.
+ - XRDDEV-506: Fix updating health data metrics fails.
+ - Added instructions to install missing additional packages in Ubuntu Minimal in Security Server setup documentation.
+ - Added iproute2 package dependency in security server Dockerfile.
+ - Added iproute2 package dependency in xroad-opmonitor package setup
+ - Merge pull request #149 from nordic-institute/XRDDEV-526
+ - Fix supported platforms in Ansible cluster setup documentation
+ - Merge pull request #148 from nordic-institute/XRDDEV-506
+ - Add postprocessing for rest message
+ - XRDDEV-506: Add missing request_out_ts and response_in_ts to operational data
+ - XRDDEV-526: Fix cannot add a new version of existing service
+ - Merge pull request #146 from nordic-institute/XRDDEV-384
+ - Merge pull request #145 from nordic-institute/XRDDEV-288
+ - XRDDEV-384: Parameterize hibernate version in build scripts
+ - XRDDEV-288 Removed instructions for Vagrant and Vagrantfile
+ - XRDDEV-288 Updated Ubuntu supported and recommended versions
+ - XRDDEV-384: Refactor op-monitoring to use JPA API
+ - XRDDEV-384: Update Hibernate
+ - Merge pull request #142 from nordic-institute/XRDDEV-435
+ - Merge pull request #143 from nordic-institute/XRDDEV-501
+ - XRDDEV-501: Remove debug, fix typo in OS check
+ - XRDDEV-501 Remove incron installation
+ - Merge pull request #140 from nordic-institute/XRDDEV-474
+ - XRDDEV-501 Fix Test TSA on bionic
+ - XRDDEV-435 disable gradle daemon
+ - XRDDEV-435 update Jenkinsfile
+ - XRDDEV-474 Refactor time-stamping recovery mode to make it handle large number of messages
+ - XRDDEV-474 Add time-stamping recovery mode when time-stamping fails
+ - Merge pull request #139 from nordic-institute/XRDDEV-450
+ - XRDDEV-450: Show onlly necessary port in Dockerfile EXPOSE
+ - XRDDEV-450: Add note about restarting ocsp after signing certs
+ - XRDDEV-450: Refactor building the central server image context
+ - Update ss-entrypoint.sh
+ - Update Docker/securityserver/README.md
+ - XRDDEV-457: Update version number
+ - Merge branch 'master' into develop
+ - XRDDEV-450: Minor improvements and fixes to documentation
+ - XRDDEV-450: Fix entry scripts
+ - XRDDEV-450: added ca init script
+ - XRDDEV-450: Central server dockerfile and context files for testing purposes
+ - Merge pull request #137 from nordic-institute/beta-6.21.0
+ - Update REST protocol version number
+ - Prepare for release
+ - Merge pull request #135 from nordic-institute/beta-6.21.0-documentation-updates
+ - XRDDEV-457 Minor updates based on review comments
+ - XRDDEV-457 Minor updates based on review comments
+ - Merge branch 'beta-6.21.0' into develop
+ - Update version change script
+ - Merge pull request #133 from nordic-institute/beta-6.21.0-fixes
+ - XRDDEV-457 Update JRuby version from 1.7 to 9.X in X-Road Technologies (ARC-TEC)
+ - XRDDEV-457 Fix typos
+ - XRDDEV-457 Update X-Road Security Server Architecture - fix REST reference's number
+ - XRDDEV-457 Add referencee to X-Road Message Protocol for REST to X-Road Security Server Architecture
+ - XRDDEV-457 Update X-Road technologies
+ - XRDDEV-457 Add description of REST support to X-Road Architecture
+ - XRDDEV-457 Add description of REST services to X-Road Terms and Abbreviations
+ - XRDDEV-457 Minor updates in Security Server User Guide regarding REST support
+ - Fix rest message processing refers to SOAP
+ - Update xroad-jetty metaspace size
+ - Merge 'origin/XRDDEV-443' into beta-6.21.0
+ - Merge pull request #132 from nordic-institute/XRDDEV-443
+ - XRDDEV-443: Fix access rights when updating service code
+ - Merge pull request #131 from nordic-institute/rest-protocol-fix-header-name
+ - Restore TOC
+ - Fix header name
+ - Update REST message log parameters' descriptions in System Parameters User Guide
+ - Added support for injecting autologin pin at runtime, Fixed linting errors in readme and added example docker-compose.yml in README.md
+ - Update changelog
+ - Merge pull request #126 from nordic-institute/XRDDEV-411
+ - XRDDEV-439: Avoid unnecessary message log update.
+ - XRDDEV-411: Prevent duplication
+ - Merge pull request #124 from nordic-institute/XRDDEV-383
+ - XRDDEV-383: Move Docker related files under root folder
+ - XRDDEV-383: Simplify instructions
+ - Merge pull request #123 from nordic-institute/XRDDEV-423
+ - XRDDEV-383: Removed direct access instructions
+ - Merge pull request #125 from nordic-institute/XRDDEV-439
+ - XRDDEV-383: Fix typos
+ - XRDDEV-383: Fix typo
+ - XRDDEV-383: Move instructions labeled as experimental to the end of readme
+ - XRDDEV-439: Fix message log cleaning
+ - XRDDEV-383: Minor improvements to documentation
+ - XRDDEV-383: Add niis organization specifier to name
+ - XRDDEV-383: Fix image name in documentation
+ - XRDDEV-383: Added instructions for public security server docker image
+ - XRDDEV-423: Fix op-monitor DB upgrade
+ - Merge pull request #121 from nordic-institute/XRDDEV-432
+ - XRDDEV-432: Check added and edited services for duplicate urls. Disable edit and refresh button from disabled rest service
+ - XRDDEV-432: check new and edited rest/wsdl service codes for duplicates and validate rest urls
+ - Update REST protocol version.
+ - XRDDEV-412: Add integration test
+ - XRDDEV-432: check duplicate service codes in backend
+ - Merge pull request #115 from nordic-institute/XRDDEV-412
+ - XRDDEV-432: Prevent adding rest services with duplicate service codes
+ - XRDDEV-419: Implement integration tests
+ - XRDDEV-412 Fix checkstyle error (wild card import)
+ - XRDDEV-419: Rename x-request-id to x-road-request-id
+ - Merge pull request #119 from nordic-institute/XRDDEV-426
+ - Merge pull request #118 from nordic-institute/XRDDEV-418
+ - Merge pull request #120 from nordic-institute/document-layout-fix
+ - Fix layout problems
+ - XRDDEV-418: Add unit tests for rest message
+ - XRDDEV-418: Add test for redirect handling
+ - XRDDEV-418: Fix service path concatenation
+ - XRDDEV-418: Disable redirect handling
+ - XRDDEV-418: Keep request header order
+ - XRDDEV-418: Add rest body to request hash
+ - Merge pull request #117 from nordic-institute/XRDDEV-419
+ - XRDDEV-419: Fix checkstyle errors
+ - XRDDEV-419: Add consistency check for x-request-id
+ - XRDDEV-426: Fix performance regression in message log archiving
+ - XRDDEV-419: Add documentation about x-request-id
+ - XRDDEV-419: Add x-request-id to x-road message protocol for rest
+ - Merge pull request #116 from nordic-institute/XRDDEV-398
+ - XRDDEV-398 Fixed document link
+ - XRDDEV-398 Changed document name
+ - XRDDEV-398 Removed appendix 2 from toc
+ - XRDDEV-398 Documentation updated
+ - Merge pull request #114 from nordic-institute/XRDDEV-400
+ - XRDDEV-398 Message Protocol for REST documentation style fix part 2
+ - XRDDEV-398 Message Protocol for REST documentation style fix
+ - XRDDEV-398 Message Protocol for REST documentation into Markdown
+ - Avoid unnecessary recompression of ASiC containers
+ - XRDDEV-412 Service type error code
+ - XRDDEV-412 REST service cannot be called via SOAP and vice versa
+ - Fix potential resource leak
+ - Add proxy integration tests integration code coverage
+ - XRDDEV-400 added a test: getWsdl metaservice throws error if service is OPENAPI3 type
+ - XRDDEV-400 getWsdl metaservice shows error if service is OPENAPI3 type
+ - Merge pull request #113 from nordic-institute/XRDDEV-14-rest-support
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-14-rest-support
+ - Merge branch 'XRDDEV-14-rest-support' of github.com:nordic-institute/X-Road into XRDDEV-14-rest-support
+ - XRDDEV-284: Fix editing REST service losing acls
+ - XRDDEV-352: Add client ID to rest response
+ - XRDDEV-284: Update documentation
+ - XRDDEV-284: Fix REST service creation
+ - Fix performance regression
+ - XRDDEV-341: Fix serverconf schema export
+ - XRDDEV-380 log request message on the provider
+ - XRDDEV-337 Responsive 'hide' utility class codestyle fix
+ - XRDDEV-337 Responsive 'hide' utility class
+ - XRDDEV-341: Update Hibernate
+ - Changelog for estonian-6.21.0-1
+ - XTE-432: Fix resource leak - close discarded socket. Use try-with-resources for explicit clousure of input stream.
+ - Merge pull request #112 from nordic-institute/XRDDEV-284
+ - Merge pull request #111 from nordic-institute/XRDDEV-375
+ - Fix performance regression
+ - XRDDEV-284: Cleanup
+ - XRDDEV-284: Add support for adding rest-service to ui
+ - XRDDEV-375 X-Road-Security-Server header
+ - Merge pull request #109 from nordic-institute/XRDDEV-352
+ - Merge pull request #107 from nordic-institute/XRDDEV-358-rest
+ - XRDDEV-358: Refactoring
+ - XRDDEV-358 Opmon REST support for serverside
+ - Merge pull request #94 from cybernetica-xroad/estonian-6.21.0-1
+ - Merge branch 'XRDDEV-14-rest-support' into XRDDEV-358-rest
+ - XRDDEV-358 Opmon REST support
+ - XRDDEV-341: Fix serverconf schema export
+ - Merge pull request #103 from nordic-institute/XRDDEV-337
+ - Merge pull request #108 from nordic-institute/XRDDEV-380
+ - Merge pull request #102 from nordic-institute/XRDDEV-341
+ - Merge pull request #110 from nordic-institute/XRDDEV-230-rest
+ - XRDDEV-352: Update documentation
+ - XRDDEV-352: Update default maximum loggable body size
+ - XRDDEV-352: Stream downloaded ASiC containers
+ - XRDDEV-358 Opmon REST support test
+ - XRDDEV-358 Opmon REST support
+ - XRDDEV-358 Opmon REST support
+ - XRDDEV-380 log request message on the provider
+ - XRDDEV-230 xRequestId REST support
+ - XRDDEV-230 xRequestId REST support
+ - XRDDEV-230 xRequestId REST support
+ - XRDDEV-230 Fix checkstyle errors
+ - XRDDEV-230 xRequestId in REST
+ - Merge branch 'XRDDEV-230' into XRDDEV-14-rest-support
+ - XRDDEV-230 Fix the doc part 3
+ - XRDDEV-230 Fix the doc
+ - XRDDEV-230 Converted message transport protocol doc into md
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-14-rest-support
+ - XRDDEV-230 Add X-Request-Id into message transport protocol doc
+ - Merge pull request #104 from nordic-institute/XRDDEV-328
+ - Merge pull request #99 from nordic-institute/XRDDEV-226
+ - XRDDEV-314: Update messagelog data model
+ - XRDDEV-328: Refactoring
+ - XRDDEV-328: Add support for rest message archiving
+ - Merge pull request #101 from nordic-institute/XRDDEV-368
+ - XRDDEV-337 Responsive 'hide' utility class codestyle fix
+ - XRDDEV-337 Responsive 'hide' utility class
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-328
+ - XRDDEV-368: Fix XRDDEV-368
+ - XRDDEV-230 Simple id log test
+ - Merge branch 'develop' into XRDDEV-230
+ - XRDDEV-230 X-Request-ID documentation
+ - XRDDEV-341: Update Hibernate
+ - XRDDEV-226 Fix checkstyle violations
+ - XRDDEV-226 Refactoring - rename variables
+ - XRDDEV-226 Merge changes from develop
+ - Merge pull request #98 from nordic-institute/hotfix-merge
+ - Merge branch 'hotfix-6.20.1' into hotfix-merge
+ - Merge pull request #95 from nordic-institute/hotfix-6.20.1
+ - XRDDEV-230 xRequestId to opmon db
+ - Changelog for estonian-6.21.0-1
+ - XTE-432: Fix resource leak - close discarded socket. Use try-with-resources for explicit clousure of input stream.
+ - Fix runProxyTest up-to-date check
+ - XRDDEV-230 X-Request-ID db logging
+ - XRDDEV-230 Adding x-request-id header
+ - Merge pull request #90 from nordic-institute/XRDDEV-258-second-try
+ - Update table of contents
+ - Refactor code - rename variables and classes
+ - Update table of contents
+ - Release 6.20.1
+ - XRDDEV-351: Update jetty and nginx configuration
+ - XRDDEV-226 Update documentation
+ - XRDDEV-351: Update jetty and nginx configuration
+ - Merge branch 'XRDDEV-351' into hotfix-6.20.1
+ - Fix XRDDEV-351
+ - Merge pull request #91 from nordic-institute/XRDDEV-225
+ - Merge pull request #92 from nordic-institute/XRDDEV-263-improvement
+ - XRDDEV-225 Update variable name based on review comments
+ - XRDDEV-263 use liquibase command for adding the column
+ - XRDDEV-226 Update client registration processing on Center Service
+ - XRDDEV-225 Add precondition to auto-approval: Security Server owner must be registered on Central Server
+ - XRDDEV-226 Refactor ManagementRequestHandler implementation
+ - XRDDEV-226 Implement automatic approval of client registration requests
+ - XRDDEV-226 Add new Central Server system parameter
+ - XRDDEV-226 Pass clientRegRequest signature verification status from ManagementRequestHandler to management_request_controller
+ - XRDDEV-226 Add client signature, sign cert and OCSP response to ClientRegRequest management request
+ - XRDDEV-285: Refactoring. Update documentation.
+ - XRDDEV-258 update jruby
+ - XRDDEV-285: Reduce jetty resource usage
+ - XRDDEV-285: Refactoring. Add option to control truncated body logging.
+ - Merge pull request #83 from nordic-institute/XRDDEV-149
+ - XRDDEV-149 Script improvements * deb changelog uses NIIS contact info * script renamed * current version can be released with or without a version number as long as --release option is present
+ - Merge pull request #85 from nordic-institute/XRDDEV-225
+ - XRDDEV-285: Limit loggable message body size to 1GiB
+ - XRDDEV-285: Update DB migration
+ - XRDDEV-285: Fix test hibernate mapping
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-285
+ - Merge pull request #87 from nordic-institute/XRDDEV-263
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-285
+ - XRDDEV-285: Implement REST message logging
+ - Update port 2080 documentation
+ - XRDDEV-263 update documentation
+ - Update port 2080 documentation
+ - Update document version number from 1.5 to 1.6
+ - XRDDEV-263 set type
+ - Fix indentation
+ - XRDDEV-263 mapping fix
+ - XRDDEV-263 test case fix
+ - XRDDEV-263 test fix
+ - XRDDEV-263 update column type
+ - XRDDEV-262 Set version number for the next development iteration
+ - Merge branch 'beta-6.20.0' into develop
+ - Merge pull request #86 from nordic-institute/beta-6.20.0
+ - Update Ansible readme with bionic repository information
+ - XRDDEV-262: Update Ubuntu 18 apt repository location
+ - Make test more robust
+ - XRDDEV-263 test fix
+ - Revert "XRDDEV-263 temp test skip"
+ - Revert "XRDDEV-263 test fix"
+ - XRDDEV-263 work on documentation
+ - XRDDEV-263 test fix
+ - XRDDEV-263 temp test skip
+ - XRDDEV-262 Update changelogs
+ - Update Central Server User Guide
+ - Update Central Server User Guide
+ - Update Central Server User Guide
+ - Update Central Server User Guide
+ - Implement automatic approval of auth cert registration requests
+ - XRDDEV-225 Add new Central Server system parameter
+ - XRDDEV-263 fix
+ - XRDDEV-263 fix
+ - XRDDEV-263 fix
+ - XRDDEV-263 wsdl -> servicedescription
+ - XRDDEV-264: Avoid multiple Date response headers
+ - XRDDEV-263 fix wsdl_add
+ - XRDDEV-263 wsdl -> servicedescription
+ - XRDDEV-263 wsdl -> servicedescription
+ - XRDDEV-263 fix migration
+ - XRDDEV-263 update migration
+ - XRDDEV-264: Remove obsolete tests
+ - XRDDEV-264: Update REST POC
+ - XRDDEV-263 Ruby fix
+ - XRDDEV-263 work on Ruby services
+ - XRDDEV-263 change one comment
+ - XRDDEV-263 fix build
+ - XRDDEV-263 renames
+ - XRDDEV-263 renaming
+ - XRDDEV-263 renaming and fix build
+ - XRDDEV-263 rename field
+ - XRDDEV-263 rename class and method
+ - XRDDEV-263 add column
+ - XRDDEV-263 rename table
+ - XRDDEV-263 rename column
+ - XRDDEV-263 remove wsdllocation
+ - Merge pull request #84 from nordic-institute/XRDDEV-95_documentation_fix
+ - Fix minor documentation bug from XRDDEV-95
+ - XRDDEV-263 update script
+ - XRDDEV-263 rename col
+ - XRDDEV-263 add rollback
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-264
+ - Speed up proxy test suite execution
+ - XRDDEV-263 refactor
+ - Optimize build
+ - XRDDEV-263 fix column add
+ - XRDDEV-263 add column
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-264
+ - XRDDEV-263 rename table
+ - XRDDEV-263 add pointer to the changelog
+ - Update compiling container
+ - XRDDEV-263 test database migration
+ - Merge pull request #74 from nordic-institute/XRDDEV-222
+ - Merge pull request #82 from nordic-institute/XRDDEV-257
+ - Merge pull request #81 from nordic-institute/XRDDEV-256
+ - XRDDEV-256: Update version and usage texts.
+ - XRDDEV-149 Script improved a little * more verbose output (for release functionality) * better argument handling
+ - XRDDEV-149 Validate version string format
+ - XRDDEV-256 Asicverifier manual fix
+ - XRDDRV-149 Version update tool
+ - XRDDEV-256 Asicverifier manual update
+ - XRDDEV-256 Asicverifier version option
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-120
+ - XRDDEV-257: Remove dependency on ntpd
+ - XRDDEV-256 * added version option to usage info
+ - XRDDEV-256 * check AsicVerifier version with the version arg * version string removed from AsicVerifier.jar
+ - Merge pull request #80 from yamakataoka/develop-patch-1
+ - Update version history and increase document version number
+ - Update terms_x-road_docs.md
+ - Update lxd_hosts.txt
+ - Fix typos
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Fix critical SonarQube JS issues
+ - Merge pull request #79 from nordic-institute/XRDDEV-168
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-168
+ - XRDDEV-168: Replace default_content_for
+ - Revert "Merge pull request #75 from nordic-institute/XRDDEV-168"
+ - Merge pull request #76 from nordic-institute/XRDDEV-248
+ - Merge pull request #75 from nordic-institute/XRDDEV-168
+ - XRDDEV-248: Use timeout during establishing connections
+ - XRDDEV-168 SonarQube Ruby issue * remove unnecessary wrapper method when rendering page heading
+ - XRDDEV-222: Update cluster rolling upgrade instructions
+ - XRDDEV-99 Minor addendum to the configuration proxy manual
+ - Merge pull request #61 from nordic-institute/XRDDEV-178
+ - Merge pull request #63 from nordic-institute/XRDDEV-101
+ - Fix default value of trusted-anchors-allowed
+ - XRDDEV-101 Review fixes
+ - XRDDEV-177: Fix build script
+ - Add Planetway Corp. as an X-Road consultation service provider
+ - XRDSD-64: Fix compilation problem
+ - Merge pull request #70 from cybernetica-xroad/estonian-6.20.0-2
+ - Merge pull request #69 from nordic-institute/XRDDEV-232
+ - XRDDEV-101: Restore the guide file name
+ - Merge pull request #65 from nordic-institute/XRDDEV-177
+ - XRDDEV-177: refactoring
+ - XRDDEV-177 Version info * separate version to version number and build identifier * version number is built according to the release flag
+ - Merge pull request #66 from nordic-institute/XRDDEV-229
+ - XRDDEV-232 Feedback page * removed unused imports
+ - XTE-427 / XRDDEV-108: Operational monitoring timestamp 'responseOutTs' is taken just before payload byte array is sent out with HTTP response.
+ - XRDDEV-232 Feedback page * feedback menu item * page content (text and links)
+ - XRDDEV-177 * buildtype is SNAPSHOT or RELEASE * optimized version class
+ - Merge pull request #67 from nordic-institute/XRDDEV-231
+ - XRDDEV-231
+ - XRDDEV-177 Version info
+ - XRDDEV-229: Update default key length to 3072 (fi only)
+ - XRDDEV-177 Version info
+ - XRDDEV-177 Version info
+ - Merge pull request #62 from nordic-institute/XRDDEV-10
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-101
+ - XRDDEV-10: Use jetty Slf4jRequestLog
+ - Merge pull request #57 from nordic-institute/XRDDEV-146
+ - XRDDEV-146 Remove support for global configuration V1
+ - XRDDEV-101: Update documentation
+ - Merge pull request #54 from nordic-institute/XRDDEV-191
+ - Merge pull request #53 from nordic-institute/XRDDEV-170
+ - XRDDEV-178: Update clusterhelper to support Ubuntu 18.04
+ - Merge pull request #56 from nordic-institute/XRDDEV-192
+ - Merge pull request #55 from nordic-institute/XRDDEV-184
+ - XRDDEV-178: Update ansible tasks
+ - Merge pull request #59 from nordic-institute/XRDDEV-221
+ - XRDDEV-221 changed ansible default ubuntu distro to trusty
+ - Merge pull request #48 from nordic-institute/XRDDEV-159
+ - Merge pull request #47 from nordic-institute/XRDDEV-160-autodetect-ubuntu-version
+ - XRDDEV-160 Remove internal repository from the documentation
+ - Merge pull request #58 from nordic-institute/XRDDEV-220
+ - XRDDEV-220: Fix intermittent connection timeout in proxy tests.
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-120
+ - XRDDEV-184 Update UG-SIGDOC version history
+ - XRDDEV-184 Update outdated links to external documents
+ - XRDDEV-192 Add note to documentation that extracting messages is possible when verification fails
+ - XRDDEV-184 Replace asicverifier download URL with the path of the jar file on Security Server
+ - XRDDEV-184 Remove Word version of UG-SIGDOC and update references from other documents
+ - XRDDEV-184 Fix ToC links and copy/paste errors
+ - XRDDEV-184 Add Signed Document Download and Verification Manual [UG-SIGDOC] in Markdown format
+ - XRDDEV-192 Add extract message prompt to asicverifier when ASiC container cannot be verified
+ - XRDDEV-191 Add missing table of contents entry
+ - XRDDEV-191 Added environmental monitoring daemon and its interfaces to the X-Road architecture document
+ - Merge pull request #49 from nordic-institute/XRDDEV-169
+ - Merge remote-tracking branch 'origin/develop' into XRDDEV-169
+ - Merge pull request #50 from nordic-institute/XRDDEV-143
+ - XRDDEV-143 Update SingerTest variable names
+ - XRDDEV-143 Change the default constant public and update the tests to use the constant instead of hard-coded values
+ - XRDDEV-169 Update section 4.1 UI Does Not Respond or Returns an Error Message based on review comments
+ - XRDDEV-169 Add instructions for installing yum-utils and remove the requirement regarding interfaces for the use of hardware tokens
+ - Merge pull request #42 from nordic-institute/XRDDEV-138
+ - XRDDEV-138 Remove redundant namespace definition based on review comments
+ - XRDDEV-170: Update documentation
+ - Correct last update date in System Parameters document
+ - XRDDEV-143 Make Signer module manager update interval configurable
+ - XRDDEV-170: Support Ubuntu 18.04 cluster
+ - XRDDEV-160 Fix xroad-monitor not enabled by default
+ - XRDDEV-160 Merge
+ - Merge branch 'develop' into XRDDEV-160-autodetect-ubuntu-version
+ - Merge branch 'develop' into XRDDEV-169
+ - XRDDEV-169 Fix typos and add starting security server in chapter in chapter 2.5
+ - XRDDEV-159: Update BDR repository location and key
+ - XRDDEV-159. Ensure that git hash lenght is consistent
+ - XRDDEV-169 Update xroad-tls-ciphers parameter description
+ - XRDDEV-169 Update note regarding supported cipher suites on RHEL 7
+ - XRDDEV-169 Add RHEL version 7.3 as minimal requirement
+ - Build trusty packages in trusty container
+ - Revert "Do not generate debug symbol packages (trusty)"
+ - Merge pull request #46 from nordic-institute/XRDDEV-145
+ - Fix building rpm packages
+ - Do not generate debug symbol packages (trusty)
+ - Merge pull request #43 from nordic-institute/XRDDEV-144
+ - XRDDEV-145 add test for timestamp-records-limit system property
+ - XRDDEV-160 Fix code style
+ - XRDDEV-169 Update Security Server installation guides
+ - XRDDEV-160 Add documentation
+ - XRDDEV-160 Autodetect Ubuntu version
+ - Merge pull request #44 from nordic-institute/XRDDEV-165
+ - XRDDEV-165: Enable only TLS 1.2 protocol
+ - Fix test ocsp and tsa fail to start on bionic
+ - Merge pull request #39 from cybernetica-xroad/estonian-6.20.0-1
+ - Merge pull request #45 from nordic-institute/XRDDEV-160
+ - XRDDEV-169 Add NIIS repository URL to 2.5 Installation chapter
+ - XRDDEV-169 Add name of the packages that are fetched from EPEL
+ - XRDDEV-169 Add initial version of official Security Server installation guide for RHEL7
+ - Merge branch 'develop' into XRDDEV-145
+ - XRDDEV-145 Update time-stamping processing logic
+ - XRDDEV-160 Install acl utilities
+ - XRDDEV-95 Separate repositories for trusty and bionic
+ - Merge pull request #38 from nordic-institute/XRDDEV-95
+ - XRDDEV-95: Check for authbind, refactoring
+ - XRDDEV-95: Reduce the use of Pre-Depends
+ - XRDDEV-95: Remove unnecessary dependencies
+ - XRDDEV-95: Stop deb build on error
+ - XRDDEV-165 restore system properties also in case of exception to not to break rest of the test cases
+ - XRDDEV-95: Remove xroad-common scripts
+ - XRDDEV-165 add test to verify cipher suite setup between client and server proxies
+ - XRDDEV-144 Fix timeout value used in batch signing
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - XRDDEV-165 fix client proxy to enforce whitelisted cipher suite
+ - Merge pull request #40 from nordic-institute/XRDDEV-162
+ - XRDDEV-162 Remove RHEL7 from supported platforms on Security Server Installation Guide
+ - XRDDEV-95: Lift xroad-proxy thread limit (bionic)
+ - XRDDEV-138 Update Annex B ToC link
+ - XRDDEV-138 Update X-Road service metadata protocol
+ - XRDDEV-162 Update Configuration Proxy User Guide
+ - XRDDEV-162 Update Central Server installation guide
+ - XRDDEV-162 Update Security Server installation guide
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - XRDEV-60 / XTE-425: Central Server: Put script modify_cluster.sh into the right directory.
+ - Merge branch 'develop' into estonian-6.20.0-1
+ - Merge pull request #37 from nordic-institute/XRDDEV-141
+ - Merge pull request #29 from nordic-institute/XRDDEV-62
+ - XRDDEV-95 Restore xroad-common but remove its dependencies and mark it obsoleted
+ - Merge pull request #36 from nordic-institute/XRDDEV-29
+ - XRDDEV-29 fix checkstyle
+ - XRDDEV-29 add test for whitelisted cipher suites
+ - XRDDEV-95 Remove xroad-common from RHEL packaging
+ - XRDDEV-29 revert xroad proxy inheritance as requested in review
+ - XRDDEV-29 refactor proxies to remove duplicate code
+ - XRDDEV-95 Remove xroad-common
+ - XRDDEV-95 Fixes to bionic packaging, local dev env for bionic and remove dependencies to xroad-common
+ - XRDDEV-29 checkstyle fix
+ - XRDDEV-29 refactoring to test cipher suites
+ - XRDDEV-141: Fix host selection failure
+ - XRDDEV-29 document cypher order in settings
+ - Merge pull request #19 from nordic-institute/XRDDEV-82
+ - XRDDEV-82 merge develop
+ - XRDDEV-120: Fix SOAP fault returned to rest client
+ - XRDDEV-120: Optimize small rest messages
+ - XRDDEV-29 fix html anchor ref
+ - XRDDEV-29 fix checkstyle issues
+ - XRDDEV-29 Add TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 ciphersuite
+ - Merge pull request #35 from nordic-institute/XRDDEV-100
+ - Set version number
+ - XRDDEV-100: Fix xroad-autologin packaging
+ - XRDEV-60 / XTE-425: Central Server: Added script for changing IP address of cluster nodes & updated document IG-CSHA respectively.
+ - XRDDEV-94: Add missing build-time dependency
+ - XRDDEV-120: POC implementation
+ - XRDDEV-94: Fix proxy can't bind to port 80 (trusty)
+ - Fix build script
+ - Merge pull request #30 from nordic-institute/XRDDEV-117
+ - Merge pull request #32 from nordic-institute/XRDDEV-86-2
+ - XRDDEV-86: Update version
+ - XRDDEV-123: Update version
+ - Merge remote-tracking branch 'origin/master' into develop
+ - Merge pull request #28 from nordic-institute/XRDDEV-94
+ - XRDDEV-94: Fix review findings
+ - Merge pull request #33 from nordic-institute/beta-6.19.0
+ - XRDDEV-86 Remove redundant method
+ - XRDDEV-86 Ruby changes
+ - XRDDEV-86 Version number to its own class
+ - XRDDEV-86 Read version from constant
+ - XRDDEV-123: Fix URL references
+ - Merge pull request #24 from nordic-institute/XRDDEV-119
+ - XRDDEV-119 Add missing license header
+ - Merge branch 'develop' into XRDDEV-119
+ - XRDDEV-119 Fix PR review comments
+ - XRDDEV-119 Fix PR review comments
+ - XRDDEV-123: Update license
+ - XRDDEV-123: Update changelog
+ - Merge pull request #31 from nordic-institute/XRDDEV-130
+ - Merge pull request #20 from nordic-institute/XRDDEV-105
+ - Merge pull request #22 from nordic-institute/XRDDEV-106
+ - XRDDEV-94: Ubuntu 18.04 packaging
+ - XRDDEV-130 fix checkstyle violations
+ - XRDDEV-117 fix checkstyle
+ - XRDDEV-62 Add note about the warning in system parameters document
+ - XRDDEV-62 Remove an additional empty line
+ - XRDDEV-62 Write warning to log when time-stamped records count is over 70 % of timestamp-records-limit value
+ - XRDDEV-117 fix checkstyle
+ - XRDDEV-117 define const instead of repeating literal
+ - XRDDEV-117 remove duplicate code
+ - XRDDEV-117 XXE secure XMLReader
+ - XRDDEV-117 fix using const instead of literal
+ - Merge pull request #25 from nordic-institute/XRDDEV-116
+ - XRDDEV-117 secure DocumentBuilderFactory for xml parsing
+ - XRDDEV-105 Add periodic reload of global configuration in proxy
+ - XRDDEV-106 remove extraneous log messages
+ - XRDDEV-116 fix undefined function argument
+ - XRDDEV-116 fix variable scope bug
+ - XRDDEV-116 Add javascript sources for sonarqube analysis
+ - XRDDEV-119 Update license files and license headers not updated by Gradle
+ - XRDDEV-119 Remove license header from a single UI file
+ - XRDDEV-119 Update LICENSE.txt
+ - XRDDEV-119 Update license headers in proxy module's .java and .rb files
+ - XRDDEV-119 Update license headers in .java and .rb files
+ - Merge pull request #17 from nordic-institute/XRDDEV-8
+ - Updated lxd_hosts.txt for test
+ - XRDDEV-82 define properties to analyze ruby sources
+ - XRDDEV-82 update rubocop, rename result file and change result format
+ - XRDDEV-106 fix checkstyle errors
+ - XRDDEV-106 add signing info cache tests
+ - XRDDEV-106 add cache tests
+ - XRDDEV-106 use guava caches in CachingKeyConf
+ - XRDDEV-8: Use latest Apache CXF wsdlvalidator
+ - XRDDEV-106 add unit test for caching key impl
+ - XRDDEV-106 test builds and deployment
+ - Merge pull request #11 from nordic-institute/update-cs-ug
+ - XRDDEV-74 Fix SonarQube critical
+ - Merge pull request #16 from nordic-institute/XRDDEV-74-additional-fixes
+ - XRDDEV-74 Add SonarQube improvements
+ - XRDDEV-74 Fix SonarQube issues
+ - Merge pull request #15 from nordic-institute/XRDDEV-74
+ - XRDDEV-74 dropped unnecessary dependency
+ - XRDDEV-74 merge develop
+ - Merge pull request #14 from nordic-institute/XRDDEV-85
+ - Merge pull request #9 from nordic-institute/XRDDEV-84
+ - Merge pull request #13 from nordic-institute/XRDDEV-28
+ - XRDDEV-74 Merge develop
+ - XRDDEV-74 reduced cognitive complexity
+ - XRDDEV-74 reduced cognitive complexity
+ - XRDDEV-74 defined const to avoid repeating string concatenation
+ - XRDDEV-74 added missing dependency
+ - XRDDEV-74 fixed checkstyle issues
+ - XRDDEV-74 reduced cognitive complexity
+ - XRDDEV-74 define const instead of repeating literal
+ - XRDDEV-74 added nested comments
+ - XRDDEV-74 added nested comment
+ - XRDDEV-74 added nested comments
+ - XRDDEV-74 reduced cognitive complexity
+ - XRDDEV-74 checkstyle fixes
+ - XRDDEV-74 reduced cognitive complexity
+ - XRDDEV-85: Refactoring and cleanup
+ - XRDDEV-74 added nested comment
+ - XRDDEV-74 added nested commment
+ - XRDDEV-74 defined const instead of repeating literal
+ - XRDDEV-74 defined const instead of repeating literal
+ - XRDDEV-74 defined const instead of repeating literal
+ - XRDDEV-74 defined const instead of repeating literal
+ - XRDDEV-74 defined const instead of repeating literal
+ - XRDDEV-74 added nested comments
+ - XRDDEV-28: Fix checkstyle errors
+ - XRDDEV-85: Fix messagelog archiving bug.
+ - XRDDEV-74 reduced cognitive complexity
+ - XRDDEV-74 added nested comment
+ - XRDDEV-74 reduced cognitive complexity
+ - XRDDEV-28: Update test
+ - XRDDEV-28: Update Guava to the latest version
+ - XRDDEV-28: Limit ssl session cache max size
+ - XRDDEV-28: Re-implement fastest target caching
+ - Merge pull request #10 from nordic-institute/XRDDEV-79
+ - XRDDEV-74 defined const instead of repeating literal
+ - XRDDEV-74 defined const instead of repeating literal
+ - XRDDEV-74 improved RequestTests and removed duplicated code
+ - XRDDEV-74 removed duplicated code
+ - XRDDEV-74 defined const instead repeating literal
+ - Merge pull request #12 from nordic-institute/XRDDEV-51
+ - XRDDEV-74 Added nested comment
+ - Added nested comment
+ - XRDDEV-74 Removed unnecessary code
+ - XRDDEV-74 Added nested comment
+ - XRDDEV-74 Checkstyle fixes
+ - XRDDEV-51 Update System Parameters User Guide
+ - XRDDEV-51 Update System Parameters User Guide version number to 2.32
+ - XRDDEV-51 Update System Parameters User Guide
+ - XRDDEV-51 Update OCSP response recovery schedule - Change Fibonacci based recovery schedule to fixed schedule. - Add new signer system property ocsp-retry-delay for defining fixed schedule. - Set ocsp-retry-delay default value to 60 seconds.
+ - Fix incorrect ocspFetchInterval default value in CS User Guide.
+ - XRDDEV-74 defined constant instead of duplicating literals
+ - XRDDEV-74 defined constant instead of duplicating literal
+ - XRDDEV-74 defined constant instead of duplicating literal
+ - XRDDEV-74 defined constant instead of duplicating literal
+ - XRDDEV-74 Reduced cognitive complexity
+ - XRDDEV-74 Added missing nested comments
+ - XRDDEV-74 Added nested comments to avoid sonar issue
+ - XRDDEV-79 Update Java dependency for xroad-jetty
+ - XRDDEV-74 add comments on empty method implementations
+ - XRDDEV-74 changed to use already defined constant instead of duplicating its value
+ - XRDDEV-74 Defined constant instead of literal duplication
+ - XRDDEV-74 Defined default constant values to pass by sonar issues
+ - XRDDEV-79 Update Java dependency
+ - XRDDEV-74 Fixed sonar issue regarding static import
+ - XRDDEV-74 Fixed checkstyle of import
+ - XRDDEV-74 fixed missing import on previous commit
+ - XRDDEV-74 Sonar: Secure this Transformer by either disabling external DTDs or enabling secure processing
+ - Merge pull request #8 from nordic-institute/XRDDEV-53
+ - XRDDEV-84: Fix cluster setup playbook
+ - XRDDEV-74 Fixed duplicated code
+ - XRDDEV-53 Fixed error message
+ - XRDDEV-74 Fixed indentations to pass checkstyle test
+ - XRDDEV-74 Rename field diagnostics to prevent any clash with field DIAGNOSTICS
+ - Renamed field failed to prevent any clash with field FAILED
+ - XRDDEV-74 Rename field OK to prevent any clash with field ok
+ - XRDDEV-74 Renamed field RELOAD to prevent any misunderstanding with method reload
+ - Merge pull request #7 from nordic-institute/XRDDEV-36
+ - XRDDEV-36: Fix logTimestampArchiveAndClean
+ - XRDDEV-36: Maybe fix intermittent test failure
+ - Update checkstyle config
+ - XRDDEV-36: Fix a (potentially) related bug in LogManagerTest
+ - Merge pull request #6 from nordic-institute/XRDDEV-39
+ - XRDDEV-39 Set log level
+ - XRDDEV-39 Add logging
+ - XRDDEV-39 Review fixes
+ - XRDDEV-39 Add license header
+ - XRDDEV-39 Patch the proxy version reading
+ - Revert "XRDDEV-39 Hardcoded version string"
+ - XRDDEV-39 Fix Checkstyle errors
+ - XRDDEV-39 Hardcoded version string
+ - XRDDEV-39 Log request headers
+ - Update ig-cs_x-road_6_central_server_installation_guide.md
+ - Merge pull request #5 from nordic-institute/XRDDEV-32
+ - XRDDEV-32 Update SonarQube properties
+ - Fix repository link
+ - Merge pull request #2 from hboutemy/patch-1
+ - typo fix: s/and/an/
+ - Merge pull request #1 from nordic-institute/20180601-update-readme
+ - Update README.md. Add European Regional Development Fund logo file.
+ - Merge pull request #87 from vrk-kpa/release-6.19.0-1
+ - PVAYLADEV-1160: Finnish-6.19.0-1
+ - Merge pull request #111 from vrk-kpa/PVAYLADEV-1137
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Set version for the next development iteration
+ - Merge branch 'master' into develop
+ - Merge pull request #84 from cybernetica-xroad/release-6.18.0
+ - Merge pull request #86 from hanneskiivet/develop
+ -  PVAYLADEV-1137: Update documentation
+ - Merge pull request #110 from vrk-kpa/PVAYLADEV-785
+ - PVAYLADEV-1137: Fix missing method implementation
+ - PVAYLADEV-1137: Improve CA listing
+ - Added EU fund image to comply with financing rules
+ - PVAYLADEV-785 Review fixes
+ - PVAYLADEV-1137: Update documentation
+ - PVAYLADEV-1137: List approved CA certificates
+ - PVAYLADEV-785 Add exception logging
+ - PVAYLADEV-785 Catch exception when reading old version of global configuration
+ - Merge pull request #109 from vrk-kpa/PVAYLADEV-1139
+ - PVAYLADEV-1139: Fix review issues
+ - PVAYLADEV-1139: Update build instructions
+ - Update debian chengelogs for release 6.18.0.
+ - Update changelog for release 6.18.0.
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #83 from cybernetica-xroad/estonian-6.18.0-2
+ -  XTE-411: Actually TLSv1.1 is still supported on client-side interfaces for outgoing requests.
+ - Changelog for estonian-6.18.0-2.
+ - XTE-406: New parameters 'library_cant_create_os_threads' and 'os_locking_ok' for initializing PKCS#11 library. Describe all the parameters in the configuration file 'devices.ini'.
+ - XTE-385: Bugfix: Correct ACL removal. Correct HTML escaping for warning messages.
+ - XTE-411: Jetty 9 does not support SHA-1 ciphers by default, so remove legacy TLSv1.1 with corresponding ciphers also.
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #82 from vrk-kpa/PVAYLADEV-1143
+ - Merge pull request #108 from vrk-kpa/PVAYLADEV-1143
+ - Fix PVAYLADEV-1143
+ - Merge 'upstream/develop' into develop
+ - Merge pull request #81 from vrk-kpa/release-6.18.0-1
+ - Merge 'upstream/develop' into release-6.18.0-1
+ - Merge pull request #80 from cybernetica-xroad/estonian-6.18.0-1
+ - XTE-377: Use JDK xerces validator implementation for XXE.
+ - XTE-396: Bugfix: Lost "remove_file" replacement during merge.
+ - XTE-396: Bugfix: Corrected logging and removed one NPE.
+ - Merge pull request #107 from vrk-kpa/PVAYLADEV-1107
+ - PVAYLADEV-1123 Update changelog
+ - PVAYLADEV-1107: Update documentation
+ - PVAYLADEV-1123 Update changelog
+ - PVAYLADEV-1107: [proxy-ui] Add support for importing a cert chain
+ - Support cert chain in internal certificate [PVAYLADEV-1107]
+ - XTE-412: Upgrade org.owasp:dependency-check-gradle to version 3.1.2.
+ - XTE-396: Bugfix: Use conf directory given via constructor.
+ - XTE-396: Configuration Proxy needs also "files" file in the globalconf.
+ - Changelog for estonian-6.18.0-1.
+ - XTE-397: Configuration-Client: Better old globalconf files cleanup after download. Save file 'files' using UTF-8 encoding.
+ - XTE-396: Security Server: To get globalconf files list do not search them directly from the configuration directory rather take list from "files" file, where is the latest collection of the downloaded globalconf files.
+ - Merge pull request #106 from vrk-kpa/PVAYLADEV-1116
+ - XTE-314: Bugfix: Write globalconf files atomic way.
+ - XTE-409: Better explanation for parameter op-monitor-buffer.sending-interval-seconds.
+ - XTE-377: Fixed XXE issues (CWE-827) found by Coverity.
+ - Merge pull request #104 from vrk-kpa/PVAYLADEV-984
+ - Merge pull request #105 from vrk-kpa/PVAYLADEV-594
+ - PVAYLADEV-1116 Update Vagrant instructions
+ - PVAYLADEV-594 Remove obsolete compatibility fix
+ - Merge pull request #102 from vrk-kpa/PVAYLADEV-985
+ - Merge pull request #103 from vrk-kpa/PVAYLADEV-1102
+ - Merge pull request #101 from vrk-kpa/PVAYLADEV-814
+ - merge
+ - PVAYLADEV-984: Documentation style and content fixes
+ - PVAYLADEV-984: Moved term and concept explanations to terminology document and created references to it
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #79 from vrk-kpa/PVAYLADEV-981-fix-import-order
+ - Merge pull request #100 from vrk-kpa/PVAYLADEV-1081
+ - PVAYLADEV-981: Fix import order
+ - PVAYLADEV-1102: Add note about DER support
+ - PVAYLADEV-1102: Enable utf8 in CA.cnf
+ - PVAYLADEV-1102: Clarify CA directory permissions
+ - PVAYLADEV-1102: Fix list numbering
+ - PVAYLADEV-1102: Add Ansible version requirement to README
+ - Deleting XRoadSizeBasedRollingPolicy. Compile ok.
+ - PVAYLADEV-1102: Replace deprecated includes with import_tasks
+ - PVAYLADEV-1081: Added a trim call to central server address editor
+ - PVAYLADEV-1101 Use latest rubocop
+ - Merge pull request #99 from vrk-kpa/PVAYLADEV-989
+ - Merge branch 'develop' into PVAYLADEV-985
+ - PVAYLADEV-989: A small fix for use case documentation
+ - PVAYLADEV-989: Updated use case documentation
+ - Remove unnecessary files left from merge
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Set version number for next development iteration
+ - Merge pull request #78 from vrk-kpa/release-6.17.0
+ - PVAYLADEV-989: Added removal of incomplete backup file as error handling
+ - PVAYLADEV-1091 Update dependency check suppresions file
+ - PVAYLADEV-1083: Fix some typos in the change log
+ - PVAYLADEV-1083: Update changelog
+ - PVAYLADEV-1083: Update changelog
+ - Merge branch 'develop' into release-6.17.0
+ - PVAYLADEV-1029: Fix (?) intermittent test failure
+ - Update JRuby dependencies in Dockerfile based on prepare_buildhost.sh
+ - Fix jruby dependency problem
+ - PVAYLADEV-1083: Update jetty changelog
+ - PVAYLADEV-1083: Update deb changelog
+ - PVAYLADEV-1083: Update changelog
+ - Merge pull request #97 from vrk-kpa/PVAYLADEV-1091
+ - PVAYLADEV-1091 Set Akka version
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #76 from cybernetica-xroad/estonian-6.17.0-5
+ - PVAYLADEV-1091 Fix xerces version
+ - Changelog for estonian-6.17.0-5.
+ - XTE-405 / Backlog #205: Security Server: Fixed changing internal TLS certificate of Security Server using UI (restored some methods that are still referred from ruby code).
+ - PVAYLADEV-1091 Update packaging with new postgresql driver
+ - PVAYLADEV-1091 Update postgresql driver
+ - PVAYLADEV-1091 Update commons-io
+ - PVAYLADEV-1091 Update xerces and jackson
+ - PVAYLADEV-1091 Update to new Akka API
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #75 from vrk-kpa/release-6.17.0-4
+ - Merge pull request #91 from vrk-kpa/PVAYLADEV-1024
+ - Merge pull request #95 from vrk-kpa/PVAYLADEV-986
+ - Ref fix
+ - Fixed links
+ - Reference links changed
+ - PVAYLADEV-1027: Fixed getWsdl HTTP GET parameter requirement description
+ - Note added
+ - minor fixes
+ - Couple of references fixed. Technology matrix from arc-opmond moved to arc-tec
+ - ref fix
+ - PVAYLADEV-986: Use strict version dependency in rpms
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-986
+ - Remove empty lines
+ - Merge pull request #93 from vrk-kpa/PVAYLADEV-1033
+ - PVAYLADEV-1033 Remove misleading comment
+ - Merge pull request #94 from vrk-kpa/PVAYLADEV-1087
+ - PVAYLADEV-1033 Remove deprecated parameter from local.ini
+ - PVAYLADEV-1033 Cleanup
+ - reference fixed
+ - Changes made according to pr-comments
+ - PVAYLADEV-1033 Fix cache lookup
+ - Merge pull request #92 from vrk-kpa/PVAYLADEV-1090
+ - PVAYLADEV-1087: Update wsdl
+ - PVAYLADEV-1087: Fix metadata protocol wsdl definition
+ - PVAYLADEV-1033 Add migration scripts
+ - PVAYLADEV-1033 Minor updates
+ - PVAYLADEV-3300 Fix saving to cache
+ - PVAYLADEV-1033 Update test case
+ - PVAYLADEV-1033 Add logging
+ - PVAYLADEV-1033 Update documentation
+ - PVAYLADEV-1033 Add null checking
+ - PVAYLADEV-1033 Utilize SSL cache to store the fastest provider URI validity time
+ - PVAYLADEV-1033 Disable uri cache for tests
+ - PVAYLADEV-1033 Log cache expire time
+ - PVAYLADEV-1033 Remove unused variable
+ - PVAYLADEV-1033 Update test
+ - PVAYLADEV-1033 Checkstyle fix
+ - PVAYLADEV-1033 Add new proxy parameter
+ - PVAYLADEV-1033 Log current thread id
+ - PVAYLADEV-1033 Checkstyle fix
+ - PVAYLADEV-1033 Add logging
+ - PVAYLADEV-1033 Fix cached URI
+ - PVAYLADEV-1033 Store previously faster provider to time based object cache
+ - PVAYLADEV-1090: Fix variant test
+ - PVAYLADEV-1033 Checkstyle fix
+ - PVAYLADEV-1033 Connection initiation order is randomized
+ - PVAYLADEV-1033 Connection timeout to previously fastest host is lower than the initial connection timeout
+ - PVAYLADEV-1075: Update changelog
+ - PVAYLADEV-1033 Logging changes
+ - PVAYLADEV-1033 Add logging
+ - Changed correct dates and versions
+ - Couple of minor fix and date changes
+ - typo
+ - minor fix
+ - references fixed
+ - renamed file
+ - doc id changed
+ - Fixed link
+ - Merge pull request #90 from vrk-kpa/PVAYLADEV-1027
+ - typo
+ - Minor fix
+ - Removed unused links
+ - Removed duplicates and chapters reordered
+ - PVAYLADEV-1027: Documentation fixes based on review notes
+ - Empty line.
+ - PVAYLADEV-1027: Fixed outdated request and response examples to contain the subsystemCode required in the current version
+ - PVAYLADEV-1027: Fixed a documentation typo
+ - PVAYLADEV-1027: Restructured and amended getWsdl documentation and fixed example requests
+ - Revert "Test push restrictions"
+ - Test push restrictions
+ - Merge pull request #88 from vrk-kpa/PVAYLADEV-795
+ - Merge pull request #89 from vrk-kpa/PVAYLADEV-1039
+ - PVAYLADEV-1039: Modified RHEL-checks to use platform facts
+ - Adding release in addition to version in requires field.
+ - PVAYLADEV-1026 Update documentation
+ - Corrected package dependency to binary version from upstream version.
+ - Using binary version instead of upstream version in debian packaging.
+ - PVAYLADEV-986 Changing redhat packaging to use explicit singe versions of X-Road packages.
+ - PVAYLADEV-986 Changing dependendy to single explicit version.
+ - Merge 'upstream/develop' into develop
+ - PVAYLADEV-1039: Added ee-metapackage support, built a check to fail playbook if using ee-variant with CentOS-containers
+ - Merge pull request #73 from vrk-kpa/release-6.17.0-3
+ - PVAYLADEV-1026 Cleanup
+ - PVAYLADEV-1026 Update scripts
+ - PVAYLADEV-1026 Update local.ini logic for RHEL
+ - PVAYLADEV-1026 Add local.ini update logic for Ubuntu
+ - All the matrixes of technologies moved to new arc-x-road_technologies.md and chapters reordered
+ - PVAYLADEV-1026 Fix tests
+ - PVAYLADEV-1026 Set parameter default value
+ - PVAYLADEV-1026 Fix property
+ - PVAYLADEV-1026 Add parameter
+ - PVAYLADEV-1026 Ignore test
+ - PVAYLADEV-106 Test disabling WSDL GET
+ - Merge branch 'develop' into PVAYLADEV-795
+ - PVAYLADEV-1070: Update changelog
+ - Merge 'upstream/develop' into develop
+ - Merge pull request #70 from cybernetica-xroad/estonian-6.17.0-4
+ - Fix absolute path in CA config
+ - Merge pull request #87 from vrk-kpa/PVAYLADEV-1057
+ - Update 'Support disclaimer' section in README.md file
+ - Merge pull request #86 from vrk-kpa/PVAYLADEV-1034
+ - Merge pull request #71 from bartjkdp/fix-documentation
+ - PVAYLADEV-1034 Checkstyle fix
+ - PVAYLADEV-1034 Fix Logback access logs issue
+ - PVAYLADEV-1034 Fix configuration files
+ - correct lxd_hosts list and default username/password
+ - Delete temporary file: packages/xroad/debian/xroad-opmonitor.xroad-opmonitor.upstart
+ - Changelog for estonian-6.17.0-4.
+ - XTE-391 / Backlog #196: X-Road Operations Monitoring Daemon: Use local SWA-Ref schema (swaref.xsd).
+ - XTE-386 / Backlog #187: Security Server: OCSP log messages more verbal.
+ - Merge pull request #84 from vrk-kpa/PVAYLADEV-1042
+ - PVAYLADEV-1042: Update documentation
+ - Update .gitignore
+ - PVAYLADEV-1042: Fix system metrics sensor
+ - Merge pull request #82 from vrk-kpa/PVAYLADEV-954-db-connections
+ - Revert "PVAYLADEV-985 Update rails"
+ - PVAYLADEV-985 Update rails
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #68 from vrk-kpa/PVAYLADEV-982
+ - PVAYLADEV-985 Update warbler
+ - PVAYLADEV-985: Update JRuby
+ - Merge pull request #83 from vrk-kpa/pvayladev-983
+ - IS-text changed to correct place
+ - Fixes made according to comments
+ - Couple of corrections made according to comments
+ - PVAYLADEV-982 Update changelog
+ - PVAYLADEV-982 Update changelog
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #67 from cybernetica-xroad/estonian-6.17.0-1
+ - Merge pull request #66 from ToomasMolder/develop
+ - XTE-355 / Backlog #152: Bugfix: Use try-with-resource.
+ - Estonian-6.17.0-2 EU RDF SF logos attached
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - EU RDF SF logos attached
+ - Fixed errors in tables
+ - typo fixed
+ - New columns for fi and ee values
+ - Revert "EU RDF SF logos attached"
+ - EU RDF SF logos attached
+ - Merge 'origin/develop' into PVAYLADEV-954-db-connections
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #65 from cybernetica-xroad/estonian-6.17.0-1
+ - fixes
+ - Inactive links to another docs removed
+ - New section added
+ - Terms in estonian language removed
+ - Couple of new definitions and estonian language removed
+ - PVAYLADEV-954: Configure opmonitoring pool
+ - XTE-355 / Backlog #152: Security Server: Refactored communication between LogManager and TaskQueue. In 'timestamp immediately' mode do not take into account acceptable timestamp failure period. Codestyle.
+ - PVAYLADEV-954: Optimize db connection pools
+ - Removed estonian translations
+ - Merge pull request #79 from vrk-kpa/PVAYLADEV-978
+ - Merge pull request #81 from vrk-kpa/PVAYLADEV-947-jwt-token
+ - PVAYLADEV-947: Removed an unnecessary sentence from the doc
+ - Merge pull request #80 from vrk-kpa/PVAYLADEV-962
+ - PVAYLADEV-947: Typo fix
+ - PVAYLADEV-974: Link and wording fix
+ - PVAYLADEV-947: Documentation for the security token
+ - Update monitor.ini
+ - Revert "PVAYLADEV-962: Add debug logging"
+ - Revert "PVAYLADEV-962: Don't read return value of restart services"
+ - PVAYLADEV-962: Don't read return value of restart services
+ - PVAYLADEV-962: Add debug logging
+ - PVAYLADEV-962: Fix extra slash in file path
+ - Changelog for estonian-6.17.0-1
+ - XTE-380: Fixed audit logging of the restore process. Fixed one NPE.
+ - PVAYLADEV-978: Fix jetty starts a child process
+ - XTE-355 / Backlog #152: Security Server: Improved message exchange performance at a time when periodical timestamping is performed. Also, fixed messagelog junit tests and added logback configuration.
+ - XTE-375: Security Server / Central Server: Enabled HttpOnly flag and set security flag to true for the session cookies
+ - XTE-376: Security Server: Fixed system resource leak of the monitoring component
+ - XTE-368: Added new security server metapackage xroad-securityserver-ee with default configuration for Estonian instances
+ - Merge pull request #78 from vrk-kpa/PVAYLADEV-883
+ - Renamed boolean.
+ - Merge pull request #76 from vrk-kpa/PVAYLADEV-921
+ - doc README link fix
+ - PVAYLADEV-921: Added short group descriptions to example host files
+ - Using JUnit Rule to override system property.
+ - updated tests
+ - Update uc-cs_x-road_use_case_model_for_central_server_management_1.2_Y-883-6.md
+ - updating manuals
+ - PVAYLADEV-809: Version update
+ - Merge branch 'PVAYLADEV-809-module-split' into develop
+ - Merge branch 'develop' into PVAYLADEV-921
+ - PVAYLADEV-921: Modified variant configuration and rewrote documentation to match current configuration scheme
+ - adding missing import
+ - fixing typos
+ - adding configuration parameters for limiting
+ - cleaning code
+ - fix bug
+ - fix bug
+ - cleaning code
+ - removing testing and adding OperatingSystem filtering
+ - trying to find os setting
+ - trying to find os setting
+ - trying to find os setting
+ - PVAYLADEV-809: Removed unnecessary scripting and updated versions
+ - using anyBoolean() in tests
+ - using anyBoolean() in tests
+ - using anyBoolean() in tests
+ - using anyBoolean() in tests
+ - removed testing
+ - testing
+ - bug fix in tests
+ - bug fix
+ - removing unused parameter
+ - bug fix
+ - bug fix
+ - testing atting parameter
+ - fixing bugs
+ - adding test parameter
+ - fixing line lenght
+ - Fixing test with new parameter
+ - fix null check on boolean
+ - fixing method name
+ - Changed attribute name
+ - fix typo
+ - PVAYLADEV-809: Version update
+ - PVAYLADEV-809: Added xroad-common.maintscript
+ - Added first generation of solution. Not yet using properties yet
+ - PVAYLADEV-809: Version update
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-809-module-split
+ - Merge pull request #64 from vrk-kpa/release-6.17.0-1
+ - PVAYLADEV-809: Moving configs around
+ - PVAYLADEV-809: Moved scripts around
+ - PVAYLADEV-809: Removed devices.ini stuff from base/nginx
+ - PVAYLADEV-809: xroad-common.spec cleanup
+ - PVAYLADEV-809: Package split draft
+ - Use case documentation fixes
+ - PVAYLADEV-926: Removed test automation section from Ansible playbook documentation
+ - Fixing type
+ - Added use case documentation ticket to changelog
+ - Updated changelog
+ - PVAYLADEV-921: Fixed partial installation vars files placement
+ - PVAYLADEV-921: Fixed the CA setup in the local playbook
+ - Merge pull request #75 from vrk-kpa/PVAYLADEV-740-build-X-Road-in-docker-container-and-pipeline
+ - Fixed jenkinsfile to have building packages
+ - PVAYLADEV-921: Updated default settings and documentation
+ - PVAYLADEV-921: Force Ansible package building tasks to recognize changed dockerfile in accordance with docker build changes
+ - PVAYLADEV-921: Added installation package variation to ubuntu tasks and created a default layer vanilla variant selection
+ - Merge pull request #72 from vrk-kpa/PVAYLADEV-891-environmental-monitoring-documentation
+ - Merge pull request #74 from vrk-kpa/PVAYLADEV-926
+ - bugfix
+ - Changing jenkinsfile to use docker
+ - Fixing bug in dockerfile
+ - Merge pull request #73 from vrk-kpa/PVAYLADEV-740-build-X-Road-in-docker-container-and-pipeline
+ - Formated extralayers away and removed default values for uid and gid
+ - PVAYLADEV-926: Removed automated testing environment setup from Ansible collection
+ - Merge pull request #71 from vrk-kpa/PVAYLADEV-841
+ - Once again adding workdirs to dockerfiles...
+ - PVAYLADEV-841: Replaced package list with repository-specific update scheme and cleaned comments and code
+ - Changing hardcoded paths
+ - Adding workspace
+ - Testing new path
+ - PVAYLADEV-891: Added line to version  history.
+ - doc readme use case documentation links fixed
+ - Added workdir for debbuild and rpmbuild
+ - PVAYLADEV-891: Added line feeds for URLs in reference list.
+ - Fixed missing group adding
+ - Added uid and gid argumets
+ - PVAYLADEV-841: Added RHEL installation per variant package for remote repository use and improved documentation
+ - Merge pull request #69 from vrk-kpa/PVAYLADEV-908-cert-status
+ - PVAYLADEV-891: More documentation.
+ - Merge pull request #70 from vrk-kpa/PVAYLADEV-839
+ - PVAYLADEV-891: Added short content for environmental monitoring paragraphs. Verified that links are working.
+ - Gradle volume works
+ - trying to solve gradle volume problem
+ - PVAYLADEV-841: Fixed a package transfer privilege issue
+ - PVAYLADEV-841: Unified RHEL installation base
+ - PVAYLADEV-891: Add Environmental Monitoring as a new paragraph.
+ - some changes
+ - PVAYLADEV-839: Update checkstyle
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #63 from ria-ee/version-6.17.0
+ - Set version number for next development iteration
+ - Merge pull request #62 from vrk-kpa/release-6.16.0
+ - Merge branch 'vrk-kpa-release-6.16.0'
+ - Merge branch 'release-6.16.0' of https://github.com/vrk-kpa/X-Road into vrk-kpa-release-6.16.0
+ - Initial compile docker
+ - Merge branch 'develop' into PVAYLADEV-841
+ - PVAYLADEV-908: Fix checkstyle error
+ - PVAYLADEV-841: Added package list for RHEL-updates and simplified package copying
+ - PVAYLADEV-908: Update documentation
+ - PVAYLADEV-908: Enhance failure handling
+ - PVAYLADEV-908: Add certificate status information
+ - PVAYLADEV-841: Refactored repository variables to own files and modified playbooks accordingly
+ - PVAYLADEV-861: Fix migration fails if config override missing
+ - PVAYLADEV-886: Update changelogs
+ - PVAYLADEV-886: Fix build fails on a clean build host
+ - Merge pull request #68 from vrk-kpa/PVAYLADEV-861
+ - PVAYLADEV-861: Improved migration function syntax
+ - PVAYLADEV-908: Refactoring
+ - Fix wsdlvalidator postinst script
+ - PVAYLADEV-886: Update changelogs
+ - Update .gitignore
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #59 from cybernetica-xroad/estonian-6.16.0-2
+ - Merge pull request #63 from vrk-kpa/PVAYLADEV-799-more-fail-safe-sensor-registery
+ - PVAYLADEV-799: Fail with IllegalArgumentException
+ - fixing missing javadoc
+ - PVAYLADEV-861: Added RHEL migration script for proxy
+ - removed empty init from certificatesensor
+ - fixing thread unsafety and initalization of sensors
+ - Merge pull request #67 from vrk-kpa/PVAYLADEV-878
+ - Imaged updated
+ - PVAYLADEV-861: Added configuration migration for debian
+ - Merge pull request #65 from vrk-kpa/improve-ansible-documentation-rebased
+ - PVAYLADEV-841: Moved necessary package installation to xroad-base and improved on variable parameterization
+ - Merge pull request #66 from vrk-kpa/PVAYLADEV-878
+ - XTE-248 / Backlog #55: Correct version of asic namespace (http://uri.etsi.org/02918/v1.2.1#)
+ - Use case docx format files removed
+ - improved ansible documentation
+ - Merge pull request #64 from vrk-kpa/PVAYLADEV-918-fix-ansible-RHEL-installation-rebased
+ - PVAYLADEV-918 reworded makecache fast step
+ - Better changelog.
+ - Changelog for estonian-6.16.0-2.
+ - XTE-357 / Backlog #164: Security Server: Fixed temporary files removal in error situations.
+ - XTE-330 / Backlog #127: Security Server: Added support for "NEE" member class in certificates provided by SK ID Solutions AS.
+ - XTE-248: Security Server: Fixed (backward compatible) signed document creation according to XAdES and ASiC standards.
+ - PVAYLADEV-918 fix broken RHEL installation and wrong repo URL
+ - PVAYLADEV-841: Improved centos installation and setup
+ - Merge pull request #62 from vrk-kpa/PVAYLADEV-861
+ - Merge pull request #61 from vrk-kpa/PVAYLADEV-878
+ - MD documentation title level changed
+ - MD documentation mistake fixed
+ - PVAYLADEV-841: Added group var to define ansible_become_method for CentOS containers
+ - PVAYLADEV-841: Initial version
+ - MD documentation mistakes fixed
+ - MD documentation mistake fixed
+ - MD documentation mistakes fixed
+ - Fix names of histograms and sensors
+ - Testing equals
+ - fix imports
+ - Updated tests to see that return values are equals
+ - MD documentation toctree links fixed
+ - Created test for histrogram test
+ - MetricRegistryHolder checkstyle fix
+ - MetricRegistryHolder checkstyle fix
+ - Test job for MetricRegistryHolder
+ - Test job for MetricRegistryHolder
+ - MD documentation syntax changed and added numbers to titles
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #57 from vrk-kpa/release-6.16.0-3
+ - Merge branch 'develop' into PVAYLADEV-861
+ - PVAYLADEV-861: Updated documentation for signer-specific configuration properties
+ - PVAYLADEV-887: Documentation fixes
+ - MD documentation links fixed
+ - PVAYLADEV-861: Fix ini-file formatting
+ - PVAYLADEV-861: Implemented a mechanism for loading mutually alternative configuration files, moved configuration loading from UIServices to CenterUIServices, moved signer-specific configuration properties from proxy section to signer section and expanded exclusive component configuration files to explicitly state their signer-specific configurations
+ - Fixed imports
+ - Update ig-xlb_x-road_external_load_balancer_installation_guide.md
+ - More fail safe registery getAndUpdate for all sensors
+ - Use case documents changed to md format
+ - Revert changes to Use Cases (work in progress)
+ - Revert changes to Use Cases (work in progress)
+ - Merge pull request #49 from vrk-kpa/PVAYLADEV-869
+ - PVAYLADEV-887: Update changelog
+ - uc md file fix
+ - uc md file fix
+ - Merge remote-tracking branch 'origin/develop' into develop
+ - uc md file fix
+ - Try to fix intermittent failure in messagelog test.
+ - all md files changed
+ - more uc md file changes
+ - more uc md file changes
+ - more uc md file changes
+ - more uc md file changes
+ - more uc md file changes
+ - more uc md file changes
+ - more uc md file changes
+ - Merge remote-tracking branch 'origin/develop' into develop
+ - more uc md files
+ - Speed up build
+ - md documentation fix
+ - second uc md documentation added
+ - more uc document testing
+ - more uc document testing
+ - more uc document testing
+ - more uc document testing
+ - more uc document testing
+ - more uc document testing
+ - more uc document testing
+ - more uc document testing
+ - more uc document testing
+ - Merge remote-tracking branch 'origin/develop' into develop
+ - initial testing md uc documentation
+ - Merge pull request #60 from vrk-kpa/PVAYLADEV-860
+ - Update OWASP plugin (PVAYLADEV-830)
+ - Added install instructions to test automation environment to README
+ - Delete duplica automation yml file
+ - Merge pull request #53 from vrk-kpa/PVAYLADEV-822-internal-certs-monitoring
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-822-internal-certs-monitoring
+ - PVAYLADEV-860: Fix circular dependency
+ - Merge pull request #58 from vrk-kpa/PVAYLADEV-438-replace-wsdl-endpoint
+ - Merge pull request #59 from vrk-kpa/PVAYLADEV-367-parametrized-monitoring-request
+ - Corrected outputSpec maxOccurs "unbounded" -> ="1".
+ - Corrections related to pull request.
+ - PVAYLADEV-860: Update documentation
+ - PVAYLADEV-860: Add xroad-centralserver-monitoring dependency to xroad-center
+ - PVAYLADEV-822: Changed wording of auth/sign certificate meaning
+ - PVAYLADEV-438 fix README.md links to markdown
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-367-parametrized-monitoring-request
+ - Merge pull request #56 from vrk-kpa/PVAYLADEV-847
+ - Updated documentation.
+ - Merge pull request #51 from vrk-kpa/PVAYLADEV-856
+ - Merge pull request #57 from vrk-kpa/PVAYLADEV-815-autologin-guide-update
+ - Merge pull request #52 from vrk-kpa/PVAYLADEV-766-wsdl-add-client-cert
+ - Code cleanup.
+ - PVAYLADEV-438 add xmlunit license
+ - PVAYLADEV-438 fix markdown
+ - PVAYLADEV-438 cleanup markdown
+ - removed metaservices docx document
+ - PVAYLADEV-438 update markdown document, add wsdl filtering documentation
+ - PVAYLADEV-438 update markdown document
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-367-parametrized-monitoring-request
+ - PVAYLADEV-438 add markdown document
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #56 from vrk-kpa/release-6.16.0-2
+ - PVAYLADEV-438 add xml comments handling
+ - fixex url to autologin document
+ - Merge branch 'develop' of github.com:vrk-kpa/X-Road into PVAYLADEV-815-autologin-guide-update
+ - Merge pull request #54 from vrk-kpa/PVAYLADEV-787-autologin
+ - Fix installation issue (PVAYLADEV-787)
+ - Fixed autologin file address
+ - Move autologin documentation (PVAYLADEV-787)
+ - Fix installation issue (PVAYLADEV-787)
+ - autologin manual update
+ - PVAYLADEV-438 match attribute/element by QName
+ - PVAYLADEV-438 functioning implementation, and tests
+ - PVAYLADEV-822: Switched to existing ServerConf TLS cert method
+ - PVAYLADEV-822: Remove duplicate certs from JMX
+ - PVAYLADEV-822: Changed JMX header to match data, JMX data format fix.
+ - PVAYLADEV-847: Fixed a typo
+ - PVAYLADEV-847: Implementation and code clean-up
+ - Migrate config file (PVAYLADEV-787)
+ - PVAYLADEV-847: Fixed provider list event handlers in central services view
+ - PVAYLADEV-787: Add autologin tool to xroad repo
+ - PVAYLADEV-822: Env-monitoring now shows expiration data for all certificates
+ - PVAYLADEV-847: Fixed dblclick errors from proxy-ui and updated deprecated implementation
+ - Merge pull request #50 from vrk-kpa/PVAYLADEV-848-upgrade-gradle
+ - Fix wrapper script (PVAYLADEV-766)
+ - Update documentation and file permissions (PVAYLADEV-766)
+ - Tests verifying both all and specified set of monitoring parameters.
+ - PVAYLADEV-867: Update changelog
+ - Fix PVAYLADEV-766
+ - PVAYLADEV-847: Replaced data validity check with event filtering selector and fixed dblclick handling for search dialog tables
+ - MetricsProviderActor parametrized with list of requested metric names. Matching unit test.
+ - PVAYLADEV-847: Fixed and updated delegated click event handlers for center-ui tables
+ - Test for parametrized monitoring data request.
+ - Corrected namespace according to targetNameSpace. 'monitoring.xsd'->'monitoring'. Both tests and SOAP request pass.
+ - Monitoring parameters on ProxyMonitorServiceHandlerImpl::startHandling. ProxyMonitorServiceHandlerTest pass also using monitoring parameters.
+ - Added fixes for installation scripts
+ - Added delete, reclone repo
+ - Exclude audit.log from log cleanup
+ - Fix some build script issues. Upgrade to Gradle 4.1. (PVAYLADEV-848)
+ - Webserver, mockserver and improved ansible scripts
+ - Fix build script (PVAYLADEV-848)
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-848-upgrade-gradle
+ - Fix gradle build scripts (PVAYLADEV-848)
+ - Update README.md
+ - initial draft for installing mockserver, webserver, ssh server and country,global  vars
+ - Test for parametrized environmental monitoring query.
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-848-upgrade-gradle
+ - Merge pull request #48 from vrk-kpa/PVAYLADEV-844
+ - Commented xroad default password
+ - Added optional parameter 'outputSpec' to getSecurityServerMetrics.
+ - Fixed password - Xroad UI password must be in sha-512 format
+ - Fix version history formatting
+ - Upgrade gradle to version 4.0.1 (PVAYLADEV-848)
+ - Fix checkstyle problem
+ - Use random akka remoting port also in LogManagerTest
+ - Merge pull request #47 from vrk-kpa/PVAYLADEV-798
+ - Use random akka remoting port in messagelog tests
+ - Fix git hash missing from rpm package version
+ - PVAYLADEV-760: Fix proxy port redirect
+ - Merge pull request #46 from vrk-kpa/PVAYLADEV-760
+ - PVAYLADEV-798: Marginal change to remove tab gap in advanced search views
+ - PVAYLADEV-798: Changed the tab list structure in center-ui to include a wrapping div
+ - PVAYLADEV-760: Updated documentation changelog
+ - PVAYLADEV-760: Corrected documented SO-linger values
+ - Move images to a subdirectory (PVAYLADEV-816)
+ - PVAYLADEV-760: Added implementation and unit tests for an explicit loading order for glob-defined files
+ - Merge pull request #45 from vrk-kpa/PVAYLADEV-772-service-restarts
+ - Changed Palveluvayla to XRoad default names and folders and changed default user,password xrd,secret
+ - PVAYLADEV-772: Minor changes
+ - PVAYLADEV-772: Cleanup
+ - PVAYLADEV-772: Fix RHEL file permissions
+ - PVAYLADEV-772: Changes to RHEL packaging
+ - Fix changelog path
+ - Speed up dependencyCheck
+ - Update jetty to version 9.4.6
+ - PVAYLADEV-772: Registration file permissions
+ - PVAYLADEV-772: Restore script restarts services in reverse order
+ - PVAYLADEV-772: Do not register xroad-jetty for backup
+ - PVAYLADEV-772: Fix restore script
+ - PVAYLADEV-772: Add backup registration files for rest of the xroad services
+ - PVAYLADEV-772: Restore script modifications
+ - PVAYLADEV-772: xroad-common installs registration files for signer and confclient
+ - Merge pull request #44 from vrk-kpa/PVAYLADEV-834-dependency-version-updates
+ - Fix typo in env monitoring documentation
+ - PVAYLADEV-772: Alter the list of services to be restarted
+ - Suppress false positive dependency check warnings
+ - PVAYLADEV-772: Log stop commands
+ - JRuby version 1.7.25 -> 1.7.27
+ - PVAYLADEV-760: fixed incomplete packaging of override file
+ - PVAYLADEV-760: corrected the sysprop SO-linger values to match new proxy.ini values
+ - PVAYLADEV-760: Removed redundancy from RHEL proxy configuration by replacing old file with an override file of the configuration differences
+ - Merge pull request #41 from vrk-kpa/PVAYLADEV-804-lb-rolling-update-doc
+ - PVAYLADEV-834: Update dependency versions to: apache-mime4j-core 0.8.1 jackson-databind 2.8.6 Compile and unit tests pass.
+ - Merge pull request #40 from vrk-kpa/PVAYLADEV-797-disable-federation
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-797-disable-federation
+ - PVAYLADEV-797: Implemented suggested code style fix by Jarkko
+ - Merge pull request #43 from vrk-kpa/PVAYLADEV-831
+ - Merge remote-tracking branch 'upstream/develop' into PVAYLADEV-831
+ - Merge pull request #53 from cybernetica-xroad/estonian-6.16.0-1
+ - XTE-332, XTE-353 / Backlog #129: Fix SonarQube critical level issue.
+ - XTE-332, XTE-353 / Backlog #129: Remove previously added invalid data length check.
+ - Ignoring classes -folder in git.
+ - XTE-332, XTE-353 / Backlog #129: Check signature algorithm and data, better logging.
+ - XTE-332, XTE-353 / Backlog #129: Configuration migration for RHEL packaging.
+ - Fix ansible task does not build debian packages
+ - PVAYLADEV-797: Filter now uses Set instead of List, added a test
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #42 from vrk-kpa/PVAYLADEV-800-soapaction-header
+ - Removed unused import
+ - PVAYLADEV-746 fixed broken unit test
+ - XTE-335 / Backlog #134: Remove metrics-bugfix-agent.jar from RH package also.
+ - PVAYLADEV-804: Document typo fix
+ - PVAYLADEV-797: Visual fix for version number
+ - PVAYLADEV-804: Visual fix for version number
+ - PVAYLADEV-804: External Load Balancing Rolling update documentation
+ - PVAYLADEV-797: Fixed version number to UG-SS
+ - XTE-332, XTE-353 / Backlog #129: Better file names for documents.
+ - XTE-349; XTE-335 / Backlog #134; XTE-332, XTE-353 / Backlog #129: Changelog.
+ - XTE-332, XTE-353 / Backlog #129: Security Server, Central Server, Configuration Proxy: Added support for PKCS#11 sign mechanism CKM_RSA_PKCS_PSS and made key creation template configurable.
+ - XTE-335 / Backlog #134: Security Server, Op Monitoring Daemon : Updated Dropwizard to 3.2.2 and removed unnecessary bugfix.
+ - XTE-349: Fixed some typos related with document PR-OPMON.
+ - Merge remote-tracking branch 'ria-ee/develop' into develop
+ - Preserve SOAPAction header (#71/PVAYLADEV-800)
+ - Merge pull request #51 from hanhaka/Readme_update
+ - Merge pull request #50 from vrk-kpa/release-6.16.0-1
+ - Merge pull request #39 from vrk-kpa/PVAYLADEV-807
+ - PVAYLADEV-797: Added clarification about needed service restarts
+ - PVAYLADEV-797: Add SS system property for enabling federation and disable it by default.
+ - PVAYLADEV-807: Added a description of the health check maintenance mode to the external load balancer installation guide
+ - PVAYLADEV-807: Tidying up errant code
+ - PVAYLADEV-807: Fine tuned response message writing and added a test step for response message
+ - Merge pull request #36 from vrk-kpa/PVAYLADEV-746-monitor-certificate-expiration
+ - PVAYLADEV-807: Added tests for HealthCheckPort maintenance mode
+ - removed unnecessary generics type token parameter
+ - Additional newlines added for readability
+ - Links fixed
+ - Update README.md and add LICENCE -file
+ - PVAYLADEV-807: Added adminport delegate handler for /maintenance and an internal maintenance state for HealthCheckPort
+ - Merge pull request #35 from vrk-kpa/PVAYLADEV-780-logback-update
+ - added changelog date
+ - Merge pull request #37 from vrk-kpa/PVAYLADEV-519-pkcs11wrapper-license
+ - updated changelog
+ - Add missing image source files
+ - Merge pull request #38 from vrk-kpa/PVAYLADEV-794
+ - PVAYLADEV-794: Fix release number in Debian changelogs
+ - PVAYLADEV-794: Fix installation directory
+ - PVAYLADEV-794: Add CHANGELOG.md to rest of the packages
+ - PVAYLADEV-794: CHANGELOG.md is installed with binaries
+ - PVAYLADEV-794: Add development and release mode packaging for Debian and RHEL
+ - PVAYLADEV-794: Work on Debian packaging
+ - PVAYLADEV-794: RPM packages can be built in development and release modes
+ - added license for IAIK PKCS Wrapper
+ - PVAYLADEV-794: Work on rpm packaging release mode
+ - PVAYLADEV-794: hard-coded release mode
+ - added documentation about certificate info sensor configuration parameter
+ - PVAYLADEV-780: Switched all log configs to logbacks own rolling policy
+ - improved documentation
+ - Merge pull request #33 from vrk-kpa/PVAYLADEV-783
+ - PVAYLADEV-780: Update jetty and its logback module, switch to logback log rolling policy instead of workaround.
+ - minor changes
+ - Merge pull request #49 from VitaliStupin/master
+ - Merge branch 'master' of XTEE6 source
+ - Merge branch 'vrk-kpa-PVAYLADEV-725'
+ - Merge branch 'PVAYLADEV-725' of https://github.com/vrk-kpa/X-Road into vrk-kpa-PVAYLADEV-725
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-746-monitor-certificate-expiration
+ - Sync proxy.ini and proxy-rhel.ini
+ - Merge pull request #47 from vrk-kpa/release-6.7.13
+ - PVAYLADEV-796: Add source code for Finnish 6.7.13
+ - updated documentation
+ - add property for scheduling, fix todos, fix port conflict on tests
+ - added unit test
+ - PVAYLADEV-783: Fixed additional code style issues
+ - Merge pull request #34 from vrk-kpa/XROAD-44
+ - XROAD-44: Fix links in Vagrant instructions
+ - Use specific bundler version
+ - Update sonar project version property
+ - PVAYLADEV-783: Refactored JRuby implementation to be a bit less error prone and made some smaller improvements
+ - PVAYLADEV-783: Amended security server user guide with additional diagnostics view description
+ - PVAYLADEV-783: Modified proxy admin port handler implementation to better differentiate errors
+ - refactor, renamed ListedData object and attributes
+ - changed ListedData package
+ - added jmx
+ - Update metaservice test to use HTTPS
+ - Refactor implementation
+ - Fix PVAYLADEV-795
+ - Merge pull request #31 from vrk-kpa/PVAYLADEV-672-metaservice-tests-rebase
+ - added unhandled message logging, error handling (signer not responding)
+ - PVAYLADEV-672: Minor fixes suggested by Jarkko
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-672-metaservice-tests-rebase
+ - Merge branch 'develop' into PVAYLADEV-672-metaservice-tests-rebase
+ - fix one checkstyle
+ - Update version
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-746-monitor-certificate-expiration
+ - Merge pull request #42 from vrk-kpa/release-6.15.0
+ - not working
+ - Update changelogs
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - PVAYLADEV-672: Removed schemaLocations from WSDLs to fix tests
+ - PVAYLADEV-672: Fixed some license headers
+ - PVAYLADEV-672: Add metaservice tests
+ - Fix proxy setup on RHEL
+ - Merge remote-tracking branch 'ria-ee/develop' into develop
+ - Merge pull request #32 from cybernetica-xroad/estonian-6.14.0
+ - Add 'packaging version' part to the version number.
+ - Merge pull request #30 from vrk-kpa/PVAYLADEV-724-rolling-upgrade
+ - Bugfix: Arrays.asList() returns fixed size list and therefore, not usable here.
+ - Bugfix: Revert previous change - do not use immutable Collections.singletonList() here.
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-724-rolling-upgrade
+ - Merge pull request #28 from vrk-kpa/PVAYLADEV-730-rhel-packaging-for-wsdlvalidator
+ - PVAYLADEV-730: Fix spec file syntax
+ - PVAYLADEV-730: Simplified spec according to review comments
+ - PVAYLADEV-730: Remove unused imports
+ - PVAYLADEV-730: Remove checking for SOAP fault in WSDL parsing
+ - Merge pull request #29 from vrk-kpa/PVAYLADEV-743
+ - PVAYLADEV-743: Small fixes
+ - PVAYLADEV-743: Added user group configuration instructions for slave node read-only users to manual cluster configuration documentation
+ - Make it possible to disable configuration sync
+ - Fix xroad-jetty9 rpm packaging (PVAYLADEV-778)
+ - PVAYLADEV-730: Adjust log levels
+ - PVAYLADEV-730: Add logging
+ - PVAYLADEV-743: Added read only user configuration to cluster configuration playbook
+ - PVAYLADEV-743: Added cluster slave compatible user groups and slave detection to installation scripts to prevent update installations from destroying slave-specific user group configuration
+ - PVAYLADEV-730: Log warning if wsdlvalidator command is not present
+ - Merge pull request #27 from vrk-kpa/PVAYLADEV-621-proxy-file-handles
+ - PVAYLADEV-730: Add post install and post uninstall scripts
+ - PVAYLADEV-730: Initial wsdlvalidator rpm packaging
+ - merge
+ - Merge remote-tracking branch 'ria-ee/develop' into develop
+ - space
+ - XTE-337 / Joint development issue #140: Remove X-Road version 5 migration support. Warning: Central Server database schema changed, old Central Server backups are not usable.
+ - Merge pull request #30 from tuudik/develop
+ - Version bump 6.14.0
+ - XTE-341 / Joint development issue #142: Enable detect connections that have become stale (half-closed) while kept inactive in the connection pool.
+ - XTE-334 / Joint development issue #135: Fixed not correctly functioning timeouts. Default value of proxy property 'client-timeout' changed to '30000'. Default value of proxy property 'client-use-idle-connection-monitor' changed to 'true'. Default value of proxy property 'client-use-fastest-connecting-ssl-socket-autoclose' changed to 'true'. All SO_LINGER timeouts are in configuration as seconds.
+ - Workaround for working nginx restart. Use service instead of invoke-rc.d.
+ - Update ig-cs_x-road_6_central_server_installation_guide.md
+ - Merge remote-tracking branch 'ria-ee/develop' into develop
+ - PVAYLADEV-742: Set version number for next development iteration
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #24 from vrk-kpa/release-6.13.0
+ - Fix load balancing installation issues
+ - Merge pull request #26 from vrk-kpa/PVAYLADEV-738
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-621-proxy-file-handles
+ - Refactor and enhance error handling (PVAYLADEV-621)
+ - PVAYLADEV-742: Remove duplicate changelog entry
+ - PVAYLADEV-742: Update changelogs
+ - Merge pull request #19 from vrk-kpa/PVAYLADEV-695
+ - Fix PVAYLADEV-621
+ - PVAYLADEV-738: Removed broken and unused AsynchronousCallback and refactored SynchronousCallback to be thread-safe. Also modified main classes that use AdminPort to use the refactored SynchronousCallback
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-621-proxy-file-handles
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-695
+ - Merge pull request #25 from vrk-kpa/readme-improvement
+ - README.md links to Vagrant.md
+ - Merge pull request #2 in XTEE6/source from 6.9.5 to master
+ - Merge pull request #24 from vrk-kpa/PVAYLADEV-540-external-load-balancing
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-540-external-load-balancing
+ - Update LB installation guide
+ - Propagate interrupted status
+ - Add documentation about disabling client-side connection pooling.
+ - Merge pull request #22 from vrk-kpa/PVAYLADEV-615-Messagelog-arhiving-with-smaller-transactions
+ - Fix backup fails due to file permissions
+ - Exclude /etc/xroad/jetty from periodic sync
+ - Merge 'origin/develop' into PVAYLADEV-540-external-load-balancing
+ - Fix intermittent proxytest failure
+ - Fix healthcheck connector parameters
+ - Merge 'origin/develop' into PVAYLADEV-540-external-load-balancing
+ - Workaround for buggy nginx restart. Use 'service' instead of 'invoke-rc.d'.
+ - PVAYLADEV-735: Set version number for next development iteration
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #17 from cybernetica-xroad/estonian-6.12.0
+ - checkstyle fix
+ - Fixing null pointer exception
+ - testing logging
+ - * Merge 6.9.4 * XTE-293: Security Server: A field set used to generate the token ID of the SSCD has been made configurable. * XTE-333 / Joint development issue #128: Security Server bugfix: Fixed parsing SOAP messages containing &amp; or &lt; entities. * Security server packages depend on xroad-addon-opmonitoring and xroad-opmonitor and conflict with package xtee55-proxy
+ - Merge remote-tracking branch 'ria/master'
+ - Merge pull request #15 from vrk-kpa/PVAYLADEV-698-feature-load-balancer-install-instructions
+ - Merge pull request #16 from vrk-kpa/PVAYLADEV-707-soap-fault
+ - only one timestamp
+ - Added restriction to getMaxTimestampId for archived = false. So it will point to index
+ - PVAYLADEV-707: Cleanup
+ - PVAYLADEV-707: First iteraton on test for multipart SoapFault
+ - Refactor (PVAYLADEV-707)
+ - Documented new configurable parameter in messagelog archiving
+ - Merge pull request #21 from vrk-kpa/PVAYLADEV-726
+ - Merge pull request #18 from vrk-kpa/PVAYLADEV-729-central-server-restore-rights-fix
+ - PVAYLADEV-726: Code clean up
+ - PVAYLADEV-731: Fix debian changelog warnings
+ - PVAYLADEV-698: Typo fix suggested by Janne
+ - PVAYLADEV-725: Cherry pick one more file to fix proxy test suite
+ - Merge pull request #20 from vrk-kpa/merge-dev-into-lb-2017-03
+ - Merge branch 'develop' into merge-dev-into-lb-2017-03
+ - PVAYLADEV-698: Reworded health check examples
+ - Merge pull request #17 from vrk-kpa/PVAYLADEV-709
+ - PVAYLADEV-698: More fixes suggested by Janne
+ - PVAYLADEV-731: Set version number
+ - Update changelog (PVAYLADEV-695)
+ - Cherry-pick fix for SOAP parser
+ - found bug, tried order max results...
+ - finding source of error
+ - Changed less than to less than or equal
+ - testing
+ - added proparty to not make handleArchive spin in endless loop in heavy use of server. This is done by using timestamp id
+ - PVAYLADEV-709: Fixed security server user guide document version number styling
+ - PVAYLADEV-726: Added UTF8 encoding to the admin port response
+ - PVAYLADEV-698: Version date fix
+ - PVAYLADEV-698: TOC
+ - PVAYLADEV-698: Most changes suggested by Janne after testing the guide in practice
+ - PVAYLADEV-621: Remove commented code
+ - spelling mistage
+ - XTE-333 / Joint development issue #128: Security Server bugfix: Fixed parsing SOAP messages containing comments.
+ - Fixed linelenght
+ - Added save guards for not missing adding archive only log records but also timesteam record
+ - PVAYLADEV-729: CS Restore removes rights from /var/lib/xroad
+ - PVAYLADEV-709: Updated security server user guide document version and date
+ - Use xerces version 2.11.0.SP5 (JBoss fork).
+ - Refactor akka logging config [PVAYLADEV-695]
+ - PVAYLADEV-709: Small RHEL user group creation fix
+ - PVAYLADEV-709: Fixed earlier document changes
+ - PVAYLADEV-707: Pass SoapFault as-is in multipart messages too
+ - PVAYLADEV-709: Small document fix
+ - PVAYLADEV-709: Fixed button id
+ - Update changelog.
+ - removed unused logging
+ - Merge branch 'develop' into estonian-6.12.0
+ - Merge remote-tracking branch 'ria-ee/develop' into develop
+ - added logging
+ - Increase akka remoting maximum message size (PVAYLADEV-695)
+ - checkstyle fix
+ - Version 6.11.1 -> 6.12.0
+ - Made messagelog archiver in transaction patched configurable from message-log.ini file
+ - XTE-333 / Joint development issue #128: Security Server bugfix: Fixed parsing SOAP messages containing &amp; or &lt; entities in attributes.
+ - Code style.
+ - Merge pull request #16 from ria-ee/VitaliStupin-patch-1
+ - fixed typo
+ - PVAYLADEV-709: Fixed privileges notation
+ - PVAYLADEV-709: Added observer role description to security server user guide
+ - found problem duplicated shared folder. removed default
+ - PVAYLADEV-709: Fixed client to dynamically seek tabs to be disabled and changed action enabling to adhere to new privilege structure
+ - PVAYLADEV-709: Added more specific access control options required by observer and changed privilege naming to match restructured privileges
+ - PVAYLADEV-709: Added observer role to privileges, restructured the hierarchy to improve logical consistency and added missing privileges required for observer
+ - PVAYLADEV-709: Fixed styling for client details dialog and tabs
+ - PVAYLADEV-709: Added observer user group to installation scripts
+ - Fixed version history table in system parameters doc
+ - Suppressing emptyblock in one file for checkstyle check
+ - * XTE-99 / Joint development issue #79: Security Server UI: Added uniqueness   check of the entered security server code when initializing the server. * XTE-252 / Joint development issue #53: Security Server: Upgraded embedded   Jetty to the version 9.4.2. * XTE-293: Security Server: A field set used to generate the token ID of the   SSCD has been made configurable. * XTE-294 / Joint development issue #84: Security Server: Added configuration   file for the OCSP responder Jetty server (and increased max threads size   of the thread pool). * XTE-307 / Joint development issue #131: Security Server bugfix: Added   missing HTTP header "Connection: close" into the server proxy response in   cases error occurs before parsing a service provider's response. * XTE-308 / Joint development issue #132: Security Server bugfix: Added   missing read timeout for OCSP responder client. * XTE-310 / Joint development issue #125: Security Server bugfix: SOAP   messages with attachments caused in some cases a temopray file handle leak. * XTE-333 / Joint development issue #128: Security Server bugfix: Fixed   parsing SOAP messages containing &amp; or &lt; entities. * Security Server: TCP socket SO_LINGER values in the proxy configuration file   (proxy.ini) set to -1 according to avoid unexpected data stream closures.
+ - replacing stopper and made it really return something
+ - PVAYLADEV-698: More clarification on the keys section
+ - Merge remote-tracking branch 'ria-ee/develop' into develop
+ - PVAYLADEV-713: Set version number for next development iteration
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #10 from vrk-kpa/release-6.11.0
+ - Merge remote-tracking branch 'upstream/develop' into release-6.11.0
+ - PVAYLADEV-698: Clarify documentation
+ - PVAYLADEV-698: Fixed document name to match document id.
+ - PVAYLADEV-698: Date fix
+ - PVAYLADEV-698: Added another link to streaming replication conf options
+ - PVAYLADEV-698: Added a link to PostgreSQL docs
+ - PVAYLADEV-698: Changes suggested by Jarkko
+ - PVAYLADEV-698: Header- and subsequent TOC fix
+ - PVAYLADEV-698: Typo fix and small clarifications
+ - PVAYLADEV-698: TOC
+ - PVAYLADEV-698: Added text about database replication verification
+ - PVAYLADEV-698: Separated RHEL/Ubuntu instance start commands
+ - PVAYLADEV-698: Added more text. Clarified sync config location
+ - PVAYLADEV-698: Some changes suggested by Janne
+ - Testing stopping with transaction patch size
+ - PVAYLADEV-698: Added some text on cluster verification, WIP
+ - PVAYLADEV-698: Changes suggested by Tatu
+ - PVAYLADEV-698: Most changes suggested by Jarkko
+ - PVAYLADEV-698: Whitespace fixes to document
+ - PVAYLADEV-698: External Load balancer installation Guide
+ - Merge pull request #12 from vrk-kpa/PVAYLADEV-714-doc-fixes
+ - PVAYLADEV-714: Protocol extension typo fix
+ - Merge pull request #13 from vrk-kpa/PVAYLADEV-704-jenkinsfile
+ - Merge pull request #9 from ToomasMolder/develop
+ - Update terms_x-road_docs.md
+ - Update uc-mess_x-road_member_communication_use_case_model.md
+ - Update uc-member_x-road_use_case_model_for_member_management.md
+ - Update pr-mess_x-road_message_protocol.md
+ - Update ug-ss_x-road_6_security_server_user_guide.md
+ - Update ig-ss_x-road_v6_security_server_installation_guide.md
+ - Update ig-csha_x-road_6_ha_installation_guide.md
+ - Update arc-ss_x-road_security_server_architecture.md
+ - Update arc-g_x-road_arhitecture.md
+ - Update arc-cs_x-road_central_server_architecture.md
+ - Update arc-cp_x-road_configuration_proxy_architecture.md
+ - Revert "Tõstame HTTP päise "Connection: close" väärtustamise kohe"
+ - Tõstame HTTP päise "Connection: close" väärtustamise kohe ServerProxyHandler::handle() algusesse, et ka veaolukordades oleks see päis ilusti seatud. Task #15530
+ - PVAYLADEV-704 clean up Jenkinsfile
+ - PVAYLADEV-704 not breaking the build anymore
+ - PVAYLADEV-704 breaking the build a bit less now
+ - PVAYLADEV-704 breaking the build for testing
+ - PVAYLADEV-704 Jenkinsfile builds packages
+ - PVAYLADEV-704 test Jenkinsfile
+ - PVAYLADEV-704 test Jenkinsfile
+ - PVAYLADEV-714: Protocol extension documentation improvements
+ - PVAYLADEV-713 fix PVAYLADEV issue numbering
+ - PVAYLADEV-713 fix changelog spelling
+ - PVAYLADEV-713 udpated changelogs
+ - Merge pull request #11 from vrk-kpa/PVAYLADEV-685
+ - Merge pull request #10 from vrk-kpa/PVAYLADEV-549-monitoring-schema-doc-rebase
+ - PVAYLADEV-594: Typo fix
+ - PVAYLADEV-594: Added X-Road vs. extension schema clarification
+ - Delete arc-ss_technology_matrix_of_the_security_server.png
+ - Update pr-mess_x-road_message_protocol.md
+ - Restored quotation in 3.2
+ - PVAYLADEV-549 minor text modifications
+ - Update ig-csha_x-road_6_ha_installation_guide.md
+ - Update ig-ss_x-road_v6_security_server_installation_guide.md
+ - Update uc-member_x-road_use_case_model_for_member_management.md
+ - Update ug-ss_x-road_6_security_server_user_guide.md
+ - Table 1 in markdown
+ - Merge pull request #7 from vrk-kpa/document-type
+ - Corrected anchor Ref_PR-MSERV
+ - Update ig-ss_x-road_v6_security_server_installation_guide.md
+ - Corrected block indents
+ - Corrected internal anchor Ref_ARC-OPMOND
+ - Update README.md
+ - Delete arc-cs_x-road_central_server_architecture_2.1.2_Y-879-4.docx
+ - Create arc-cs_x-road_central_server_architecture.md
+ - Add files via upload
+ - Update README.md
+ - Delete arc-cp_x-road_configuration_proxy_architecture_1.2.1_Y-879-6.docx
+ - Create arc-cp_x-road_configuration_proxy_architecture.md
+ - Add files via upload
+ - Update ig-ss_x-road_v6_security_server_installation_guide.md
+ - Update README.md
+ - Update ig-ss_x-road_v6_security_server_installation_guide.md
+ - PVAYLADEV-685: Added a system property to indicate whether OCSP-response retrieval is activated and a check to disable OCSP-response retrieval scheduling if it is deactivated. The property is delivered as an override in confproxy and center packages.
+ - Added Monitoring service
+ - Added Monitoring service
+ - Update uc-mess_x-road_member_communication_use_case_model.md
+ - Create terms_x-road_docs.md
+ - Update arc-ss_x-road_security_server_architecture.md
+ - Update pr-mess_x-road_message_protocol.md
+ - Update uc-member_x-road_use_case_model_for_member_management.md
+ - Delete uc-mess_x-road_member_communication_use_case_model_1.5_Y-883-2.docx
+ - Update README.md
+ - Update uc-mess_x-road_member_communication_use_case_model.md
+ - Add files via upload
+ - Create uc-member_x-road_use_case_model_for_member_management.md
+ - Corrected some indented codeblocks
+ - Correct link to UC-OPMON
+ - PVAYLADEV-549: Date fix for document version listing
+ - PVAYLADEV-549: Document security server protocol extension
+ - Update README.md
+ - Delete uc-member_x-road_use_case_model_for_member_management_1.4_Y-883-1.docx
+ - Create uc-mess_x-road_member_communication_use_case_model.md
+ - Add files via upload
+ - Create .gitkeep
+ - Update README.md
+ - Delete proxy_monitoring_agent_manual_1.1_Y-745-13.pdf
+ - Delete central_monitoring_agent_manual_1.1_Y-745-12.pdf
+ - Delete v6_SOAP.zip
+ - Delete x-tee_uleandmise_testplaan_1.4_Y-884-1.docx
+ - Delete x-tee_turvaserveri_kasutajarollid_0.9_Y-742-17.docx
+ - Delete testservice-0.1.war
+ - Delete testclient-1.0.war
+ - Delete asicverifier-1.0.jar
+ - Update README.md
+ - Update README.md
+ - Delete arc-ss_x-road_security_server_architecture_1.3_Y-879-5.docx
+ - Update arc-ss_x-road_security_server_architecture.md
+ - Add files via upload
+ - Converted to Markdown
+ - Add files via upload
+ - Update pr-mess_x-road_message_protocol.md
+ - Update ig-csha_x-road_6_ha_installation_guide.md
+ - Update arc-g_x-road_arhitecture.md
+ - Update ug-ss_x-road_6_security_server_user_guide.md
+ - Update ug-ss_x-road_6_security_server_user_guide.md
+ - Update ig-csha_x-road_6_ha_installation_guide.md
+ - Update arc-g_x-road_arhitecture.md
+ - Add files via upload
+ - Update README.md
+ - Update ug-ss_x-road_6_security_server_user_guide.md
+ - Update ug-ss_x-road_6_security_server_user_guide.md
+ - Delete ug-ss_x-road_6_security_server_user_guide_2.14_Y-883-32.docx
+ - Converted from Microsoft Word format to Markdown
+ - Delete ig-csha_x-road_6_ha_installation_guide_1.3.1_Y-883-19-1.docx
+ - Update ig-csha_x-road_6_ha_installation_guide.md
+ - Converted from Microsoft Word format to Markdown
+ - Delete ig-csha_x-road_6_ha_installation_guide.md
+ - Delete arc-g_x-road_arhitecture_1.4_Y-879-3.docx
+ - Converted to Github flavoured Markdown
+ - Converted from Microsoft Word format to Markdown
+ - Delete arc-g_x-road_arhitecture.md
+ - Create arc-g_x-road_arhitecture.md
+ - Delete arc-g_x-road_arhitecture.md
+ - Create arc-g_x-road_arhitecture.md
+ - Delete arc-g_x-road_arhitecture.md
+ - Create ig-csha_x-road_6_ha_installation_guide.md
+ - Add files via upload
+ - Create .gitkeep
+ - Update arc-g_x-road_arhitecture.md
+ - Update arc-g_x-road_arhitecture.md
+ - Update arc-g_x-road_arhitecture.md
+ - Update arc-g_x-road_arhitecture.md
+ - Update arc-g_x-road_arhitecture.md
+ - Add files via upload
+ - Create arc-g_x-road_arhitecture.md
+ - Create .gitkeep
+ - PVAYLADEV-540 added a bit of documentation
+ - Merge pull request #8 from vrk-kpa/PVAYLADEV-609-messagelog-performance
+ - PVAYLADEV-703: Added changelog entry to messagelog database doc
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-609-messagelog-performance
+ - PVAYLADEV-696: Add jetty folder to .gitignore
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Merge pull request #5 from vrk-kpa/release-6.10.0
+ - PVAYLADEV-696: Fix document headers
+ - PVAYLADEV-696: Remove obsolete docx
+ - PVAYLADEV-703: Documented the new index. Also fixed the name of the previous index in doc.
+ - Merge pull request #6 from vrk-kpa/PVAYLADEV-609-messagelog-performance
+ - PVAYLADEV-696: Set version number for the next development iteration
+ - PVAYLADEV-696: Add missing task to changelogs
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-540-external-load-balancing
+ - PVAYLADEV-696: Update changelogs
+ - Merge remote-tracking branch 'upstream/develop' into develop
+ - Update documentation
+ - PVAYLADEV-609: Also added preconditions to the previously added not-archived index
+ - Merge pull request #2 from cybernetica-xroad/estonian-6.9.4
+ - PVAYLADEV-609: Added preconditions to the index as it might be added to some customers
+ - PVAYLADEV-609: Modified the added index slightly as per Jarkko's changes
+ - * XTE-301: Security Server UI bugfix: race condition of the adding a new client caused duplicates * XTE-319: Security Server UI bugfix: WSDL deletion caused incorrect ACL removal * XTE-322: Security Server bugfix: a typo in the configuration file proxy.ini (client-timeout)
+ - Merge pull request #1 from vrk-kpa/PVAYLADEV-691-hotfix-execlisting-package-list
+ - PVAYLADEV-691: Debian changelog fix
+ - Update README.md
+ - Fix for documentation link
+ - Fix for disk space sensor default value
+ - PVAYLADEV-691: removed comment
+ - PVAYLADEV-691: Fix for changelog format
+ - PVAYLADEV-609: Added an index to speed up timestamping
+ - PVAYLADEV-691: Fix for changelog format
+ - PVAYLADEV-691: Fix for changelog format: spaces
+ - PVAYLADEV-691: Fix for changelog format
+ - PVAYLADEV-691: Updated changelog and version number from 6.9.2 to 6.9.3
+ - [PVAYLADEV-637]: Fix cron job
+ - PVAYLADEV-691: Hotfix for ExecListingSensor init. (Package listing etc)
+ - Merge branch 'PVAYLADEV-680-fix-changelog' into develop
+ - Merge pull request #4 from vrk-kpa/PVAYLADEV-369-monitoring-interval-conf
+ - PVAYLADEV-369: Renamed property monitor -> env-monitor
+ - Merge branch 'develop' into PVAYLADEV-369-monitoring-interval-conf
+ - Rename files (fixes merge)
+ - Merge remote-tracking branch 'origin/develop' into PVAYLADEV-540-external-load-balancing
+ - PVAYLADEV-670: Fix document paths
+ - [PVAYLADEV-637] Add sync service
+ - Merge pull request #1 from vrk-kpa/PVAYLADEV-670
+ - Merge pull request #2 from vrk-kpa/lxd-automation
+ - Merge pull request #3 from vrk-kpa/PVAYLADEV-684-rename-folders
+ - PVAYLADEV-684: Add missing upstart file
+ - PVAYLADEV-680 fix changelog syntax
+ - PVAYLADEV-369: Updated documentation with new environmental monitoring parameters describing sensor intervals.
+ - PVAYLADEV-369: Renamed property environmental monitoring property names.
+ - [PVAYLADEV-637] Multiple modifications
+ - PVAYLADEV-684: Fix path to archive-hashchain-verifier
+ - PVAYLADEV-684: Move checkstyle config to src
+ - PVAYLADEV-684: Move folders xtee6 and doc
+ - PVAYLADEV-684: Update xtee6 and doc path references
+ - PVAYLADEV-684 Import changes from another repository
+ - PVAYLADEV-684 Import changes from another repository
+ - PVAYLADEV-684 Import changes from another repository
+ - PVAYLADEV-684 Import changes from another repository
+ - PVAYLADEV-684 Remove obsolete files
+ - PVAYLADEV-684 Import changes from another repository
+ - Merge pull request #31 in XM/source from finnish-6.9.2 to develop
+ - Add source code for Finnish 6.9.2
+ - Merge pull request #29 in XM/source from estonian-6.9.1 to develop
+ - Fixed references of ARC-OPMOND, UG-OPMONSYSPAR, TEST-OPMON, TEST-OPMONSTRAT
+ - Missing version bump.
+ - Updated documents: ARC-OPMOND, UG-OPMONSYSPAR, UG-SS, PR-OPMON, PR-OPMONJMX, TEST_OPMON, TEST_OPMONSTRAT, UC-OPMON
+ - Merge pull request #28 in XM/source from finnish-6.9.0 to develop
+ - Exit build script on error
+ - Add source code for Finnish 6.9.0
+ - Merge pull request #1 in XTEE6/source from 6.8.11 to master
+ - Added operational monitoring functionality for security server:   * added operational monitoring daemon component - package xroad-opmonitor;   * added operational monitoring addon for proxy - package xroad-addon-opmonitoring;   * Minor bugfixes and improvements
+ - Merge pull request #27 in XM/source from estonian-6.8.11 to develop
+ - Merge remote-tracking branch 'ria-xm/estonian-6.8.11'
+ - Added documents: PR-OPMON, PR-OPMONJMX, ARC-OPMOND, UG-OPMONSYSPAR Updated documents: ARC-G, ARC-SS, UC-OPMON, UG-SS, TEST_OPMON, TEST_OPMONSTRAT
+ - Merge pull request #26 in XM/source from estonian-6.8.10 to develop
+ - * Added README instead the file operational_monitoring_mock_service.war. * Updated document TEST-OPMONSTRAT. * Some comments. * TLS certificate generation script uses directory $HOME instead $PWD for output directory.
+ - Let's make service restart sleep seconds confirable in the integration test.
+ - Operational data monitoring improvements. Some bugfixes.
+ - Merge pull request #23 in XM/source from estonian-6.8.9 to develop
+ - Merge
+ - Make field startTimestamp non static.
+ - Xroad-common packaging fix.
+ - Merge branch 'develop' into estonian-6.8.9
+ - Merge pull request #25 in XM/source from ~VITALI/xm-source:estonian-6.8.7.1 to develop
+ - Converting PR-MESS to markdown
+ - Fixing version number
+ - CDATA parsing fix
+ - Operational data monitoring improvements. Some bugfixes. Updated documents: UC-MEMBER, UG-SS Added documents: TEST-OPMON, TEST-OPMONSTRAT
+ - Merge pull request #19 in XM/source from estonian-6.8.7 to develop
+ -  * DOM parser replacement with SAX parser (XTE-262)  * Added conflict uxp-addon-monitor<=6.5
+ - Merge remote-tracking branch 'ria-xm/develop'
+ - Merge remote-tracking branch 'ria-xm/develop'
+ - xtee55 moved to another repo
+ - Merge pull request #18 in XM/source from estonian-6.8.6 to develop
+ - * XTE-265 - Fixed: Security server handles MIME message incorrectly if there is a (\t) TAB symbol before bounday parameter * XTE-278 - Change in installation guide: apt-get upgrade does not upgrade security server from 6.8.3 to 6.8.5
+ - Merge pull request #16 in XM/source from estonian-6.8.5 to develop
+ - Copy-paste bugfix.
+ - Missing changelog and version bump.
+ - * Bugfix: it's not possible to send duplicate client registration requests * Bugfix: added one missing translation * Updated configuration client test data * Some minor corrections
+ - Revert "Merge branch 'master' of https://stash.ria.ee/scm/xtee6/source into develop"
+ - Merge branch 'master' of https://stash.ria.ee/scm/xtee6/source into develop
+ - Merge pull request #15 in XM/source from xtee6-merge-6.8.4 to develop
+ - uxp dependencies removed
+ - xtee6/packages/build-jetty-rpm.sh version fix 6.7.12 -> 6.8.4
+ - fixed redhat build scripts
+ - removing unused codelines
+ - [Central] * Bugfix: Fixed race conditions in the client registration and authentication certificate registration processes * Minor fixes
+ - documents merging
+ - test data fixed: expired date in future now
+ - Merge branch 'master' of https://stash.ria.ee/scm/xtee6/source
+ - v5.5:
+ - v6:
+ - Merge pull request #14 in XM/source from develop to master
+ - Merge pull request #13 in XM/source from finnish-6.7.12-fix to develop
+ - Fix copy/paster error
+ - [Security Server]   * Bugfix: Added the mandatory "type" parameter to the multipart/related content-type header   * Bugfix: Fixed the premature termination of message streams   * Bugfix: Ensured that the signature is not sent before the message has been successfully logged   * Feature: Do not validate SOAP messages against the SOAP schema, to prevent     causing errors in case a type definition of the SOAP message element is     described in an external schema (the necessary checks are performed in other ways)   * Feature: Remove the UTF-8 BOM bytes (if found) from the incoming request and response
+ - Merge pull request #12 in XM/source from finnish-6.7.12 to master
+ - Sources and documentation for Finnish 6.7.12 version
+ - Fixing Jetty download link
+ - Merge branch 'master' of https://stash.ria.ee/scm/xtee6/source
+ -  [Security server]   * Bugfixes
+ - [Security server]  * WSDL validator bugfixes  * Better logging of SOAP Fault details  * Minor fixes
+ - wsdlvalidator updated to version 1.0.2 (now correctly handles big wsdl files from stdin)
+ - 6.8.2
+ - v6 changelog --- * Bugfixes and UI improvements * Improved getting OCSP responses * ISO8601 time format used in audit log * SOAP Fault message element faultDetail without namespace
+ - * XTE-179 KS veebiliideses sql teade   Parandatud keskserveri UI veakäsitlust. * XTE-172 "TODO" lähtekoodis   Lähtekoodist "TODO"-d eemaldatud. * XTE-201 Manusega sõnumil kaob Content-ID   Päiste edastamine parandatud. * ProtocolVersion ja UserID väljade kasutamine täpsustatud vastavalt spekile * pisibugid XTE-189
+ - XTE-145 - sertifikaadi DN automaatne täitmine serifikaadiprofiilist XTE-177 - logitakse .tmp failidesse
+ - XTE-78, XTE-160, XTE-161  - alamsüsteemi kasutamise kohustuslikus XTE-145 - sertifikaadi DN automaatne täitmine serifikaadiprofiilist XTE-177 - logitakse .tmp failidesse XTE-182 - puuduv indeks XTE-189 - Backupfailide kontrollid ja piirangud XTE-174 - HSM reconnect XTE-92 - võtme loomisel määratakse 'label' XTE-197 - alamsüsteemi ja mitme sertifikaadi korral päringute vahendamine ebaõnnestus XTE-171 - 'No valid authentication certificate' - lisatud logimist XTE-159 - lisatud logimist
+ - Merge pull request #1 in XM/source from finnish-6.7.0 to master
+ - XTE-109, XTE-110 lähtekoodi uuendus
+ - Added sources for Finnish 6.7.0
+ - X-tee v6 parandustarne.
+ - X-road v6.6-2 release source
+ - v6 tarne
+ - New v6.6 pre-release source
+ - Fixed failing tests Corrected permissions for directory
+ - koodi uuendus
+ - v6 juuni vahetarne
+ - XTE-112 XTE-108 XTE-96
+ - Removed X-road 5.5 source
+ - v6 hanke I etappi tarne.
+ - copyright markeerimine. XTE-59
+ - 2015.01 parandustarne kood
+ - XTE-56. ehitusjuhised ja skriptid täiendatud
+ - födereerumisehange: xtee55 koodiuuendus
+ - repo sync
+ - X-tee 6.0 föderatsioonilepingu source tarne
+ - Vastavalt lepingule lähtekooditarne. ◦ turvaserver kasutab konfiguratsiooni hoidmiseks Postgres SQL andmebaasi; ◦ turvaserveri kasutajaliideses on kliendi andmed koondatud ühele sakkidega lehele; ◦ turvaserveri kasutajaliideses kuvatakse kõik kliendi identifikaatorid stringina ja ◦ hüpikaknas näidatakse detailinfot;
+ - Initial Commit
+
