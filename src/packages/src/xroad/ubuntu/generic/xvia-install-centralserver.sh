@@ -14,3 +14,4 @@ sudo dpkg -i $DIRNAME/xroad-signer_*.deb
 #Install X-Road Center
 sudo dpkg -i $DIRNAME/xroad-center_*.deb
 sudo dpkg -i $DIRNAME/xroad-centralserver-monitoring_*.deb
+sudo apt-get install -f
