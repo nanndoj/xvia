@@ -11,10 +11,6 @@ sudo dpkg -i $DIRNAME/xroad-confclient_*.deb
 sudo dpkg -i $DIRNAME/xroad-jetty9_*.deb
 sudo dpkg -i $DIRNAME/xroad-signer_*.deb
 
-# Install X-Road proxy
-sudo dpkg -i $DIRNAME/xroad-proxy_*.deb
-sudo dpkg -i $DIRNAME/xroad-addon-metaservices_*.deb
-sudo dpkg -i $DIRNAME/xroad-addon-messagelog_*.deb
-sudo dpkg -i $DIRNAME/xroad-monitor_*.deb
-sudo dpkg -i $DIRNAME/xroad-addon-proxymonitor_*.deb
-sudo dpkg -i $DIRNAME/xroad-addon-wsdlvalidator_*.deb
+#Install X-Road Center
+sudo dpkg -i $DIRNAME/xroad-center_*.deb
+sudo dpkg -i $DIRNAME/xroad-centralserver-monitoring_*.deb

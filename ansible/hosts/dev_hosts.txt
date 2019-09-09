@@ -4,7 +4,7 @@
 
 #configuration proxies (ubuntu lxd containers, optional)
 [cp-servers]
-#xroad-lxd-cp ansible_connection=lxd
+##xroad-lxd-cp ansible_connection=lxd
 
 #certification authority, time stamping authority and ocsp service server for testing purposes (ubuntu)
 [ca-servers]
@@ -12,6 +12,7 @@
 
 #security servers (ubuntu lxd containers)
 [ss-servers]
+ss-server ansible_connection=docker
 #xroad-lxd-ss1 ansible_connection=lxd
 xroad-lxd-ss2 ansible_connection=lxd
 
