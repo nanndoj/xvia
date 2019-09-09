@@ -1,19 +1,64 @@
 #!/bin/bash
-set -e
-export XROAD=$(cd "$(dirname "$0")"; pwd)
+BASEDIR=$(cd `dirname $0` && pwd)
+ARTIFACTORY_USER=deploy
+BUILD_DIR=packages/build
+REPOSITORY="https://artifactory.xvia.com.br/artifactory/xvia-release"
+INSTALL_SRC="packages/src/xroad/ubuntu/generic"
 
-./compile_code.sh "$@"
-
-if command -v docker &>/dev/null; then
-    docker build -q -t xroad-deb-bionic $XROAD/packages/docker/deb-bionic
-    docker build -q -t xroad-deb-trusty $XROAD/packages/docker/deb-trusty
-    docker build -q -t xroad-rpm $XROAD/packages/docker/rpm
-
-    docker run --rm -v $XROAD/..:/workspace -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u $(id -u):$(id -g) -e HOME=/workspace/src/packages xroad-deb-bionic /workspace/src/packages/build-deb.sh bionic
-    docker run --rm -v $XROAD/..:/workspace -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u $(id -u):$(id -g) -e HOME=/workspace/src/packages xroad-deb-trusty /workspace/src/packages/build-deb.sh trusty
-    docker run --rm -v $XROAD/..:/workspace -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u $(id -u):$(id -g) -e HOME=/workspace/src/packages xroad-rpm /workspace/src/packages/build-rpm.sh
+if [ -f VERSION ]; then
+    BASE_STRING=$(cat VERSION)
+    BASE_LIST=(`echo $BASE_STRING | tr '.' ' '`)
+    V_MAJOR=${BASE_LIST[0]}
+    V_MINOR=${BASE_LIST[1]}
+    V_PATCH=${BASE_LIST[2]}
+    echo "Current version : $BASE_STRING"
+    V_MINOR=$((V_MINOR + 1))
+    V_PATCH=0
+    SUGGESTED_VERSION="$V_MAJOR.$V_MINOR.$V_PATCH"
+    read -r -p "Enter a version number [$SUGGESTED_VERSION]: " INPUT_STRING
+    if [ "$INPUT_STRING" = "" ]; then
+        INPUT_STRING=$SUGGESTED_VERSION
+    fi
+    echo "Will set new version to be $INPUT_STRING"
+    echo $INPUT_STRING > VERSION
 else
-    echo "Docker not installed, building only .deb packages for this distribution"
-    cd $XROAD/packages
-    ./build-deb.sh $(lsb_release -sc)
+    echo "Could not find a VERSION file"
+    read -r -p "Do you want to create a version file and start from scratch? [y]" RESPONSE
+    if [ "$RESPONSE" = "" ]; then RESPONSE="y"; fi
+    if [ "$RESPONSE" = "Y" ]; then RESPONSE="y"; fi
+    if [ "$RESPONSE" = "Yes" ]; then RESPONSE="y"; fi
+    if [ "$RESPONSE" = "yes" ]; then RESPONSE="y"; fi
+    if [ "$RESPONSE" = "YES" ]; then RESPONSE="y"; fi
+    if [ "$RESPONSE" = "y" ]; then
+        echo "0.1.0" > VERSION
+    fi
+
 fi
+
+V=$(cat VERSION)
+read -r -s -p "Enter artifactory password (deploy): " PSWD
+
+pack () {
+  TARGET="xvia-$1-v$V.tar.gz"
+  echo "$TARGET"
+  cp -rf $BASEDIR/$INSTALL_SRC/xvia-install-*.sh $BASEDIR/$BUILD_DIR/$1
+  mkdir -p "$BASEDIR/$BUILD_DIR/xvia"
+  cp -rf "$BASEDIR/$BUILD_DIR/$1" "$BASEDIR/$BUILD_DIR/xvia"
+  cd "$BASEDIR/$BUILD_DIR" && tar -czvf "$BASEDIR/$BUILD_DIR/$TARGET" "xvia/$1"
+  rm -rf "$BASEDIR/$BUILD_DIR/xvia"
+}
+
+deploy () {
+  echo "Deploying $1..."
+  curl -u$ARTIFACTORY_USER:$PSWD -T "$BASEDIR/$BUILD_DIR/$1" "$REPOSITORY/$1"
+}
+
+echo "Packing ubuntu 14.04..."
+TARGET_FILE=$(pack "ubuntu14.04")
+deploy $TARGET_FILE
+
+echo packing "Packing ubuntu 18.04..."
+TARGET_FILE=$(pack "ubuntu18.04")
+deploy $TARGET_FILE
+
+echo "New version deployed successfully!"
