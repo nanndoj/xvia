@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# OS: Ubuntu
+# Module: Security Server
+
 DIRNAME=$(cd `dirname $0` && pwd)
 
 sudo apt-get --assume-yes install nginx-light

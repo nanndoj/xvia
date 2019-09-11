@@ -3,7 +3,7 @@ BASEDIR=$(cd `dirname $0` && pwd)
 ARTIFACTORY_USER=deploy
 BUILD_DIR=packages/build
 REPOSITORY="https://artifactory.xvia.com.br/artifactory/xvia-release"
-INSTALL_SRC="packages/src/xroad/ubuntu/generic"
+INSTALL_SRC="packages/src/xroad/installer"
 
 if [ -f VERSION ]; then
     BASE_STRING=$(cat VERSION)
@@ -36,15 +36,15 @@ else
 fi
 
 V=$(cat VERSION)
-read -r -s -p "Enter artifactory password (deploy): " PSWD
+read -r -s -p "Enter artifactory password (deploy user): " PSWD
 
 pack () {
-  TARGET="xvia-$1-v$V.tar.gz"
+  TARGET="xvia-$1$2-v$V.tar.gz"
   echo "$TARGET"
-  cp -rf $BASEDIR/$INSTALL_SRC/xvia-install-*.sh $BASEDIR/$BUILD_DIR/$1
+  cp -rf $BASEDIR/$INSTALL_SRC/$1/xvia-install-*.sh $BASEDIR/$BUILD_DIR/$1$2
   mkdir -p "$BASEDIR/$BUILD_DIR/xvia"
-  cp -rf "$BASEDIR/$BUILD_DIR/$1" "$BASEDIR/$BUILD_DIR/xvia"
-  cd "$BASEDIR/$BUILD_DIR" && tar -czvf "$BASEDIR/$BUILD_DIR/$TARGET" "xvia/$1"
+  cp -rf "$BASEDIR/$BUILD_DIR/$1$2" "$BASEDIR/$BUILD_DIR/xvia"
+  cd "$BASEDIR/$BUILD_DIR" && tar -czvf "$BASEDIR/$BUILD_DIR/$TARGET" "xvia/$1$2"
   rm -rf "$BASEDIR/$BUILD_DIR/xvia"
 }
 
@@ -54,11 +54,11 @@ deploy () {
 }
 
 echo "Packing ubuntu 14.04..."
-TARGET_FILE=$(pack "ubuntu14.04")
+TARGET_FILE=$(pack "ubuntu" "14.04")
 deploy $TARGET_FILE
 
 echo packing "Packing ubuntu 18.04..."
-TARGET_FILE=$(pack "ubuntu18.04")
+TARGET_FILE=$(pack "ubuntu" "18.04")
 deploy $TARGET_FILE
 
 echo "New version deployed successfully!"
