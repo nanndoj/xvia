@@ -2,8 +2,9 @@
 BASEDIR=$(cd `dirname $0` && pwd)
 ARTIFACTORY_USER=deploy
 BUILD_DIR=packages/build
+RPM_SRC=$BUILD_DIR/xroad/redhat/RPMS/x86_64
 REPOSITORY="https://artifactory.xvia.com.br/artifactory/xvia-release"
-INSTALL_SRC="packages/src/xroad/installer"
+INSTALL_SRC=packages/src/xroad/installer
 
 if [ -f VERSION ]; then
     BASE_STRING=$(cat VERSION)
@@ -38,10 +39,14 @@ fi
 V=$(cat VERSION)
 read -r -s -p "Enter artifactory password (deploy user): " PSWD
 
+# Prepare the RPM packages
+mkdir -p "$BASEDIR/$BUILD_DIR/redhat"
+cp -r $RPM_SRC/*.* $BUILD_DIR/redhat
+
 pack () {
   TARGET="xvia-$1$2-v$V.tar.gz"
   echo "$TARGET"
-  cp -rf $BASEDIR/$INSTALL_SRC/$1/xvia-install-*.sh $BASEDIR/$BUILD_DIR/$1$2
+  cp -rf $BASEDIR/$INSTALL_SRC/$1/install-*.sh $BASEDIR/$BUILD_DIR/$1$2
   mkdir -p "$BASEDIR/$BUILD_DIR/xvia"
   cp -rf "$BASEDIR/$BUILD_DIR/$1$2" "$BASEDIR/$BUILD_DIR/xvia"
   cd "$BASEDIR/$BUILD_DIR" && tar -czvf "$BASEDIR/$BUILD_DIR/$TARGET" "xvia/$1$2"
@@ -52,6 +57,10 @@ deploy () {
   echo "Deploying $1..."
   curl -u$ARTIFACTORY_USER:$PSWD -T "$BASEDIR/$BUILD_DIR/$1" "$REPOSITORY/$1"
 }
+
+echo packing "Packing redhat..."
+TARGET_FILE=$(pack "redhat")
+deploy $TARGET_FILE
 
 echo "Packing ubuntu 14.04..."
 TARGET_FILE=$(pack "ubuntu" "14.04")
