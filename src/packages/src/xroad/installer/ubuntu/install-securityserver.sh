@@ -21,3 +21,6 @@ sudo dpkg -i $DIRNAME/xroad-addon-messagelog_*.deb
 sudo dpkg -i $DIRNAME/xroad-monitor_*.deb
 sudo dpkg -i $DIRNAME/xroad-addon-proxymonitor_*.deb
 sudo dpkg -i $DIRNAME/xroad-addon-wsdlvalidator_*.deb
+
+# Install Support for Operational Monitoring
+sudo dpkg -i $DIRNAME/xroad-addon-opmonitoring_*.deb
