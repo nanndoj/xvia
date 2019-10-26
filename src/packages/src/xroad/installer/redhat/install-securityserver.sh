@@ -25,5 +25,8 @@ sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-jetty9-*.rpm
 
 
 #Install Support for Operational Monitoring
+sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-opmonitor-*.rpm
 sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-addon-opmonitoring-*.rpm
+
+sudo service xroad-proxy restart
 
