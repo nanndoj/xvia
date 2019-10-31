@@ -1,11 +1,11 @@
 #central servers (ubuntu)
 [cs-servers]
-#cs.xvia.com.br
+cs.xvia.com.br
 
 #security servers (ubuntu or rhel)
 [ss-servers]
-#ss-monitor.xvia.com.br
-#ss.xvia.com.br
+ss-monitor.xvia.com.br
+ss.xvia.com.br
 
 
 #configuration proxies (ubuntu)
@@ -23,6 +23,5 @@ cp-servers
 ca-servers
 
 ### vars ###
-
 [ss-servers:vars]
 variant=vanilla

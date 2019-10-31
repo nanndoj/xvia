@@ -1,0 +1,14 @@
+---
+# This playbook installs an X-Via environment to the defined host inventory from a remote package repository
+
+- hosts: cs-servers
+  become: yes
+  become_user: root
+  roles:
+    - xvia-base
+    - xvia-cs
+  tags:
+    - cs
+  vars_files:
+    - vars_files/local_repo.yml
+    - vars_files/xvia_remote_repo.yml

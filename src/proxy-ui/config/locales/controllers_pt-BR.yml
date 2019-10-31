@@ -104,6 +104,7 @@ pt-BR:
     deleting_services: "Excluindo serviços:<p class='bold'>%{deleted}</p>"
     wsdl: "WSDL"
     openapi3: "REST"
+    openapi3_description: "Descritivo do REST (OpenAPI V3)"
     wsdl_disabled: "DESABILITADO"
     internal_server_ssl_error: "O handshake TLS com o serviço %{url} falhou, o certificado deste serviço não foi fixado neste servidor"
     group_exists: "Um grupo com o código '%{code}' já existe"

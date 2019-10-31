@@ -1,0 +1,43 @@
+---
+- name: Configura o idioma principal como português brasileiro
+  lineinfile:
+    path: /etc/environment
+    regexp: '^LC_ALL='
+    line: LC_ALL=pt_BR.UTF-8
+
+- name: Instala os pacotes de linguagens adcionais
+  locale_gen:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - pt_BR.UTF-8
+
+
+- name: Download X-Via
+  get_url:
+    url: "{{ xvia_repository_url }}/xvia-ubuntu18.04-v{{ xvia_version }}.tar.gz"
+    dest: /tmp/
+
+- name: Descompacta o pacote X-Via
+  unarchive:
+    remote_src: yes
+    src: "/tmp/xvia-ubuntu18.04-v{{ xvia_version }}.tar.gz"
+    dest: /tmp/
+
+- name: Copia o script instalador para o servidor remoto
+  copy:
+    src: "{{ playbook_dir }}/xvia/resources/scripts/install-centralserver.sh"
+    dest: /tmp/xvia/ubuntu18.04/install-centralserver.sh
+
+- name: Ajusta permissões
+  file:
+    path: /tmp/xvia/ubuntu18.04/install-centralserver.sh
+    mode: 0500
+
+- name: Instala o Servidor Central X-Via
+  command: /tmp/xvia/ubuntu18.04/install-centralserver.sh
+
+- name: Remove a pasta com o instalador
+  file:
+    state: absent
+    path: /tmp/xvia/

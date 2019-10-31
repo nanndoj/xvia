@@ -28,8 +28,8 @@
     - { question: "xroad-common/admin-subject",      value: "/CN={{ inventory_hostname }}" }
     - { question: "xroad-common/username",           value: "{{ xroad_ui_user }}" }
 
-- name: install xroad central server
-  apt:
-    name: xroad-centralserver
-    state: present
-    force: yes
+#- name: install xroad central server
+#  apt:
+#    name: xroad-centralserver
+#    state: present
+#    force: yes

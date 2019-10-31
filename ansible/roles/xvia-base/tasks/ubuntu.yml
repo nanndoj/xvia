@@ -1,0 +1,5 @@
+---
+- name: Garante que os pacotes básicos estão instalados
+  apt:
+    name: ['locales','software-properties-common']
+    state: present

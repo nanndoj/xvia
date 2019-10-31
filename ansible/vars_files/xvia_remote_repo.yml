@@ -1,0 +1,4 @@
+---
+package_source: "xvia"
+xvia_repository_url: "https://artifactory.xvia.com.br/artifactory/xvia-release"
+xvia_version: "0.29.0"
