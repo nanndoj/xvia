@@ -1,5 +1,29 @@
 ---
+- name: Atualiza os pacotes
+  apt:
+    force: yes
+    upgrade: full
+    update_cache: yes
+
 - name: Garante que os pacotes básicos estão instalados
   apt:
-    name: ['locales','software-properties-common']
+    name: ['locales','software-properties-common', 'wget', 'git']
     state: present
+
+- name: Instala os pacotes de linguagens adcionais
+  locale_gen:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - pt_BR.UTF-8
+
+- name: Download X-Via
+  get_url:
+    url: "{{ xvia_repository_url }}/xvia-ubuntu18.04-v{{ xvia_version }}.tar.gz"
+    dest: /tmp/
+
+- name: Descompacta o pacote X-Via
+  unarchive:
+    remote_src: yes
+    src: "/tmp/xvia-ubuntu18.04-v{{ xvia_version }}.tar.gz"
+    dest: /tmp/

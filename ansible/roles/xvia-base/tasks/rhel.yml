@@ -1,0 +1,16 @@
+---
+- name: Garante que os pacotes básicos estão instalados (RHEL)
+  yum:
+    name: ['yum-utils', 'wget']
+    state: present
+
+- name: Download X-Via (RHEL)
+  get_url:
+    url: "{{ xvia_repository_url }}/xvia-redhat-v{{ xvia_version }}.tar.gz"
+    dest: /tmp/
+
+- name: Descompacta o pacote X-Via (RHEL)
+  unarchive:
+    remote_src: yes
+    src: "/tmp/xvia-redhat-v{{ xvia_version }}.tar.gz"
+    dest: /tmp/

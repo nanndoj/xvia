@@ -12,3 +12,25 @@
   vars_files:
     - vars_files/local_repo.yml
     - vars_files/xvia_remote_repo.yml
+
+- hosts: ss-servers
+  become: yes
+  become_user: root
+  roles:
+    - xvia-base
+    - xvia-ss
+  tags:
+    - ss
+  vars_files:
+    - vars_files/local_repo.yml
+    - vars_files/ss_database.yml
+    - vars_files/xvia_remote_repo.yml
+
+- hosts: ca-servers
+  become: yes
+  become_user: root
+  pre_tasks:
+    - raw: apt install openssl
+  roles:
+    - role: xroad-ca
+      tags: [ 'ca' ]

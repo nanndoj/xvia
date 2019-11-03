@@ -1,0 +1,31 @@
+---
+- name: Copia o script instalador para o servidor remoto
+  copy:
+    src: "{{ playbook_dir }}/resources/xvia-scripts/redhat/install-securityserver.sh"
+    dest: /tmp/xvia/redhat/install-securityserver.sh
+
+- name: Ajusta permissões
+  file:
+    path: /tmp/xvia/redhat/install-securityserver.sh
+    mode: 0500
+
+- name: Instala o Servidor Seguro X-Via
+  command: /tmp/xvia/redhat/install-securityserver.sh
+
+- name: Remove a pasta com o instalador
+  file:
+    state: absent
+    path: /tmp/xvia/
+
+- name: add xroad admin user
+  command: "xroad-add-admin-user {{ xroad_ui_user }}"
+
+- name: start xroad-proxy (RHEL)
+  service:
+   name: xroad-proxy
+   state: started
+
+- name: Garante que os pacotes básicos estão instalados (RHEL)
+  yum:
+    name: ['docker', 'device-mapper-libs', 'device-mapper-event-libs']
+    state: present

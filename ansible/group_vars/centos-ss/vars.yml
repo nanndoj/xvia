@@ -1,2 +1,2 @@
 ---
-ansible_become_method: su
+ansible_become_method: sudo

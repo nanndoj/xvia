@@ -18,7 +18,7 @@
 - name: Create / update local package repository (RHEL)
   become: yes
   command: createrepo /xroad/local
-  when: package_source == "local"
+  when: package_source != "xvia" and package_source == "local"
   args:
     chdir: /xroad/local
   tags: centos-repo
@@ -33,3 +33,4 @@
     repo_gpgcheck: "{{ rhel_repo_gpgcheck }}"
     state: present
     enabled: yes
+  when: package_source != "xvia"

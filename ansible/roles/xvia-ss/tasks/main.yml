@@ -1,0 +1,37 @@
+---
+- import_tasks: ubuntu.yml
+  when: ansible_os_family == "Debian"
+
+- import_tasks: rhel.yml
+  when: ansible_os_family == "RedHat"
+
+- name: Ensures the docker service is active
+  systemd:
+    state: started
+    name: docker
+    enabled: yes
+
+- name: Downloads the proxy adapter
+  git:
+    repo: "{{ proxy_adapter_repo }}"
+    dest: "/srv/{{ proxy_adapter_name }}"
+
+- name: Stops the proxy adapter docker container
+  command: "docker start {{ proxy_adapter_name }}"
+  ignore_errors: yes
+
+- name: Remove old proxy adapter images
+  command: "docker image rm {{ proxy_adapter_name }} -f"
+
+- name: Builds the proxy adapter docker image
+  command: "docker build -t {{ proxy_adapter_name }} /srv/{{ proxy_adapter_name }}"
+
+- name: Starts the proxy adapter docker container
+  command: "docker start {{ proxy_adapter_name }}"
+  register: docker_started
+  ignore_errors: yes
+
+- name: Forces the proxy adapter docker container to run
+  command: "docker run --name {{ proxy_adapter_name }} -d {{ proxy_adapter_name }}"
+  when: docker_started.rc != 0
+

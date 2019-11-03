@@ -1,3 +1,12 @@
 ---
+- name: Configura o idioma principal como português brasileiro
+  lineinfile:
+    path: /etc/environment
+    regexp: '^LC_ALL='
+    line: LC_ALL=pt_BR.UTF-8
+
 - import_tasks: ubuntu.yml
   when: ansible_os_family == "Debian"
+
+- import_tasks: rhel.yml
+  when: ansible_os_family == "RedHat"

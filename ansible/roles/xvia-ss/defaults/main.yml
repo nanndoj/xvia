@@ -1,0 +1,3 @@
+---
+proxy_adapter_name: xroad-universal-soap
+proxy_adapter_repo: "https://github.com/nanndoj/{{ proxy_adapter_name }}.git"

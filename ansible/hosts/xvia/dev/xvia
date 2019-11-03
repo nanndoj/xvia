@@ -1,26 +1,15 @@
 #central servers (ubuntu)
 [cs-servers]
-cs.xvia.com.br
+34.95.151.170
 
-#security servers (ubuntu or rhel)
 [ss-servers]
-ss-monitor.xvia.com.br
-ss.xvia.com.br
+34.95.249.205
+34.95.184.253
+34.95.235.234
+34.95.245.231
 
-
-#configuration proxies (ubuntu)
-[cp-servers]
-
-#certification authority, time stamping authority and ocsp service server (ubuntu)
 [ca-servers]
-ca.xvia.com.br
-
-#a custom super group for overriding variable defaults
-[xvia:children]
-cs-servers
-ss-servers
-cp-servers
-ca-servers
+34.95.153.132
 
 ### vars ###
 [ss-servers:vars]
