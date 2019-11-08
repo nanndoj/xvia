@@ -1,0 +1,87 @@
+---
+- name: install bionic apt repo key
+  apt_key:
+    url: "{{ubuntu_18_apt_key}}"
+    state: present
+
+- name: xroad bionic apt repository
+  apt_repository:
+    repo: "{{ubuntu_18_apt_repo}}"
+    state: present
+
+- name: Install the cluster management package on the master node
+  apt:
+    name: ['xroad-center-clusterhelper']
+    state: present
+    update_cache: yes
+  when: master is defined
+
+- name: Create/modify a list of HA node IP addresses
+  lineinfile:
+    dest: /etc/xroad/cluster/nodes
+    regexp: "{{ item }}"
+    line: "{{ item }}"
+    state: present
+    create: yes
+  with_items: "{{ groups['cs-servers'] }}"
+  when: master is defined
+
+- name: Check if there's one SSH Key configured
+  stat:
+    path: /etc/xroad/cluster/hacluster.sshkey.pub
+  register: has_sshkey
+  when: master is defined
+
+- name: Configure the SSH Key
+  command: ssh-keygen -N "" -f /etc/xroad/cluster/hacluster.sshkey
+  become: yes
+  become_user: xroad
+  when: master is defined and not has_sshkey.stat.exists
+
+- name: Load the the SSH Key content
+  slurp:
+    src: /etc/xroad/cluster/hacluster.sshkey.pub
+  register: haClusterKey
+  when: master is defined
+
+- name: Share the SSH key with the other nodes
+  set_fact:
+    sharedClusterKey: "{{ haClusterKey.content|b64decode }}"
+  delegate_to: "{{item}}"
+  delegate_facts: True
+  loop: "{{groups['cs-servers']}}"
+  when: master is defined
+
+- name: Create a directory if it does not exist
+  file:
+    path: /root/.ssh
+    state: directory
+
+- name: Set authorized key
+  authorized_key:
+    state: present
+    user: root
+    path: /root/.ssh/authorized_keys2
+    key: "{{ sharedClusterKey }}"
+
+- name: Copy the updated version of the cluster script
+  copy:
+    src: "{{ playbook_dir }}/../..//src/packages/src/xroad/common/cluster/xroad_create_cluster.sh"
+    dest: /usr/share/xroad/scripts/xroad_create_cluster.sh
+  when: master is defined
+
+- name: Execute the cluster setup script
+  command: /usr/share/xroad/scripts/xroad_create_cluster.sh -y
+  become: yes
+  become_user: xroad
+  when: master is defined
+
+- name: Install the X-Road central server cluster helper package on all the added nodes
+  apt:
+    name: ['xroad-center-clusterhelper']
+    state: present
+
+- name: Remove bionic apt repository
+  apt_repository:
+    repo: "{{ubuntu_18_apt_repo}}"
+    state: absent

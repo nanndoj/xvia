@@ -1,0 +1,15 @@
+#central servers (ubuntu)
+
+[cs-servers]
+34.95.235.234 master=true
+34.95.151.170
+
+[ss-servers]
+
+
+[ca-servers]
+
+
+### vars ###
+[ss-servers:vars]
+variant=vanilla

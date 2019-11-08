@@ -18,6 +18,18 @@ REMOTE_SCRIPT_PREFIX="set -x"
 POSTGRES_CONF_FILE="/etc/postgresql/9.4/main/postgresql.conf"
 OLD_POSTGRES_VERSION=0
 
+ASK_CONFIRMATION=true
+
+while getopts ":y" opt; do
+  case $opt in
+    y) ASK_CONFIRMATION=false
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+
+
 # These are the steps for creating a cluster. See the comments of each function
 # for details.
 create_cluster () {
@@ -62,6 +74,13 @@ usage() {
   fi
 }
 
+confirm() {
+  if [[ ${ASK_CONFIRMATION} = true ]]
+  then
+    read
+  fi
+}
+
 # The detailed log of the commands run on the target machines will be saved to $LOGFILE.
 # A less detailed log will be written to the console.
 start_log_file() {
@@ -86,7 +105,7 @@ check_nodes_file() {
     output "\nThe following machines will be used in the cluster:\n==="
     output "$(cat $NODESFILE)"
     output "===\nPress ENTER to continue, Ctrl-C to interrupt"
-    read
+    confirm
   else
     die "Cannot access cluster node file at $DIR/$NODESFILE\n" \
         "ATTENTION! Write node IP addresses, one every line into $DIR/$NODESFILE\n" \
@@ -117,7 +136,7 @@ wait_for_authorized_keys() {
 
   output "ATTENTION! Did you execute the above command in _ALL_ nodes???\n\n"
   output "If ready press ENTER. SSH connection test will follow"
-  read
+  confirm
 }
 
 # Make sure that root's key-based access to all the machines that make up the
@@ -125,7 +144,7 @@ wait_for_authorized_keys() {
 test_ssh_connections() {
   while read -u10 node
   do
-    local command="ssh -n ${SSH_OPTIONS} root@${node} exit"
+    local command="ssh -n ${SSH_OPTIONS} -o "StrictHostKeyChecking=no" root@${node} exit"
     output "\n$node: Testing SSH connection"
     output "Testing: $command"
     if $command; then

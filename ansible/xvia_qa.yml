@@ -1,0 +1,7 @@
+---
+# This playbook installs an X-Via environment to the defined host inventory from a remote package repository
+- name: Setup the central server cluster
+  import_playbook: cs_cluster/xroad_cs_cluster.yml
+
+- name: Setup the QA enviroment (same as dev)
+  import_playbook: xvia_dev.yml
