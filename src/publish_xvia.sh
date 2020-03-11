@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BUILD_DIR="${DIR}/packages/build"
 DIST_FOLDER=xvia
 STAGING_DIR="${BUILD_DIR}/${DIST_FOLDER}"
-VERSION="6.24.0"
+VERSION="6.23.0"
 
 publish () {
   echo "Cleaning staging folder"
