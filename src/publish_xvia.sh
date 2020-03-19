@@ -18,6 +18,7 @@ publish () {
   then
     cp -R "${BUILD_DIR}/xroad/$1/RPMS/x86_64" "${STAGING_DIR}"
     mv "${STAGING_DIR}/x86_64" "${STAGING_DIR}/$1"
+    cp -R "${BUILD_DIR}/xroad/$1/RPMS/noarch/*" "${STAGING_DIR}/$1"
   else
     cp -R "${BUILD_DIR}/$1" "${STAGING_DIR}"
   fi
