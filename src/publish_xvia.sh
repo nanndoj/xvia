@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BUILD_DIR="${DIR}/packages/build"
 DIST_FOLDER=xvia
 STAGING_DIR="${BUILD_DIR}/${DIST_FOLDER}"
-VERSION="6.23.0"
+VERSION= "${VERSION_NUM:-6.23.0}"
 
 publish () {
   echo "Cleaning staging folder"
@@ -13,7 +13,14 @@ publish () {
 
   echo "Preparing staging files for $1"
   mkdir -p "${STAGING_DIR}"
-  cp -R "${BUILD_DIR}/$1" "${STAGING_DIR}"
+
+  if [ $1 == "redhat" ]
+  then
+    cp -R "${BUILD_DIR}/xroad/$1/RPMS/x86_64" "${STAGING_DIR}"
+  else
+    cp -R "${BUILD_DIR}/$1" "${STAGING_DIR}"
+  fi
+
   cp "${DIR}/packages/src/xroad/installer/$1/install-centralserver.sh" "${STAGING_DIR}/$1"
   cp "${DIR}/packages/src/xroad/installer/$1/install-securityserver.sh" "${STAGING_DIR}/$1"
 
@@ -24,4 +31,4 @@ publish () {
   curl --insecure --progress-bar -u deploy:Extreme@1 -X PUT "https://artifactory.xvia.com.br/artifactory/xvia-release/" -T "xvia-$1-v${VERSION}.tar.gz"
 }
 
-publish "ubuntu18.04"
+publish "${DIST:-ubuntu18.04}"
