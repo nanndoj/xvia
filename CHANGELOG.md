@@ -1,5 +1,7 @@
 # Change Log
 
+## 6.24.0 - UNRELEASED
+
 ## 6.23.0 - 2020-02-19
 - XRDDEV-730: Validate security server addresses on security server.
 - XRDDEV-732: Validate security server addresses on cental server.

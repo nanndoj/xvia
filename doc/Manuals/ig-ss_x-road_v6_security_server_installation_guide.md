@@ -6,7 +6,7 @@
 
 **X-ROAD 6**
 
-Version: 2.19  
+Version: 2.21  
 Doc. ID: IG-SS
 
 ---
@@ -44,6 +44,8 @@ Doc. ID: IG-SS
  30.05.2019 | 2.17    | Added package installation instructions on chapter "[2.4 Preparing OS](#24-preparing-os)" | Raul Martinez
  11.09.2019 | 2.18    | Remove Ubuntu 14.04 from supported platforms | Jarkko Hyöty
  20.09.2019 | 2.19    | Add instructions for using remote databases | Ilkka Seppälä
+ 12.04.2020 | 2.20    | Add note about the default value of the *connector-host* property in the EE-package | Petteri Kivimäki
+ 29.04.2020 | 2.21    | Add instructions how to use remote database located in Microsoft Azure | Ilkka Seppälä
   
 ## Table of Contents <!-- omit in toc -->
 
@@ -99,6 +101,9 @@ See X-Road terms and abbreviations documentation \[[TA-TERMS](#Ref_TERMS)\].
 1.  <a id="Ref_UG-SS" class="anchor"></a>\[UG-SS\] Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: [UG-SS](ug-ss_x-road_6_security_server_user_guide.md)
 
 2.  <a id="Ref_TERMS" class="anchor"></a>\[TA-TERMS\] X-Road Terms and Abbreviations. Document ID: [TA-TERMS](../terms_x-road_docs.md).
+
+3. <a name="Ref_UG-SYSPAR" class="anchor"></a>\[UG-SYSPAR\] X-Road: System Parameters User Guide. Document ID:
+[UG-SYSPAR](ug-syspar_x-road_v6_system_parameters.md).
 
 ## 2 Installation
 
@@ -201,7 +206,7 @@ To install the X-Road security server software on *Ubuntu* operating system, fol
 
         sudo apt-add-repository -y "deb https://artifactory.niis.org/xroad-release-deb $(lsb_release -sc)-current main"
 
-3. (Optional step) If you want to use remote database server instead of the default locally installed one, you need to pre-create a configuration file containing the database administrator master password. This can be done by performing the following steps:
+3. (Optional step) If you want to use remote database server instead of the default locally installed one, you need to pre-create a configuration file containing at least the database administrator master password. This can be done by performing the following steps:
 
         sudo touch /etc/xroad.properties
         sudo chown root:root /etc/xroad.properties
@@ -209,7 +214,28 @@ To install the X-Road security server software on *Ubuntu* operating system, fol
         
     Edit `/etc/xroad.properties` contents. See the example below. Replace parameter values with your own.
 
-        postgres.connection.password = 54F46A19E50C11DA8631468CF09BE5DB
+        postgres.connection.password = {database superuser password}
+        postgres.connection.user = {database superuser name, postgres by default}
+
+    If your remote database is in Microsoft Azure the connection usernames need to be in format `username@servername`. Therefore you need to precreate also db.properties file as follows. First create the directory and file.
+
+      sudo mkdir /etc/xroad
+      sudo chown xroad:xroad /etc/xroad
+      sudo chmod 751 /etc/xroad
+      sudo touch /etc/xroad/db.properties
+      sudo chown xroad:xroad /etc/xroad/db.properties
+      sudo chmod 640 /etc/xroad/db.properties
+
+    Then edit `/etc/xroad/db.properties` contents. See the example below. Replace parameter values with your own.
+
+      serverconf.hibernate.connection.username = serverconf@servername
+      serverconf.hibernate.connection.password = H1nGmB3uqtU7IJ82qqEaMaH2ozXBBkh0
+      op-monitor.hibernate.connection.username = opmonitor@servername
+      op-monitor.hibernate.connection.password = V8jCARSA7RIuCQWr59Hw3UK9zNzBeP2l
+      messagelog.hibernate.connection.username = messagelog@servername
+      messagelog.hibernate.connection.password = 1wmJ-bK39nbA4EYcTS9MgdjyJewPpf_w
+
+    In case remote database is used, one should verify that the version of the local PostgreSQL client matches the version of the remote PostgreSQL server.
 
 4.  Issue the following commands to install the security server packages (use package xroad-securityserver-ee to include configuration specific to Estonia; use package xroad-securityserver-fi to include configuration specific to Finland):
 
@@ -222,7 +248,7 @@ Upon the first installation of the packages, the system asks for the following i
 
 -   Database server URL. Locally installed database is suggested as default but remote databases can be used as well. In case remote database is used, one should verify that the version of the local PostgreSQL client matches the version of the remote PostgreSQL server.
 
--   The Distinguished Name of the owner of the **user interface’s** self-signed TLS certificate (*Subject DN*) and its alternative names (*subjectAltName*) (**reference data: 1.8; 1.10**). The certificate is used for securing connections to the user interface.
+-   The Distinguished Name of the owner of the **user interface's and management REST API's** self-signed TLS certificate (*Subject DN*) and its alternative names (*subjectAltName*) (**reference data: 1.8; 1.10**). The certificate is used for securing connections to the user interface and to the management REST APIs.
     The name and IP addresses detected from the operating system are suggested as default values.
 
     -   The *Subject DN* must be entered in the format:
@@ -246,6 +272,7 @@ Upon the first installation of the packages, the system asks for the following i
 
 The meta-package `xroad-securityserver` also installs metaservices module `xroad-addon-metaservices`, messagelog module `xroad-addon-messagelog` and WSDL validator module `xroad-addon-wsdlvalidator`. Both meta-packages `xroad-securityserver-ee` and `xroad-securityserver-fi` install operational data monitoring module `xroad-addon-opmonitoring`.
 
+**N.B.** In case configuration specific to Estonia (package `xroad-securityserver-ee`) is installed, connections from client applications are restricted to localhost by default. To enable client application connections from external sources, the value of the `connector-host` property must be overridden in the `/etc/xroad/conf.d/local.ini` configuration file. Changing the system parameter values is explained in the System Parameters User Guide \[[UG-SS](#Ref_UG-SS)\].
 
 ### 2.6 Post-Installation Checks
 

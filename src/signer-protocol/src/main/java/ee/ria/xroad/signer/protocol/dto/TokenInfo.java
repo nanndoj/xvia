@@ -36,6 +36,8 @@ import java.util.Map;
 @Value
 public final class TokenInfo implements Serializable {
 
+    public static final String SOFTWARE_MODULE_TYPE = "softToken";
+
     private final String type;
 
     private final String friendlyName;
@@ -61,4 +63,12 @@ public final class TokenInfo implements Serializable {
     /** Contains label-value pairs of information about token. */
     private final Map<String, String> tokenInfo;
 
+    /**
+     * Logic to determine if a token is saved to configuration.
+     * True if there is at least one key which is saved to configuration
+     */
+    public boolean isSavedToConfiguration() {
+        return keyInfo.stream()
+                .anyMatch(k -> k.isSavedToConfiguration());
+    }
 }

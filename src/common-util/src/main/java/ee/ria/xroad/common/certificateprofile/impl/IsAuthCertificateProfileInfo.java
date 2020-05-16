@@ -34,19 +34,31 @@ public class IsAuthCertificateProfileInfo extends AbstractCertificateProfileInfo
 
     /**
      * Constructor.
+     * 
      * @param params the parameters
      */
     public IsAuthCertificateProfileInfo(Parameters params) {
         super(new DnFieldDescription[] {
                 // Country Code
-                new DnFieldDescriptionImpl("C", "Country Code (C)", "IS").setReadOnly(true),
+                new EnumLocalizedFieldDescriptionImpl(
+                        "C",
+                        DnFieldLabelLocalizationKey.COUNTRY_CODE,
+                        "IS"
+                ).setReadOnly(true),
 
-                // Server FQDN
-                new DnFieldDescriptionImpl("CN", "Server DNS name (CN)", "").setReadOnly(false),
+                // Server code
+                new EnumLocalizedFieldDescriptionImpl(
+                        "CN",
+                        DnFieldLabelLocalizationKey.SERVER_DNS_NAME,
+                        ""
+                ).setReadOnly(false),
 
                 // Serialnumber
-                new DnFieldDescriptionImpl("serialNumber", "Server identifier",
-                        params.getServerId().toShortString()).setReadOnly(true)
+                new EnumLocalizedFieldDescriptionImpl(
+                        "serialNumber",
+                        DnFieldLabelLocalizationKey.SERIAL_NUMBER,
+                        params.getServerId().toShortString()
+                ).setReadOnly(true)
         });
     }
 }

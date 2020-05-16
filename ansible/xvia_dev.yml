@@ -1,7 +1,7 @@
 ---
 # This playbook installs an X-Via environment to the defined host inventory from a remote package repository
 
-- hosts: cs-servers
+- hosts: cs_servers
   become: yes
   become_user: root
   roles:
@@ -13,7 +13,7 @@
     - vars_files/local_repo.yml
     - vars_files/xvia_remote_repo.yml
 
-- hosts: ss-servers
+- hosts: ss_servers
   become: yes
   become_user: root
   roles:
@@ -26,7 +26,7 @@
     - vars_files/ss_database.yml
     - vars_files/xvia_remote_repo.yml
 
-- hosts: ca-servers
+- hosts: ca_servers
   become: yes
   become_user: root
   pre_tasks:
