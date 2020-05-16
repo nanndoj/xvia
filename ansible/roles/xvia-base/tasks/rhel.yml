@@ -8,6 +8,7 @@
   get_url:
     url: "{{ xvia_repository_url }}/xvia-redhat-v{{ xvia_version }}.tar.gz"
     dest: /tmp/
+    validate_certs: no
 
 - name: Descompacta o pacote X-Via (RHEL)
   unarchive:

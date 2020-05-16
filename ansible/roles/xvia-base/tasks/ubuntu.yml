@@ -21,6 +21,7 @@
   get_url:
     url: "{{ xvia_repository_url }}/xvia-ubuntu18.04-v{{ xvia_version }}.tar.gz"
     dest: /tmp/
+    validate_certs: no
 
 - name: Descompacta o pacote X-Via
   unarchive:
