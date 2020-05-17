@@ -1,0 +1,5 @@
+---
+- name: Instala o nodejs e o NPM
+  apt:
+    name: ['nodejs', 'npm']
+    state: present

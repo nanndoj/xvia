@@ -1,8 +1,23 @@
 ---
+- name: ensure gpg is installed
+  apt:
+    name: ['gnupg']
+    state: present
+    update_cache: yes
+
 - name: install bionic apt repo key
   apt_key:
     url: "{{ubuntu_18_apt_key}}"
     state: present
+
+- name: xroad user
+  user:
+    name: xroad
+    comment: "XRoad User"
+    state: present
+    shell: "/bin/bash"
+    password: '*'
+    createhome: "yes"
 
 - name: xroad bionic apt repository
   apt_repository:
@@ -35,7 +50,7 @@
 - name: Configure the SSH Key
   command: ssh-keygen -N "" -f /etc/xroad/cluster/hacluster.sshkey
   become: yes
-  become_user: xroad
+  become_user: root
   when: master is defined and not has_sshkey.stat.exists
 
 - name: Load the the SSH Key content
@@ -66,7 +81,7 @@
 
 - name: Copy the updated version of the cluster script
   copy:
-    src: "{{ playbook_dir }}/../..//src/packages/src/xroad/common/cluster/xroad_create_cluster.sh"
+    src: "{{ playbook_dir }}/roles/node/templates/xroad_create_cluster.sh"
     dest: /usr/share/xroad/scripts/xroad_create_cluster.sh
   when: master is defined
 

@@ -1,0 +1,17 @@
+---
+proxy_adapter_name: xroad-universal-soap
+proxy_http_port: 5080
+proxy_https_port: 5443
+proxy_adapter_repo: "https://github.com/nanndoj/{{ proxy_adapter_name }}.git"
+
+ca_path_debian: /usr/local/share/ca-certificates
+ca_path:
+  RedHat:
+    6: /usr/local/share/ca-certificates
+    7: /etc/pki/ca-trust/source/anchors
+  Debian:
+    7: '{{ ca_path_debian }}'
+    8: '{{ ca_path_debian }}'
+    14: '{{ ca_path_debian }}'
+    16: '{{ ca_path_debian }}'
+    18: '{{ ca_path_debian }}'

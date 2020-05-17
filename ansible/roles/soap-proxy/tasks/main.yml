@@ -1,0 +1,93 @@
+---
+- import_tasks: ubuntu.yml
+  when: ansible_os_family == "Debian"
+
+- import_tasks: rhel.yml
+  when: ansible_os_family == "RedHat"
+
+- name: Install "pm2" globally using npm
+  npm:
+    name: pm2
+    global: yes
+
+- name: Download the soap proxy adapter
+  git:
+    repo: "{{ proxy_adapter_repo }}"
+    dest: "/srv/{{ proxy_adapter_name }}"
+    force: yes
+  register: gitUpdate
+
+- name: Fix permissions
+  file:
+    path: "/srv/{{ proxy_adapter_name }}/{{ item }}.sh"
+    mode: 0500
+  loop:
+    - build
+    - startup
+
+- name: Compile xroad-soap-proxy
+  command: "/srv/{{ proxy_adapter_name }}/build.sh"
+
+- name: Ensure the certificate directory exist
+  file:
+    path: /srv/sslcert
+    state: directory
+    mode: 0755
+
+- name: Prepare to generate the certificate
+  copy:
+    remote_src: yes
+    src: '/srv/{{ proxy_adapter_name }}/src/sslcert/{{item}}'
+    dest: '/srv/sslcert/{{item}}'
+    mode: 0500
+  with_items:
+    - generate-certificate.sh
+
+- name: Check if theres already a certificate
+  stat:
+    path: "/srv/sslcert/local.crt"
+  register: cert
+
+- name: Generate the self signed certificate
+  command: "/srv/sslcert/generate-certificate.sh"
+  when: cert.stat.exists == False
+
+- name: install ca package on rhel systems
+  yum:
+    name: ca-certificates
+    state: present
+  when: ansible_os_family == "RedHat" and cert.stat.exists == False
+
+- name: Install ca package on debian systems
+  apt:
+    name: ca-certificates
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Debian" and cert.stat.exists == False
+
+- name: Enable dynamic ca configuration on rhel6
+  shell: /bin/update-ca-trust enable
+  when: ansible_os_family == "RedHat" and ansible_distribution_major_version|int == 6 and cert.stat.exists == False
+
+- name: Copy certificate authority to trusted ca path of the os
+  copy:
+    remote_src: yes
+    src: '/srv/sslcert/local.crt'
+    dest: '{{ ca_path[ansible_os_family][ansible_distribution_major_version|int] }}/'
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - update trusted ca debian
+    - update trusted ca redhat
+  when: cert.stat.exists == False
+
+- name: Startup PM2 service
+  command: "/srv/{{ proxy_adapter_name }}/startup.sh"
+
+- name: Install xroad-soap-proxy service
+  command: "env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u xroad --hp /home/xroad"
+  become: yes
+
+- name: Freeze the process list when rebooting
+  command: "pm2 save"

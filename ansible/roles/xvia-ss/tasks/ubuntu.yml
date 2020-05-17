@@ -16,13 +16,3 @@
   file:
     state: absent
     path: /tmp/xvia/
-
-- name: Remove versões antigas do Docker
-  apt:
-    name: ['docker', 'docker-engine', 'docker.io']
-    state: absent
-
-- name: Instala as dependências do Docker
-  apt:
-    name: ['docker.io']
-    state: present

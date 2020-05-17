@@ -1,0 +1,19 @@
+---
+- name: Update YUM libraries
+  shell: "yum -y update"
+  become: yes
+
+- name: Make sure git is installed
+  yum:
+    name: git
+    state: present
+
+- name: Configure EPEL Repository
+  yum:
+    name: epel-release
+    state: present
+
+- name: Install Node from the EPEL Repository
+  yum:
+    name: nodejs
+    state: present

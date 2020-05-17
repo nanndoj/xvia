@@ -1,8 +1,8 @@
 ---
-- name: Copia o script instalador para o servidor remoto
-  copy:
-    src: "{{ playbook_dir }}/resources/xvia-scripts/ubuntu/install-centralserver.sh"
-    dest: /tmp/xvia/ubuntu18.04/install-centralserver.sh
+#- name: Copia o script instalador para o servidor remoto
+#  copy:
+#    src: "{{ playbook_dir }}/resources/xvia-scripts/ubuntu/install-centralserver.sh"
+#    dest: /tmp/xvia/ubuntu18.04/install-centralserver.sh
 
 - name: Ajusta permissões
   file:

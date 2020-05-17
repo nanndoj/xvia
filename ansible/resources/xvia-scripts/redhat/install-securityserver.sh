@@ -22,6 +22,9 @@ sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-monitor-*.rpm
 sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-addon-proxymonitor-*.rpm
 sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-addon-wsdlvalidator-*.rpm
 sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-jetty9-*.rpm
+
+# Autologin
+sudo yum -y install expect
 sudo yum -y --nogpgcheck localinstall $DIRNAME/xroad-autologin-*.rpm
 
 #Install Support for Operational Monitoring

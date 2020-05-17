@@ -1,0 +1,10 @@
+#central servers (ubuntu)
+[cs_servers]
+
+[ss_servers]
+
+[ca_servers]
+
+### vars ###
+[ss_servers:vars]
+variant=vanilla
