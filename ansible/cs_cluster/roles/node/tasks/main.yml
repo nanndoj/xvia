@@ -1,3 +1,21 @@
 ---
-- import_tasks: ubuntu.yml
-  when: ansible_os_family == "Debian"
+- name: Create target directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0751'
+  with_items:
+    - /etc/xroad
+    - /etc/xroad/conf.d
+
+- name: Setup the db.properties
+  template:
+      src: "db.properties.j2"
+      dest: "/etc/xroad/db.properties"
+      mode: 0751
+
+- name: configure a unique node name for each node
+  template:
+      src: "local.ini.j2"
+      dest: "/etc/xroad/conf.d/local.ini"
+      mode: 0751

@@ -1,9 +1,16 @@
 ---
-- hosts: cs-servers
+- hosts: cs_nodes
   become: yes
   become_user: root
   roles:
     - node
   vars_files:
-    - ../group_vars/all/vars.yml
-    - ../vars_files/remote_repo.yml
+    - vars_files/database_conf.yml
+
+- hosts: cs_databases
+  become: yes
+  become_user: root
+  roles:
+    - database
+  vars_files:
+    - vars_files/database_conf.yml

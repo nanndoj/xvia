@@ -1,0 +1,4 @@
+standby_mode = 'on'
+primary_conninfo = 'host={{ master_host }} user=standby password={{ standby_user_password }}'
+primary_slot_name = 'standby_{{ nodename }}'
+recovery_target_timeline = 'latest'

@@ -1,0 +1,25 @@
+---
+- name: ensure postgresql is installed (Ubuntu)
+  apt:
+    name: ["postgresql", "postgresql-contrib"]
+    state: present
+    update_cache: yes
+
+- name: ensure the service is started (Ubuntu)
+  systemd:
+    state: started
+    name: "postgresql"
+
+- name: check postgresql version
+  become: yes
+  become_user: postgres
+  command: psql -tqAc "show server_version"
+  register: postgresql_version_output
+
+- set_fact:
+    postgresql_version: "{{ postgresql_version_output.stdout | regex_replace('^(\\d+).*$','\\1') }}"
+  when: ansible_distribution_release == "bionic"
+
+- set_fact:
+    postgresql_data_dir: "/var/lib/postgresql/{{ postgresql_version }}/main"
+    postgresql_config_dir: "/etc/postgresql/{{ postgresql_version }}/main"

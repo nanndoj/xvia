@@ -1,0 +1,7 @@
+[cs_nodes]
+104.154.176.114
+35.232.24.127
+
+[cs_databases]
+34.69.55.94 nodename=bd01
+34.72.164.31 nodename=bd02

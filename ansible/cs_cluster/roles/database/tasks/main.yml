@@ -1,0 +1,184 @@
+---
+- set_fact:
+    master: "{{ inventory_hostname == groups['cs_databases'][0] }}"
+    master_host: "{{ groups['cs_databases'][0] }}"
+
+- import_tasks: ubuntu.yml
+  when: ansible_os_family == "Debian"
+
+- import_tasks: rhel.yml
+  when: ansible_os_family == "RedHat"
+
+- name: copy postgresql certificates
+  copy:
+      src: "{{ item }}"
+      dest: "/etc/xroad/postgresql/"
+      owner: postgres
+      group: postgres
+      mode: 0400
+  with_items:
+      - "ca/ca.crt"
+      - "ca/{{ nodename }}/server.crt"
+      - "ca/{{ nodename }}/server.key"
+
+- name: configure database
+  lineinfile:
+      dest: "{{ postgresql_config_dir }}/postgresql.conf"
+      regexp: "^\\s*#?{{ item.option }}\\s*="
+      line: "{{ item.option }} = {{ item.value }}"
+      state: "{{ item.state | default('present') }}"
+  with_items:
+      - { option: 'password_encryption', value: 'scram-sha-256' }
+      - { option: 'ssl', value: 'on' }
+      - { option: 'ssl_ca_file', value: "'/etc/xroad/postgresql/ca.crt'" }
+      - { option: 'ssl_cert_file', value: "'/etc/xroad/postgresql/server.crt'" }
+      - { option: 'ssl_key_file', value: "'/etc/xroad/postgresql/server.key'" }
+      - { option: 'listen_addresses', value: "'*'" }
+      - { option: 'wal_level', value: "replica" }
+      - { option: 'max_wal_senders', value: '10' }
+      - { option: 'wal_keep_segments', value: '8' }
+      - { option: 'hot_standby', value: 'on' }
+
+- name: enable replication connections
+  lineinfile:
+      dest: "{{ postgresql_config_dir }}/pg_hba.conf"
+      regexp: "^\\s*hostssl\\s+replication\\s+standby\\s+all\\s+cert"
+      line: "hostssl replication standby all scram-sha-256"
+
+- name: enable remote connection from central servers
+  lineinfile:
+      dest: "{{ postgresql_config_dir }}/pg_hba.conf"
+      regexp: "^\\s*host\\s+centerui_production\\s+centerui\\s+{{ item }}}\\s+scram-sha-256"
+      line: "host centerui_production centerui {{ item }}/32 scram-sha-256"
+  with_items: "{{ groups['cs_nodes'] }}"
+
+- name: enable remote connection from central servers for postgres user
+  lineinfile:
+      dest: "{{ postgresql_config_dir }}/pg_hba.conf"
+      regexp: "^\\s*host\\s+postgres\\s+postgres\\s+{{ item }}}\\s+trust"
+      line: "host postgres postgres {{ item }}/32 trust"
+  with_items: "{{ groups['cs_nodes'] }}"
+
+- name: restart postgresql master service (RHEL7)
+  systemd:
+    state: restarted
+    name: "postgresql-10"
+  when: (ansible_os_family == "RedHat" and master == true)
+
+- name: restart postgresql master service (Ubuntu)
+  systemd:
+    state: restarted
+    name: "postgresql"
+  when: (ansible_os_family == "Debian" and master == true)
+
+- name: check if the replication user exists (master only)
+  become: yes
+  become_user: postgres
+  command: psql -qtAc "SELECT 1 FROM pg_roles WHERE rolname='standby'"
+  register: standby_user_exists
+  changed_when: false
+  when: master == true
+
+- name: stop the slave instances (Ubuntu)
+  systemd:
+    state: stopped
+    name: "postgresql"
+  when: master == false and ansible_os_family == "Debian"
+
+- name: drop the replication slots
+  become: yes
+  become_user: postgres
+  command: psql -c "select pg_drop_replication_slot(slot_name) from pg_replication_slots where slot_name = 'standby_{{ hostvars[item]['nodename'] }}';"
+  with_items: "{{ groups['cs_databases'] }}"
+  when: master == true
+
+- name: create the replication user (master only)
+  become: yes
+  become_user: postgres
+  command: psql -c "CREATE USER standby REPLICATION PASSWORD '{{ standby_user_password }}'"
+  when: (master == true and standby_user_exists.stdout == "")
+
+- name: create a replication slot for the standby instances (master only)
+  become: yes
+  become_user: postgres
+  command: psql -c "SELECT pg_create_physical_replication_slot('standby_{{ hostvars[item].nodename }}');"
+  with_items: "{{ groups['cs_databases'] }}"
+  when: master == true
+
+- name: stop the slave instances (RHEL7)
+  systemd:
+    state: stopped
+    name: "postgresql-10"
+  when: master == false and ansible_os_family == "RedHat"
+
+- name: create ~/.pgpass file
+  become_user: postgres
+  become: yes
+  template:
+      src: ".pgpass.j2"
+      dest: "~/.pgpass"
+      owner: postgres
+      group: postgres
+      mode: 0600
+
+- name: Do a base backup with pg_basebackup
+  become_user: postgres
+  become: yes
+  environment:
+      PGSSLMODE: verify-ca
+      PGSSLROOTCERT: /etc/xroad/postgresql/ca.crt
+      PGSSLCERT: /etc/xroad/postgresql/server.crt
+      PGSSLKEY: /etc/xroad/postgresql/server.key
+  block:
+    - name: Do a base backup with pg_basebackup
+      shell: |
+        rm -rf "{{ postgresql_data_dir }}_backup"
+        cp -r "{{ postgresql_data_dir }}" "{{ postgresql_data_dir }}_backup"
+        cd "{{ postgresql_data_dir }}"
+        rm -rf *
+        pg_basebackup -h "{{ master_host }}" -U standby --slot=standby_{{ nodename }} -w -R -D "{{ postgresql_data_dir }}"
+      args:
+        chdir: "{{ postgresql_data_dir }}"
+        creates: "{{ postgresql_data_dir }}/recovery.conf"
+  rescue:
+    - name: rollback the changes
+      shell: |
+        rm -rf "{{ postgresql_data_dir }}"
+        mv "{{ postgresql_data_dir }}_backup" "{{ postgresql_data_dir }}"
+      failed_when: true
+  when: master == false
+
+- name: install recovery conf
+  template:
+      src: "recovery.conf.j2"
+      dest: "{{ postgresql_data_dir }}/recovery.conf"
+      owner: postgres
+      group: postgres
+  when: master == false
+
+- name: start all database servers (RHEL7)
+  systemd:
+    state: started
+    name: "postgresql-10"
+  when: ansible_os_family == "RedHat"
+
+- name: start all database servers  (Ubuntu)
+  systemd:
+    state: started
+    name: "postgresql"
+  when: ansible_os_family == "Debian"
+
+- name: remove the backup
+  become_user: postgres
+  become: yes
+  file:
+    path: "{{ postgresql_data_dir }}_backup"
+    state: absent
+
+
+- name: remove ~/.pgpass file
+  become_user: postgres
+  become: yes
+  file:
+    path: "~/.pgpass"
+    state: absent

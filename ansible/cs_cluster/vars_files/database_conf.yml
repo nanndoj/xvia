@@ -1,0 +1,4 @@
+---
+psql_yum_repo: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+standby_user_password: 863A42A944C93A3DD793FA0D6F4AE8D52C1161B
+centerui_password: RYYS5DIeFjpuIuBceMun

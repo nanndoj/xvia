@@ -15,6 +15,7 @@ sudo dpkg -i $DIRNAME/xroad-jetty9_*.deb
 sudo dpkg -i $DIRNAME/xroad-signer_*.deb
 
 #Install X-Road Center
-DEBIAN_FRONTEND=noninteractive sudo dpkg -i $DIRNAME/xroad-center_*.deb
+yes N | DEBIAN_FRONTEND=noninteractive sudo dpkg -i $DIRNAME/xroad-center_*.deb
+sudo dpkg -i $DIRNAME/xroad-autologin_*.deb
 sudo dpkg -i $DIRNAME/xroad-centralserver-monitoring_*.deb
 sudo apt-get --assume-yes install -f

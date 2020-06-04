@@ -1,0 +1,8 @@
+adapter=postgresql
+encoding=utf8
+username=centerui
+password={{ centerui_password }}
+database=centerui_production
+reconnect=true
+host={{ groups['cs_databases'][0] }}
+secondary_hosts={{groups['cs_databases'][1:] | join(',')}}

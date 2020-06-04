@@ -1,0 +1,37 @@
+---
+- name: install postgresql rpm from a remote repo
+  yum:
+    name: "{{psql_yum_repo}}"
+    state: present
+
+- name: ensure postgresql is installed
+  yum:
+    name: ["postgresql10-server", "postgresql10"]
+    state: present
+
+- name: Check if the database was not initialized before
+  stat:
+    path: /var/lib/pgsql/10/data/pg_hba.conf
+  register: pgconf
+
+- name: Initialize PGDATA
+  command: "/usr/pgsql-10/bin/postgresql-10-setup initdb"
+  when: not pgconf.stat.exists
+
+- name: Make sure postgresql service is running
+  systemd:
+    state: started
+    name: "postgresql-10"
+
+- name: check postgresql version
+  become: yes
+  become_user: postgres
+  command: psql -tqAc "show server_version"
+  register: postgresql_version_output
+
+- set_fact:
+    postgresql_version: "{{ postgresql_version_output.stdout | regex_replace('^(\\d+).*$','\\1') }}"
+
+- set_fact:
+    postgresql_data_dir: "/var/lib/pgsql/{{ postgresql_version }}/data"
+    postgresql_config_dir: "/var/lib/pgsql/{{ postgresql_version }}/data"
